@@ -120,7 +120,7 @@ A website's configuration is its design tokens and its metadata. Both live in ex
   - The earlier site shipped nine JPEGs totalling about 8 MB, including a 6000 by 4000 pixel original displayed at 400 pixels wide. The rebuilt site, fonts included, is under 600 KB.
 - **Fonts are self-hosted woff2, latin subset, variable where available**, with `font-display: swap` and at most two `<link rel="preload" as="font" crossorigin>` lines for the faces used above the fold. The license file sits beside the font files. Google Fonts served from Google's servers sends visitor IP addresses to Google; a Munich court (LG München I, 20 January 2022, Az. 3 O 17493/20) found that to breach GDPR without consent. Self-hosting is also faster. The Fontsource npm packages are the simplest source of properly subset files.
 - **PDFs are generated, not hand-made.** The capability statement is an HTML page with print CSS, rendered to PDF by Playwright. The HTML is the source; the PDF is committed so the link works without a build. `[site]`
-  - The first render of this site's one-page capability statement ran to two pages by a few pixels. "One page" is a requirement buyers state out loud. `scripts/render.js` fails unless the PDF's `/Count` is exactly 1, and CI checks the committed file the same way.
+  - The first render of this site's one-page capability statement ran to two pages by a few pixels. "One page" is a requirement buyers state out loud. `scripts/render.js` fails unless the PDF's `/Count` matches the page count the site promises (now two, after the experience section outgrew one page), and CI checks the committed file the same way.
 
 ## 5. Provenance: every generated asset has a generator
 
@@ -195,7 +195,7 @@ These records let a maintainer with no memory of past work continue it correctly
 ### Writing review
 - Every pull request that touches copy runs the pattern check in section 14 and gets a read-aloud by a human. The check is mechanical; the read is not.
 
-The committed workflow, `.github/workflows/checks.yml`, runs on every pull request and on pushes to `main`: html-validate on the three pages, lychee in offline mode, the banned-punctuation and banned-word grep, the facts grep, a check that `security.txt` expires more than 60 days out, and a check that the committed PDF is one page. Actions are pinned to commit SHAs (resolved with `git ls-remote --tags` in November 2026) and Dependabot keeps them current.
+The committed workflow, `.github/workflows/checks.yml`, runs on every pull request and on pushes to `main`: html-validate on the three pages, lychee in offline mode, the banned-punctuation and banned-word grep, the facts grep, a check that `security.txt` expires more than 60 days out, and a check that the committed PDF has the promised page count. Actions are pinned to commit SHAs (resolved with `git ls-remote --tags` in November 2026) and Dependabot keeps them current.
 
 ## 9. Operating a live site safely
 
@@ -312,7 +312,7 @@ The earlier version of this site read, in its own words: "Manifold blends cuttin
 **Before a launch**
 - [ ] The Owner has approved.
 - [ ] A test form submission arrived at the destination mailbox from the live domain.
-- [ ] The PDF is one page, dated, and matches the site's Facts.
+- [ ] The PDF has the page count the site promises, is dated, and matches the site's Facts.
 - [ ] `security.txt` expiry is more than 60 days out.
 - [ ] DNS, certificate, 404 page, `security.txt` and the www-to-apex redirect checked with `dig` and `curl`.
 - [ ] Crawl of the live domain returns only intended URLs.

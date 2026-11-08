@@ -32,6 +32,9 @@ Notable changes to manifold-llc.com. The format follows [Keep a Changelog](https
 - Sticky header has a solid fallback where `color-mix()` is unsupported.
 
 ### Changed (later the same day)
+- Positioning widened from advice to advice and engineering, on the Owner's instruction. A fifth capability, applied research and development, and the rule that Manifold advises or builds but never both for the same organization.
+- Two research projects added under Selected work: re-finding dark vessels across satellite passes (figures limited to what the research brief permits; unpublished draft) and FastSAR, SAR image formation on CPUs, GPUs and TPUs.
+- Capability statement is now two pages: page one stands alone; page two carries experience and principals.
 - Logo mark replaced with the company's own symbol from Drive; wire-grid drawing kept as the hero figure.
 - Company data added from primary records: UEI C6P2G6PQLEB8, CAGE 23X60, NAICS 541715, 541512, 541611, 541690, formed March 2026, Loudoun County, both principals TS/SCI with CI polygraph, classified work on customer premises. The company table, JSON-LD and PDF carry them.
 

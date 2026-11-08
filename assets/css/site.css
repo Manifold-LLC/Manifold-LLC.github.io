@@ -384,8 +384,11 @@ button, input, textarea { font: inherit; color: inherit; }
   font-size: 0.95rem;
   line-height: 1.4;
 }
+.cap.wide { grid-column: 1 / -1; }
+.cap.wide .deliverables ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2rem; }
 @media (max-width: 760px) {
   .cap-grid { grid-template-columns: 1fr; }
+  .cap.wide .deliverables ul { grid-template-columns: 1fr; }
 }
 
 /* ---------- Work ---------- */

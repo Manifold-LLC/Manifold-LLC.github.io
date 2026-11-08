@@ -9,7 +9,7 @@ The site is one hand-written content page, a 404 page and a print-styled capabil
 | Path | What it is |
 |---|---|
 | `index.html` | The site. All copy lives here. |
-| `capability-statement.html` | Print-styled one-pager (styles in `assets/css/capability-statement.css`). `manifold-capability-statement.pdf` is rendered from it. |
+| `capability-statement.html` | Print-styled two-page capability statement (styles in `assets/css/capability-statement.css`). `manifold-capability-statement.pdf` is rendered from it. |
 | `404.html` | Not-found page (GitHub Pages serves it automatically). |
 | `assets/css/site.css` | All styles. Design tokens are at the top. |
 | `assets/js/site.js` | Footer year and the contact form handler. |
@@ -51,7 +51,7 @@ python3 -m http.server 8000 &
 node scripts/render.js
 ```
 
-`scripts/render.js` renders the PDF (US Letter, tagged for accessibility, one page), the share image and the touch icon, and fails if the PDF is not exactly one page.
+`scripts/render.js` renders the PDF (US Letter, tagged for accessibility, two pages), the share image and the touch icon, and fails if the PDF is not exactly two pages.
 
 The hero drawing can be regenerated with `python3 scripts/surface.py hero > assets/img/manifold-surface.svg`.
 

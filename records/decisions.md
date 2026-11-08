@@ -32,5 +32,14 @@ Maintainer decision. The Owner's Drive holds a designed symbol (a calligraphic M
 ## 2026-11-08 | Company data published from primary records
 Maintainer decision under the Owner's instruction to add the SAM codes. UEI and CAGE come from the SAM.gov activation email, the formation date from the Virginia SCC acknowledgement, the county from the registered address, NAICS from the July 2026 capability statement, and the facility-clearance posture ("performed on customer premises") from the same document. The registered street address is a principal's home and is not published.
 
+## 2026-11-08 | Development is in scope; advise or build, never both for one organization
+Owner decision: the site need not be limited to consulting. The headline now reads "advice and engineering", a fifth capability covers applied research and development, and the conflict-of-interest item states the rule. Two research projects supplied by the Owner are described under Selected work within the limits their write-ups allow.
+
+## 2026-11-08 | A paper under anonymous review stays off the site and out of the repository
+Maintainer decision. One of the three project write-ups is under double-blind review and marked do not distribute. Describing it on a public site could identify the authors to reviewers. Its skills are listed generically in records/skills-inventory.md; nothing else appears until the Owner says the review has ended.
+
+## 2026-11-08 | Capability statement becomes two pages
+Maintainer decision. With five competencies, five experience entries and two bios, one page would have needed type under 8 points. Page one stands alone (competencies, differentiators, company data, contact); page two carries experience and principals. CI now checks for exactly two pages.
+
 ## 2026-11-08 | Commits are authored by the Owner's named person with no tooling trailers
 Owner instruction.

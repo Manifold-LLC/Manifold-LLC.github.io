@@ -27,10 +27,13 @@ npx html-validate@11 index.html capability-statement.html 404.html
 - Whether to name the sponsor agency on the site, as the July 2026 capability statement does.
 - Whether naming the principals' current employers is permitted under their outside-activity rules.
 - NAICS codes are from the July 2026 capability statement; confirm against the SAM record.
+- FastSAR: is the code public, and is the paper submitted, under review or accepted? The site says "written for" the journal and does not claim the code is available.
+- Dark-vessel work: may any of the paper's figures be used on the site? The brief says to ask first.
+- When the anonymous review of the trajectory model ends, it can be named under Selected work.
 
 ## Traps
 - `CNAME` must stay in the repository root or the custom domain drops.
-- The capability statement PDF is generated from `capability-statement.html`. Do not edit the PDF. The page count must stay at one; CI checks it.
+- The capability statement PDF is generated from `capability-statement.html`. Do not edit the PDF. It is two pages; `scripts/render.js` and CI both fail on any other count.
 - Facts appear in several files. Change `records/facts.md` first, then grep for the old value.
 - `404.html` uses absolute asset paths and looks unstyled when opened from disk. That is expected.
 

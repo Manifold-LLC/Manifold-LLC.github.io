@@ -36,5 +36,5 @@ jobs:
         run: |
           exp=$(grep -i '^Expires:' .well-known/security.txt | cut -d' ' -f2)
           test "$(date -u -d "$exp" +%s)" -gt "$(date -u -d '+60 days' +%s)" || { echo "security.txt expires soon: $exp"; exit 1; }
-      - name: Capability statement PDF is one page
-        run: test "$(grep -ac '/Count 1' manifold-capability-statement.pdf)" -ge 1
+      - name: Capability statement PDF is two pages
+        run: test "$(grep -ac '/Count 2' manifold-capability-statement.pdf)" -ge 1
