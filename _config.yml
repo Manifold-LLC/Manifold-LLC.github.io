@@ -1,0 +1,14 @@
+# GitHub Pages builds this repository with Jekyll. This file keeps repository
+# files off the published site and lets the dot-directory .well-known through.
+# The HTML pages have no front matter, so Jekyll copies them unchanged.
+include:
+  - .well-known
+exclude:
+  - README.md
+  - CHANGELOG.md
+  - CREDITS.md
+  - records/
+  - docs/
+  - scripts/
+  - .htmlvalidate.json
+  - .github/

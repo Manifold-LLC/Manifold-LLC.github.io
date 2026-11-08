@@ -1,181 +1,519 @@
-<!DOCTYPE HTML>
-<!--
-	Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<!DOCTYPE HTML>
-<!--
-	Manifold LLC - Applied AI/ML for the National Security Mission
-	Template: Solid State by HTML5 UP (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Manifold — Applied AI/ML for the National Security Mission</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Manifold is a Virginia-based boutique consultancy delivering AI/ML strategy, acquisition, and engineering support to the U.S. Intelligence Community and Department of Defense. Founded by senior practitioners with active TS/SCI clearances." />
-		<meta property="og:title" content="Manifold — Applied AI/ML for the National Security Mission" />
-		<meta property="og:description" content="Boutique AI/ML consultancy for the U.S. Intelligence Community and Department of Defense. Principal-led, cleared, and current with the literature." />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://manifold-llc.com/" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self' https://api.web3forms.com; manifest-src 'self'; upgrade-insecure-requests">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manifold LLC | AI/ML advice and engineering for IC and DoD programs</title>
+  <meta name="description" content="A small, cleared AI/ML firm in Northern Virginia. We advise Intelligence Community and Department of Defense programs on strategy, acquisition, compute and secure generative AI, and we build models, detectors and GPU kernels when a program needs them built.">
+  <link rel="canonical" href="https://manifold-llc.com/">
+  <meta name="theme-color" content="#f6f4ee">
+  <meta name="color-scheme" content="light">
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Manifold LLC">
+  <meta property="og:title" content="Manifold LLC | Independent AI/ML advice and engineering for intelligence and defense programs">
+  <meta property="og:description" content="A small Virginia firm run by cleared practitioners. Strategy, acquisition and compute, program assessment, secure generative AI, and applied research and development for IC and DoD programs.">
+  <meta property="og:url" content="https://manifold-llc.com/">
+  <meta property="og:image" content="https://manifold-llc.com/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">Manifold</a></h1>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-				<!-- Menu -->
-					<nav id="menu">
-						<div class="inner">
-							<h2>Menu</h2>
-							<ul class="links">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="#one">Who We Are</a></li>
-								<li><a href="#four">Capabilities</a></li>
-								<li><a href="#footer">Contact</a></li>
-							</ul>
-							<a href="#" class="close">Close</a>
-						</div>
-					</nav>
+  <link rel="preload" href="assets/fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/ibm-plex-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/ibm-plex-mono-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css">
 
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<div class="logo"><span class="icon fa-gem"></span></div>
-							<h2>Applied AI/ML for the national security mission</h2>
-							<p>A boutique consultancy delivering AI/ML strategy, acquisition, and engineering support to the Intelligence Community and Department of Defense.</p>
-						</div>
-					</section>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Manifold LLC",
+    "url": "https://manifold-llc.com/",
+    "image": "https://manifold-llc.com/assets/img/og.png",
+    "logo": "https://manifold-llc.com/apple-touch-icon.png",
+    "email": "info@teammanifold.com",
+    "description": "Independent AI/ML advice and engineering for Intelligence Community and Department of Defense programs: strategy and roadmaps, acquisition and compute planning, program assessment, secure generative AI deployment, and applied research and development.",
+    "areaServed": "US",
+    "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" },
+    "foundingDate": "2026-03",
+    "identifier": [
+      { "@type": "PropertyValue", "propertyID": "UEI", "value": "C6P2G6PQLEB8" },
+      { "@type": "PropertyValue", "propertyID": "CAGE", "value": "23X60" }
+    ],
+    "knowsAbout": ["Machine learning", "Foundation models", "Federal acquisition", "DoD Cloud Computing SRG Impact Level 4 and 5", "Retrieval-augmented generation", "Geospatial foundation models", "Synthetic aperture radar image formation", "Maritime domain awareness", "Multi-target tracking", "GPU and TPU kernel engineering"],
+    "founder": [
+      { "@type": "Person", "name": "Paul G. Singerman", "jobTitle": "Principal" },
+      { "@type": "Person", "name": "John Och", "jobTitle": "Principal" }
+    ]
+  }
+  </script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-				<!-- Wrapper -->
-					<section id="wrapper">
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="mark" viewBox="100.2 51.6 1470.1 1470.1"><path fill="currentColor" d="m 246.32705,934.65068 22.81522,-25.90881 19.59274,-25.77991 17.78814,-25.26431 25.26431,-38.92767 22.68632,-37.38087 44.34145,-73.21495 15.46794,-22.68632 19.85054,-29.6469 14.43675,-18.04593 9.92526,-12.50326 16.048,-16.43469 20.46885,-19.96437 9.5703,-7.3828 14.30989,-9.57031 12.39582,-6.3802 12.21353,-4.92187 13.48957,-4.46614 8.84114,-1.36719 8.11197,-0.77474 c 0,0 7.29166,-0.22786 7.83854,-0.13671 0.54687,0.0911 8.47655,-0.0912 8.47655,-0.0912 l 7.28624,0.78876 3.41584,0.87007 4.35036,1.12788 5.28488,1.54679 4.31814,1.25677 2.93246,1.25677 2.64244,1.4179 2.80357,1.51457 2.67466,1.25677 2.64244,1.35344 2.61022,1.22455 2.44909,1.35344 1.80459,1.25677 2.51355,1.35345 1.41789,1.32122 2.57799,1.48235 1.45012,1.16009 1.48235,1.61125 2.19129,1.83681 2.03017,1.70792 5.40225,5.13508 4.0332,3.82813 5.29785,5.48013 14.43521,16.91893 8.29426,11.75781 12.12238,18.86717 7.83854,14.67446 11.55272,20.43944 10.4134,20.66729 10.29947,20.69009 8.5677,19.50519 8.5677,18.3203 10.20833,21.51039 15.03905,29.34894 12.30467,23.60674 4.83073,7.20052 3.1901,4.83072 9.93489,13.12499 6.3802,6.5625 7.01822,5.28645 4.375,2.64323 2.27864,1.09375 2.91667,0.72916 3.91926,0.72917 h 3.3724 l 3.37239,-0.27344 5.01302,-1.45833 4.73957,-2.27865 4.55729,-3.00781 4.46614,-3.09895 3.00781,-2.55208 9.7526,-11.02864 7.83853,-10.11718 6.47135,-9.47915 8.29426,-13.21614 5.92448,-10.48176 15.67707,-29.34893 10.29947,-19.50519 5.83333,-11.30207 3.73697,-6.65364 11.57551,-22.96873 7.29166,-13.12499 6.10677,-11.48437 5.92447,-10.29947 10.7552,-19.41404 8.74999,-13.85415 9.02341,-13.39843 11.3021,-15.49478 10.664,-13.48957 7.1094,-8.02082 9.0234,-8.84114 6.4714,-5.65104 8.6588,-6.83593 14.3099,-9.02343 10.6641,-5.01302 6.9271,-2.64322 6.5624,-1.82292 7.2006,-1.45833 5.3776,-0.36458 8.7957,-0.53325 6.7902,-0.0136 7.5651,0.27344 7.1093,1.36719 14.2188,4.92187 7.2005,3.41796 7.793,4.46614 7.8385,4.69401 5.8333,4.32942 11.849,9.61588 6.1067,5.78776 5.9701,6.15233 8.7546,10.64002 7.3473,9.66746 4.9626,7.15393 9.4742,13.8567 5.4782,8.31402 13.7487,24.01364 7.0182,12.85155 10.2083,19.77863 7.7474,16.04165 14.7656,31.17185 5.5599,11.84894 10.5729,20.78124 7.3828,16.22394 10.5729,19.68748 12.8516,22.96873 12.3958,20.05207 13.3984,21.87498 6.836,8.65884 3.8281,5.65104 5.1953,6.74478 8.4765,9.93489 5.0131,6.10677 7.6562,8.29426 12.9427,13.03384 11.2109,10.66405 9.8438,7.74739 9.7526,7.01823 10.7552,6.74478 10.026,5.92448 11.4844,5.46874 7.406,3.21545 7.9757,2.723 8.3845,2.56089 10.9375,2.55213 4.3522,1.0709 -9.4792,0.2051 -10.6342,-0.6207 -8.5718,-1.4179 -12.3744,-2.57805 -13.4055,-3.67364 -6.2517,-1.93349 -8.1851,-3.15804 -12.0521,-4.96263 -9.1519,-4.89819 -15.7257,-9.60301 -14.6301,-9.28077 -13.8871,-10.57862 -6.7448,-5.74218 -7.3828,-6.97265 -9.1602,-8.5677 -7.8385,-8.02082 -6.5169,-7.61068 -3.8281,-4.23827 -3.8709,-4.53374 -5.4783,-6.6061 -3.158,-3.99589 -5.8327,-7.08947 -5.0593,-6.34831 -3.1903,-4.47926 -8.5396,-11.43983 -8.8941,-12.24546 -7.4117,-10.37641 -9.603,-12.95441 -9.3452,-13.14775 -8.4429,-11.60096 -9.2808,-11.02092 -7.7984,-10.31196 -5.6084,-6.37545 -8.3854,-8.45377 -7.9192,-7.53485 -9.0874,-7.92733 -9.9252,-7.15392 -7.9543,-4.97828 -11.9856,-5.8789 -12.2591,-4.28385 -10.1628,-1.45833 -11.8034,0.0456 -9.0234,1.13932 -10.8463,3.3724 -9.0235,4.37499 -7.5651,4.42057 -7.0638,4.42057 -5.8789,4.51171 -5.8333,5.10417 -6.6536,6.15233 -5.5144,5.97005 -4.5117,4.78515 -4.9674,6.15234 -6.0156,7.0638 -6.8815,9.29686 -7.9297,11.34765 -5.013,7.38281 -4.7396,6.60806 -5.4688,8.29427 -5.5143,8.97785 -5.1953,8.0664 -5.2409,8.02083 -4.5572,6.97265 -6.0157,9.5703 -4.4205,7.47395 -4.694,7.5651 -5.51436,9.02343 -2.87109,4.14713 -5.33203,8.20312 -5.14973,7.47395 -7.20052,10.29947 -5.1953,7.65624 -4.10156,5.74218 -3.1901,3.96485 -4.69401,5.51431 -4.8763,6.24349 -4.28385,5.01301 -4.46614,5.55989 -3.6914,3.73698 -4.83073,4.73958 -3.60025,3.64583 -5.97005,5.55989 -6.24349,5.24088 -7.70181,6.19791 -7.10937,4.78515 -8.24869,4.92187 -7.65624,4.2383 -15.1302,6.289 -12.71483,4.056 -12.85155,1.6406 -17.77342,0.4558 -7.47395,-0.8659 -15.26692,-2.8711 -7.56509,-2.78 -7.61067,-2.871 -7.10937,-3.4636 -10.93749,-6.6081 -7.15494,-5.01296 -8.43099,-6.42577 -13.84885,-12.56607 -7.47617,-7.83065 -7.6373,-8.73294 -3.28694,-4.28591 -9.66746,-12.18101 -5.51046,-7.6373 -2.93247,-3.77031 -6.74316,-10.17023 -6.3802,-9.38801 -6.24349,-10.11718 -7.33723,-11.21093 -3.87369,-7.0638 -5.24088,-8.65884 -4.83073,-8.43098 -4.1927,-7.38281 -2.64323,-4.05599 -8.5677,-14.4466 -5.14974,-9.25129 -8.15754,-13.71744 -5.46874,-8.93228 -5.28646,-8.70442 -4.694,-7.61067 -4.42057,-6.69921 -5.78776,-8.93228 -5.05859,-7.5651 -5.46874,-7.65625 -5.97005,-7.61067 -5.55989,-6.3802 -4.32942,-5.14973 -4.32943,-4.42057 -5.74218,-5.14974 -8.33984,-6.24348 -6.60806,-4.28385 -5.55989,-2.91666 -7.38281,-2.91667 -6.51692,-1.86849 -7.24609,-1.09375 -6.79036,-0.22786 -7.65624,0.27344 -8.38541,1.0026 -7.56509,2.55208 -7.01823,2.55208 -6.01562,2.59766 -5.8789,2.87109 -4.92187,2.73437 -8.65884,5.14973 -9.57031,6.74479 -6.74478,5.19531 -12.30468,10.20832 -8.70442,7.88411 -5.97005,6.10676 -8.79556,9.02343 -12.2591,13.30728 -7.47396,7.92968 -3.41796,4.05599 -7.24609,8.74999 -7.15494,7.92968 -5.65104,6.51692 -9.79817,12.12239 -7.20051,8.02082 -5.10416,6.10677 -5.42317,6.24348 -5.46875,6.01562 -5.42317,6.47135 -7.51953,8.43098 -8.29426,9.2513 -5.14973,5.46874 -5.78776,6.33463 -6.3802,6.74479 -8.11197,7.61067 -6.60807,6.24348 -6.69921,5.83333 -6.83593,6.79036 -6.33463,5.55989 -6.60807,5.51432 -7.92968,6.65364 -8.52213,6.10676 -5.78775,4.28385 -5.33203,4.05599 -6.24348,4.14713 -6.79036,3.73698 -7.0638,4.14713 -6.65364,3.96484 -7.42838,3.78255 -8.11197,4.1927 -9.29686,3.82812 -7.0638,2.82552 -8.11197,2.96226 -8.5677,2.3242 -5.24088,1.1849 -1.27604,-1.4584 1.13932,-1.0026 8.43098,-3.41791 8.20312,-3.73698 8.20311,-4.73958 7.33724,-4.37499 7.95256,-5.2466 5.60713,-3.96366 6.15496,-4.25369 8.05622,-7.1217 5.02708,-4.28591 8.76517,-7.47617 4.76928,-4.57594 7.66953,-8.05622 4.38258,-5.38156"/></symbol>
+</svg>
 
-						<!-- One -->
-							<section id="one" class="wrapper spotlight style1">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Who we are</h2>
-										<p>Manifold is a Virginia-based small business founded by senior practitioners with active TS/SCI clearances and direct insider experience in the Intelligence Community. Manifold blends cutting-edge understanding with a decade of IC acquisition execution — helping sponsors make faster, better decisions on AI/ML investments and deploy them to mission at scale.</p>
-										<a href="#four" class="special">Our capabilities</a>
-									</div>
-								</div>
-							</section>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <svg aria-hidden="true"><use href="#mark"></use></svg>
+      <span class="word">Manifold <small>LLC</small></span><span class="sr-only">, home</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#capabilities">Capabilities</a>
+      <a href="#work">Work</a>
+      <a href="#approach">Approach</a>
+      <a href="#company">Company</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-cta" href="manifold-capability-statement.pdf">Capability statement</a>
+    </nav>
+  </div>
+</header>
 
-						<!-- Two -->
-							<section id="two" class="wrapper alt spotlight style2">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Principal-led, every engagement</h2>
-										<p>No benches, no hand-offs. Every engagement is delivered personally by a founding Principal. We're the same people who briefed your senior leadership, shaped your acquisitions, and published the research — not a logo with a staffing model.</p>
-										<a href="#three" class="special">Why it matters</a>
-									</div>
-								</div>
-							</section>
+<main id="main">
 
-						<!-- Three -->
-							<section id="three" class="wrapper spotlight style3">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Research-grade depth, production delivery</h2>
-										<p> Experience architecting geospatial foundation models in active collaboration with Google and NVIDIA, while also delivering production CUI GenAI — including a Bedrock RAG system at a Navy UARC with full IL4 / LDAP / SSL compliance. </p>
-										<a href="#footer" class="special">Start a conversation</a>
-									</div>
-								</div>
-							</section>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Northern Virginia &middot; AI/ML advice and engineering &middot; Cleared principals</p>
+          <h1>Independent AI/ML advice and engineering for intelligence and defense programs.</h1>
+          <p class="lead">Manifold is a small Virginia firm run by two cleared practitioners with about ten years each inside Intelligence Community acquisition and research programs. We help program offices decide whether to build or buy, and how to get the result running on accredited networks. When the answer is build, we can do the building, though never for an organization we also advise.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#contact">Start a conversation</a>
+            <a class="btn btn-ghost" href="manifold-capability-statement.pdf">Capability statement (PDF)</a>
+          </div>
+        </div>
+        <figure class="hero-figure">
+          <img src="assets/img/manifold-surface.svg" width="760" height="620" alt="Line drawing of a curved two-dimensional surface drawn as a wire grid.">
+          <figcaption><span>A two-dimensional manifold, drawn as a wire grid.</span></figcaption>
+        </figure>
+      </div>
 
-						<!-- Four -->
-							<section id="four" class="wrapper alt style1">
-								<div class="inner">
-									<h2 class="major">Core capabilities</h2>
-									<p>Full-spectrum AI/ML services scaled to the realities of IC and DoD work — from sponsor-level strategy through production deployment in accredited environments.</p>
-									<section class="features">
-										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-											<h3 class="major">AI/ML Strategy & Roadmap Advisory</h3>
-											<p>Foundation-model strategy, capability roadmapping, build-vs-buy analysis, and technology forecasting aligned to IC mission needs. Competitive acquisition review as technical SME, BAA evaluation, and sponsor-wide AI/ML training curriculum design.</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3 class="major">Acquisition & Compute Strategy</h3>
-											<p>Technical requirements authoring, RFP/SOW development, source-selection support, and vendor evaluation across hyperscaler GovCloud (AWS, Azure, GCP) and on-prem infrastructure. GPU/TPU cluster sizing, training-vs-inference optimization, and cost modeling for production foundation-model workloads.</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
-											<h3 class="major">Technical Program Assessment</h3>
-											<p>Independent technical evaluation of AI/ML programs, risk and maturity assessments, acquisition shaping, milestone reviews, and sponsor-facing performance metrics. </p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-											<h3 class="major">Secure GenAI & Foundation-Model Deployment</h3>
-											<p>End-to-end advisory for production GenAI on controlled networks: CUI / IL4 / IL5 architecture patterns, RAG system design, model and vendor selection in GovCloud, and responsible-AI evaluation including bias audits and human-in-the-loop design.</p>
-										</article>
-									</section>
-									<ul class="actions">
-										<li><a href="#footer" class="button">Request capability statement</a></li>
-									</ul>
-								</div>
-							</section>
+      <dl class="facts">
+        <div>
+          <dt>Location</dt>
+          <dd>Loudoun County, Virginia</dd>
+        </div>
+        <div>
+          <dt>Delivery</dt>
+          <dd>By the founding principals, start to finish</dd>
+        </div>
+        <div>
+          <dt>Clearances</dt>
+          <dd>TS/SCI with CI polygraph, both principals</dd>
+        </div>
+        <div>
+          <dt>Reach us</dt>
+          <dd><a href="mailto:info@teammanifold.com">info@teammanifold.com</a></dd>
+        </div>
+      </dl>
+    </div>
+  </section>
 
-					</section>
+  <!-- 01 Capabilities -->
+  <section class="section" id="capabilities" aria-labelledby="capabilities-h">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">01 &nbsp;Capabilities</p>
+          <h2 id="capabilities-h">What we do</h2>
+        </div>
+        <p class="intro">Five kinds of engagement. Each is scoped in writing before it starts, and each ends with a deliverable your office keeps. The first four are advice; the fifth is building. We do not do both for the same organization.</p>
+      </div>
 
-				<!-- Footer -->
-					<section id="footer">
-						<div class="inner">
-							<h2 class="major">Let's talk</h2>
-							<p>Whether you're a program office exploring what's possible, an integrator looking for cleared AI/ML expertise, or a sponsor working through where foundation models fit in your roadmap — we'd like to hear from you.</p>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-							<ul class="contact">
-								<li class="icon solid fa-envelope"><a href="mailto:info@teammanifold.com">info@teammanifold.com</a></li>
-								<li class="icon solid fa-phone">(703) 436-1308</li>
-								<li class="icon solid fa-home">Virginia, USA</li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; 2026 Manifold LLC. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</section>
+      <div class="cap-grid">
+        <article class="cap">
+          <span class="num">1 / 5</span>
+          <h3>Strategy and roadmaps</h3>
+          <p>Where foundation models fit in a sponsor's portfolio, and where they do not yet. We write the analysis a program manager has to defend in front of a review board: what the technology can do today, what it will cost to run, and which parts should be bought rather than built.</p>
+          <div class="deliverables">
+            <p class="eyebrow">Typical deliverables</p>
+            <ul>
+              <li>Foundation-model strategy and capability roadmaps</li>
+              <li>Build-versus-buy analysis and technology forecasts</li>
+              <li>Technical SME on competitive acquisitions and BAA evaluation panels</li>
+              <li>AI/ML training curricula for sponsor staff</li>
+            </ul>
+          </div>
+        </article>
 
-			</div>
+        <article class="cap">
+          <span class="num">2 / 5</span>
+          <h3>Acquisition and compute</h3>
+          <p>Requirements that vendors can bid against, and compute plans that hold up to the budget. We draft technical requirements, RFP and SOW language, and source-selection criteria. We size GPU and TPU clusters against actual training and inference loads in AWS GovCloud, Azure Government, and Google Cloud's assured regions, or on hardware you own.</p>
+          <div class="deliverables">
+            <p class="eyebrow">Typical deliverables</p>
+            <ul>
+              <li>Technical requirements and statement-of-work language</li>
+              <li>Source-selection and vendor-evaluation support</li>
+              <li>Cluster sizing and cost models for training and inference</li>
+              <li>Government cloud versus on-premises trade studies</li>
+            </ul>
+          </div>
+        </article>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        <article class="cap">
+          <span class="num">3 / 5</span>
+          <h3>Program assessment</h3>
+          <p>An outside technical read on an AI program. Where it stands, what it will take to finish, and whether the metrics being briefed mean what they appear to mean. We have sat in these reviews before and write them for the people who have to act on them.</p>
+          <div class="deliverables">
+            <p class="eyebrow">Typical deliverables</p>
+            <ul>
+              <li>Independent technical evaluation, with maturity and risk assessment</li>
+              <li>Milestone and design reviews</li>
+              <li>Sponsor-facing performance metrics</li>
+            </ul>
+          </div>
+        </article>
 
-	</body>
+        <article class="cap">
+          <span class="num">4 / 5</span>
+          <h3>Secure generative AI</h3>
+          <p>Getting a language-model system onto a controlled network and keeping it there. We design for Controlled Unclassified Information at Impact Level 4 and 5, build retrieval-augmented generation in government cloud regions, choose models and vendors with the accreditation path in mind, and do the evaluation work, bias audits and human-review design included.</p>
+          <div class="deliverables">
+            <p class="eyebrow">Typical deliverables</p>
+            <ul>
+              <li>Reference architectures for IL4 and IL5 environments</li>
+              <li>Retrieval-augmented generation design and delivery</li>
+              <li>Model and vendor selection in government cloud regions</li>
+              <li>Evaluation plans and bias audits</li>
+              <li>Human-in-the-loop review design</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="cap wide">
+          <span class="num">5 / 5</span>
+          <h3>Applied research and development</h3>
+          <p>When a program needs something built rather than bought, we build it: detectors and trackers over satellite imagery, foundation models pretrained on a sponsor's own data, and the GPU or TPU kernels that make them affordable to run. We write the evaluation protocol before the model, score against data the model never sees, and report the negative results with the positive ones. Examples are under Selected work below.</p>
+          <div class="deliverables">
+            <p class="eyebrow">Typical deliverables</p>
+            <ul>
+              <li>Working prototypes with their evaluation harness and held-out test protocol</li>
+              <li>Pretrained domain models with scaling studies that say how big the next one should be</li>
+              <li>CPU, GPU and TPU implementations with measured cost per run on cloud hardware</li>
+              <li>Open-source releases where the sponsor allows them</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 Work -->
+  <section class="section alt" id="work" aria-labelledby="work-h">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">02 &nbsp;Selected work</p>
+          <h2 id="work-h">Work our principals have led</h2>
+        </div>
+        <p class="intro">Research and delivery our principals have led. Some of it predates the firm, and sponsor names are withheld. We are glad to go into detail in conversation.</p>
+      </div>
+
+      <ol class="work-list">
+        <li class="work">
+          <div class="meta">
+            <p class="eyebrow">Research &middot; Maritime domain awareness</p>
+            <p class="tags">Sentinel-1 &middot; Sentinel-2 &middot; Landsat<br>NISAR &middot; VIIRS<br>Multi-target tracking<br>Unpublished draft</p>
+          </div>
+          <div>
+            <h3>Re-finding ships that switch off AIS, from one satellite pass to the next</h3>
+            <dl>
+              <dt>Problem</dt>
+              <dd>Vessels involved in illegal fishing, sanctions evasion and smuggling switch off AIS, the transponder that reports a ship's identity and position. Satellites still see them, but passes are hours apart, and by the next one a moving ship can be any of many unexplained detections.</dd>
+              <dt>What our principal built</dt>
+              <dd>A tracker that links detections from public radar, optical and night-light sensors (Sentinel-1 and NISAR, Sentinel-2 and Landsat, VIIRS) across the waters around Denmark and southern Norway. Each sensor has its own detector and attribute model, including heading and speed read from Sentinel-2's band delay and wake, and the motion model is learned from historical AIS. The system was scored against full-rate Danish and Norwegian AIS that it never saw.</dd>
+              <dt>Result</dt>
+              <dd>Ships at anchor or in port were re-found in most weekly cases. Ships under way were re-found far less often, and the true next sighting was usually within a short ranked list of candidates. No published system was found that measures this problem, so the results stand as a first public baseline. Changes to the tracking algorithm did not improve the moving-ship result; adding sensors did, which points to more looks per day as the lever. Results are from an unpublished draft.</dd>
+            </dl>
+          </div>
+        </li>
+
+        <li class="work">
+          <div class="meta">
+            <p class="eyebrow">Research &middot; Synthetic aperture radar</p>
+            <p class="tags">CPU &middot; NVIDIA GPU &middot; Google TPU<br>C++ &middot; CUDA &middot; JAX Pallas<br>Open source, MIT license<br>Preprint, submitted to IEEE TGRS</p>
+          </div>
+          <div>
+            <h3>FastSAR: radar image formation on CPUs, GPUs and TPUs, compared on matched hardware</h3>
+            <dl>
+              <dt>Problem</dt>
+              <dd>Every radar satellite returns raw phase histories that must be formed into images, and the fleet is growing fast. The open-source image-formation codes had never been compared on the same hardware against a common reference, and none ran on TPUs.</dd>
+              <dt>What our principal built</dt>
+              <dd>A library that forms SAR images on CPUs, NVIDIA GPUs and Google TPUs through one Python interface: exact backprojection, factorized backprojection and polar format, in several floating-point precisions, reading CPHD, SICD, Sentinel-1 and NISAR data. Every configuration was scored against a high-precision reference and priced at on-demand cloud rates, so a user can pick the accuracy, speed and cost they need.</dd>
+              <dt>Result</dt>
+              <dd>Faster than every open-source implementation tested, by orders of magnitude in most cases, at equal or better accuracy. A full commercial spotlight image forms in seconds on the lowest-priced cloud GPU for a fraction of a cent, and the comparison shows which precision and device to choose for interferometric, radiometric or quick-look use. The code is public under the MIT license on <a href="https://github.com/saulpingerman/FastSAR">GitHub</a> and installs from <a href="https://pypi.org/project/fastsar/">PyPI</a>; the paper is on <a href="https://arxiv.org/abs/2610.33932">arXiv</a> and submitted to IEEE Transactions on Geoscience and Remote Sensing.</dd>
+            </dl>
+          </div>
+        </li>
+
+        <li class="work">
+          <div class="meta">
+            <p class="eyebrow">Research &middot; Vessel movement</p>
+            <p class="tags">Foundation model &middot; AIS<br>Under review</p>
+          </div>
+          <div>
+            <h3>A foundation model for where vessels go</h3>
+            <dl>
+              <dt>Problem</dt>
+              <dd>Forecasting where a vessel will be, and what it is doing, underlies collision avoidance, search and rescue, port planning and fisheries enforcement. Each of those tasks has had its own small model.</dd>
+              <dt>What our principal built</dt>
+              <dd>A single model pretrained on years of public AIS traffic that forecasts a vessel's position as a probability map at any horizon, with small task heads on the frozen model for the questions analysts ask of a track.</dd>
+              <dt>Status</dt>
+              <dd>A paper is under review. We can discuss the approach, not the results, until it is published.</dd>
+            </dl>
+          </div>
+        </li>
+
+        <li class="work">
+          <div class="meta">
+            <p class="eyebrow">Generative AI &middot; Navy UARC</p>
+            <p class="tags">Amazon Bedrock &middot; AWS GovCloud<br>Impact Level 4 &middot; CUI<br>Directory integration</p>
+          </div>
+          <div>
+            <h3>A retrieval-augmented generation system for Controlled Unclassified Information at a Navy University Affiliated Research Center</h3>
+            <dl>
+              <dt>Problem</dt>
+              <dd>The laboratory wanted its staff to use a language-model assistant over internal documents that are Controlled Unclassified Information.</dd>
+              <dt>What our principals did</dt>
+              <dd>Designed and delivered the system on Amazon Bedrock inside an Impact Level 4 AWS GovCloud environment, integrated with the laboratory's directory service (LDAP), with TLS on every connection.</dd>
+              <dt>Outcome</dt>
+              <dd>Delivered to production on the laboratory's controlled network.</dd>
+            </dl>
+          </div>
+        </li>
+
+        <li class="work">
+          <div class="meta">
+            <p class="eyebrow">Foundation models &middot; Geospatial</p>
+            <p class="tags">Model and training architecture<br>Data pipelines &middot; Compute planning</p>
+          </div>
+          <div>
+            <h3>Geospatial foundation models over overhead data</h3>
+            <dl>
+              <dt>Problem</dt>
+              <dd>A sponsor wanted foundation models trained on large volumes of overhead and geospatial data instead of one narrow model per task.</dd>
+              <dt>What our principals did</dt>
+              <dd>Served as architects for the modeling and training effort, working directly with vendor engineering teams at Google and NVIDIA on data pipelines, model design, and the compute plan.</dd>
+              <dt>What we took from it</dt>
+              <dd>The cluster-sizing and cost models we build now come from this work.</dd>
+            </dl>
+          </div>
+        </li>
+
+        <li class="work">
+          <div class="meta">
+            <p class="eyebrow">Acquisition &middot; Intelligence Community</p>
+            <p class="tags">About ten years<br>Requirements &middot; Source selection<br>BAA evaluation &middot; Training</p>
+          </div>
+          <div>
+            <h3>A decade inside Intelligence Community acquisition</h3>
+            <dl>
+              <dt>Role</dt>
+              <dd>Before Manifold, our principals spent about ten years inside Intelligence Community acquisition offices and research programs: one as a trusted agent at a Navy University Affiliated Research Center, the other as a systems engineering and technical assistance (SETA) contractor.</dd>
+              <dt>What that involved</dt>
+              <dd>Writing technical requirements, serving as evaluators on competitive source selections and Broad Agency Announcements, designing AI/ML training for sponsor staff, and briefing senior leadership on where to put money.</dd>
+              <dt>Why it matters</dt>
+              <dd>It is the experience behind the acquisition and assessment work above. We know what a contracting officer can and cannot do with a recommendation.</dd>
+            </dl>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 03 Approach -->
+  <section class="section" id="approach" aria-labelledby="approach-h">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">03 &nbsp;Approach</p>
+          <h2 id="approach-h">How we work</h2>
+        </div>
+        <p class="intro">We are a small firm and we run engagements like one. These are the rules we hold ourselves to.</p>
+      </div>
+
+      <ol class="approach">
+        <li>
+          <h3>The people you meet do the work.</h3>
+          <p>A founding principal scopes the engagement and does the work, then briefs it. Manifold has no bench, and nothing is handed to junior staff after the kickoff.</p>
+        </li>
+        <li>
+          <h3>A written scope and a fixed deliverable.</h3>
+          <p>Every engagement starts with a one-page scope and ends with something your office keeps, whether that is a report, a requirements package, or a working system. Typical engagements run from a few weeks to a few months.</p>
+        </li>
+        <li>
+          <h3>Sometimes the answer is not to build it.</h3>
+          <p>A fair share of our advice is that a problem is better handled with a rules engine, a database query, or a hire. When that is the case we say so early, because it is cheaper for you and better for the program.</p>
+        </li>
+        <li>
+          <h3>Current with the research, and with the hardware.</h3>
+          <p>We read the papers and run the models ourselves, so when a vendor says its model does something we can check. We can also tell you what it will cost each month to keep doing it.</p>
+        </li>
+        <li>
+          <h3>Cleared, and unclassified by default.</h3>
+          <p>Both principals hold TS/SCI clearances with counterintelligence polygraph and have worked in Intelligence Community spaces for years. Manifold holds no facility clearance of its own; classified work is performed on the customer's premises under the customer's or prime's contract. This site, our email, and first conversations are unclassified; please keep Controlled Unclassified Information and procurement-sensitive material out of both.</p>
+        </li>
+        <li>
+          <h3>No conflicts of interest.</h3>
+          <p>We advise or we build, never both for the same organization. Where we help write requirements or evaluate bids, we do not compete for the resulting work, and we take no referral or reseller fees from any vendor. That is what the word independent means on this page.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 04 Company -->
+  <section class="section alt" id="company" aria-labelledby="company-h">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">04 &nbsp;Company</p>
+          <h2 id="company-h">About Manifold</h2>
+        </div>
+      </div>
+
+      <div class="company-grid">
+        <div class="prose">
+          <p class="first">Manifold LLC is a Virginia small business formed by two practitioners who have spent their careers inside Intelligence Community research and acquisition.</p>
+          <p>We started the firm for a simple reason. The people deciding how to spend large sums on AI in government rarely have an advisor who has both worked an acquisition and trained a model. We have done both, and we intend to stay small enough to keep doing both ourselves.</p>
+          <p>The name comes from geometry. A manifold is a space that looks flat from any one point and is not flat as a whole. Most programs look fine from inside any one office.</p>
+
+          <h3>Working with us</h3>
+          <p>Program offices can engage us directly as a small business. Integrators and primes can bring us in as a subcontractor when a proposal or a program needs cleared AI/ML depth that is not on their staff. Either way, send a note and a principal will reply.</p>
+        </div>
+
+        <aside aria-label="Company data">
+          <dl class="datatable">
+            <div><dt>Legal name</dt><dd>Manifold LLC, a Virginia limited liability company formed March 2026</dd></div>
+            <div><dt>Location</dt><dd>Loudoun County, Virginia</dd></div>
+            <div><dt>Size</dt><dd>Small business</dd></div>
+            <div><dt>UEI</dt><dd><span class="nowrap">C6P2G6PQLEB8</span></dd></div>
+            <div><dt>CAGE</dt><dd>23X60</dd></div>
+            <div><dt>NAICS</dt><dd>541715, 541512, 541611, 541690</dd></div>
+            <div><dt>Clearances</dt><dd>TS/SCI with CI polygraph, both principals</dd></div>
+            <div><dt>Classified work</dt><dd>Performed on customer premises</dd></div>
+            <div><dt>Work</dt><dd>Direct award, subcontract, or teaming</dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:info@teammanifold.com">info@teammanifold.com</a></dd></div>
+          </dl>
+          <p class="datatable-note">A two-page capability statement is available as a <a href="manifold-capability-statement.pdf">PDF</a>.</p>
+        </aside>
+      </div>
+
+      <div class="principals-head">
+        <h3 id="principals-h">Principals</h3>
+        <p>Two founding principals. Both do the work described on this page.</p>
+      </div>
+      <div class="principals">
+        <article class="person">
+          <p class="eyebrow">Principal</p>
+          <h4>Paul G. Singerman, Ph.D.</h4>
+          <p>Paul is an Associate Research Professor at a Navy University Affiliated Research Center, where he leads the laboratory's largest AI/ML research program: a team of more than thirty engineers, funded at over ten million dollars a year, with a sole-source follow-on contract whose ceiling is above two hundred million dollars. Since 2023 he has also been the laboratory's on-site trusted agent to an Intelligence Community agency: he contributed to its five-year foundation-model roadmap, served as technical evaluator on five competitive acquisitions and on BAA panels, and coordinated an agency-wide AI/ML training curriculum. His research is in geospatial foundation models and multi-source data fusion.</p>
+          <p class="person-meta">Ph.D. electrical engineering and M.A. mathematics &middot; TS/SCI with counterintelligence polygraph</p>
+        </article>
+        <article class="person">
+          <p class="eyebrow">Principal</p>
+          <h4>John "Luke" Och</h4>
+          <p>Luke leads a team of ten systems engineering and technical assistance (SETA) engineers at a large defense integrator, supporting early-stage AI/ML initiatives for a national security space program: shaping acquisition strategies, writing technical requirements for more than ten low-maturity AI/ML capabilities, and setting the performance metrics and evaluation criteria behind investment decisions. Before that he spent five years there as a satellite ground systems engineer, running source selections from RFP development through proposal evaluation and contract negotiation. He has worked in Chantilly, Virginia, since 2015.</p>
+          <p class="person-meta">Regents Bachelor of Arts, West Virginia University (mathematics and communications) &middot; SAFe Agilist &middot; TS/SCI with counterintelligence polygraph</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 Contact -->
+  <section class="section" id="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">05 &nbsp;Contact</p>
+          <h2 id="contact-h">Tell us what you are working on</h2>
+        </div>
+        <p class="intro">A principal reads every message and replies personally. A rough description is enough; details can wait for a call.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!--
+          Delivery: Web3Forms (https://web3forms.com). Create a free access key for info@teammanifold.com
+          and paste it into data-access-key below; the script then posts to data-endpoint. Until a real key
+          is present the form falls back to opening the visitor's mail client with the message pre-filled,
+          and the action stays on this page so nothing is sent anywhere without JavaScript.
+        -->
+        <form class="form" id="contact-form" method="POST" action="#contact" data-endpoint="https://api.web3forms.com/submit" data-access-key="REPLACE_WITH_WEB3FORMS_ACCESS_KEY" novalidate>
+          <input type="hidden" name="subject" value="Inquiry from manifold-llc.com">
+          <input type="hidden" name="from_name" value="manifold-llc.com contact form">
+          <div class="row">
+            <div class="field">
+              <label for="f-name">Name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-err">
+              <p class="err" id="f-name-err"></p>
+            </div>
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="f-email-err">
+              <p class="err" id="f-email-err"></p>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-org">Organization <span class="opt">(optional)</span></label>
+            <input id="f-org" name="organization" type="text" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="f-msg">Message</label>
+            <textarea id="f-msg" name="message" required maxlength="1500" aria-describedby="f-msg-err"></textarea>
+            <p class="err" id="f-msg-err"></p>
+          </div>
+          <div class="hp" aria-hidden="true">
+            <label for="f-botcheck">Do not check this box</label>
+            <input id="f-botcheck" type="checkbox" name="botcheck" tabindex="-1">
+          </div>
+          <div class="foot">
+            <button class="btn btn-primary" type="submit">Send message</button>
+            <p class="status" role="status" aria-live="polite"></p>
+          </div>
+          <p class="fine">Messages are delivered by Web3Forms, a form service, and are used only to reply to you.</p>
+          <noscript><p class="fine">This form needs JavaScript. You can also write to <a href="mailto:info@teammanifold.com">info@teammanifold.com</a>.</p></noscript>
+        </form>
+
+        <aside class="contact-aside" aria-label="Contact details">
+          <dl class="datatable">
+            <div><dt>Email</dt><dd><a href="mailto:info@teammanifold.com">info@teammanifold.com</a></dd></div>
+            <div><dt>Location</dt><dd>Loudoun County, Virginia<br><span class="muted">Eastern time</span></dd></div>
+          </dl>
+          <div class="note">
+            <strong>Good first messages</strong> say which office or program you are in and what decision is in front of you. A paragraph is plenty. Please keep Controlled Unclassified Information and procurement-sensitive detail out of this form.
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="left">
+      <svg aria-hidden="true"><use href="#mark"></use></svg>
+      <span>&copy; <span id="year">2026</span> Manifold LLC. Loudoun County, Virginia.</span>
+    </div>
+    <ul>
+      <li><a href="manifold-capability-statement.pdf">Capability statement</a></li>
+      <li><a href="mailto:info@teammanifold.com">info@teammanifold.com</a></li>
+    </ul>
+    <p class="colophon">This site sets no cookies and runs no analytics or third-party scripts. The contact form is delivered by Web3Forms.</p>
+  </div>
+</footer>
+
+<script src="assets/js/site.js" defer></script>
+</body>
 </html>
