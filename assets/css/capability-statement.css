@@ -1,6 +1,6 @@
-/* Capability statement: print-first layout for a US Letter one-pager.
+/* Capability statement: print-first layout for two US Letter pages.
    The PDF in the repo root is rendered from capability-statement.html with this sheet. */
-@page { size: Letter; margin: 0.45in 0.55in; }
+@page { size: Letter; margin: 0.4in 0.55in; }
 body { background: #fff; font-size: 9pt; line-height: 1.36; color: var(--ink); }
 .sheet { max-width: 8.5in; margin: 0 auto; padding: 0.4in 0.5in 0.3in; background: #fff; }
 @media screen {
@@ -10,8 +10,8 @@ body { background: #fff; font-size: 9pt; line-height: 1.36; color: var(--ink); }
 .cs-head .brand { padding: 0; }
 .cs-head .brand .word { font-size: 1.55rem; }
 .cs-head .right { text-align: right; font-family: var(--mono); font-weight: 500; font-size: 0.7rem; color: var(--ink-3); line-height: 1.6; }
-.cs-title { font-family: var(--serif); font-size: 1.25rem; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 0.25rem; }
-.cs-sub { color: var(--ink-2); font-size: 0.9rem; max-width: 56em; margin-bottom: 0.55rem; }
+.cs-title { font-family: var(--serif); font-size: 1.25rem; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 0.2rem; }
+.cs-sub { color: var(--ink-2); font-size: 0.86rem; max-width: 60em; margin-bottom: 0.5rem; }
 .cols { display: grid; grid-template-columns: 1.35fr 1fr; gap: 0.7rem 1.4rem; }
 .cols-2 { grid-template-columns: 1.15fr 1fr; gap: 0.5rem 1.4rem; }
 .cols-2 .pp .entry { margin-bottom: 0.3rem; }
@@ -30,7 +30,10 @@ body { background: #fff; font-size: 9pt; line-height: 1.36; color: var(--ink); }
 .kv { display: grid; grid-template-columns: 6.6rem 1fr; gap: 0.12rem 0.6rem; font-size: 0.9rem; }
 .kv dt { font-family: var(--mono); font-weight: 500; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); padding-top: 0.18rem; }
 .kv dd { margin: 0; }
-.pp .entry { margin-bottom: 0.4rem; }
+.pp .entry { margin-bottom: 0.3rem; break-inside: avoid; }
+.block.pp { break-inside: auto; }
+.cols .pp .entry p { font-size: 0.84rem; line-height: 1.3; }
+.block p.small { font-size: 0.78rem; color: var(--ink-3); }
 .pp .entry .tag { font-family: var(--mono); font-weight: 500; font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
 .cs-foot { margin-top: 0.4rem; border-top: 1px solid var(--rule-strong); padding-top: 0.5rem; display: flex; justify-content: space-between; font-family: var(--mono); font-weight: 500; font-size: 0.7rem; color: var(--ink-3); }
 .screen-only { font-size: 0.9rem; color: var(--ink-2); text-align: center; margin: 1.5rem 1rem -1rem; }

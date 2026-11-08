@@ -22,6 +22,11 @@ Notable changes to manifold-llc.com. The format follows [Keep a Changelog](https
 - Contact copy asks visitors to keep Controlled Unclassified Information and procurement-sensitive detail out of the form, and names the form service.
 
 ### Changed (evening)
+- Review fixes: Luke's bio names Northern Virginia rather than the town; the conflict-of-interest item says the firm does not pursue work where a member serves as a trusted agent or evaluator; the approach section discloses the founders' positions at Penn State ARL and SAIC; the capabilities intro says the delivery half of Secure generative AI is building; the manifold sentence says "need not be flat"; the dark-vessel note says the results "would be" a first public baseline once published.
+- Share image regenerated with the current headline and all five capabilities.
+- Capability statement: Past performance moved to page one with a Contract vehicles row; page two is Research and Principals; URLs are live links; PDF Author metadata set.
+- A numbered index of the six case notes at the top of Selected work, with anchors on each note.
+- Referrer-Policy meta tag on every page.
 - Founder-centric wording replaced with wording that survives hiring: "senior practitioners" deliver the work, "everyone at the firm" is cleared, past work is "led by the people who founded Manifold". Capability statement PDF re-rendered.
 - Contact form now delivers through Web3Forms (account info@manifold-llc.com). The mail-link fallback remains for visitors without JavaScript.
 - Every published address is now info@manifold-llc.com.

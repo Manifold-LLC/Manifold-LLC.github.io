@@ -2,6 +2,7 @@
 // Usage: serve the repo root on port 8000 (python3 -m http.server 8000), then: node scripts/render.js
 const { chromium } = require('playwright');
 const fs = require('fs');
+const { execFileSync } = require('child_process');
 const BASE = process.env.BASE || 'http://localhost:8000';
 (async () => {
   const browser = await chromium.launch();
@@ -9,6 +10,7 @@ const BASE = process.env.BASE || 'http://localhost:8000';
   await page.goto(`${BASE}/capability-statement.html`, { waitUntil: 'networkidle' });
   await page.emulateMedia({ media: 'print' });
   await page.pdf({ path: 'manifold-capability-statement.pdf', format: 'Letter', printBackground: true, preferCSSPageSize: true, tagged: true });
+  execFileSync('python3', ['scripts/pdf-metadata.py', 'manifold-capability-statement.pdf']);
   const pdf = fs.readFileSync('manifold-capability-statement.pdf', 'latin1');
   const m = pdf.match(/\/Count (\d+)/);
   if (!m || m[1] !== '2') { console.error(`PDF has ${m ? m[1] : '?'} pages; it must be two.`); process.exit(1); }
