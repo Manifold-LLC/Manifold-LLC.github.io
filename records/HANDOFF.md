@@ -11,7 +11,7 @@ Live state of the site. Update whenever any of this changes.
 - Registrations: SAM.gov active since 2026-08-21, annual renewal due 2027-08-10. Loudoun County business license and business personal property filings due by 2027-03-01 each year.
 - Brand: the logo mark is the "Manifold_Symbol_Master.svg" from the Drive folder "MANIFOLD Symbols SVG", cropped to its bounding box and inlined as an SVG symbol. `assets/img/mark.svg` is a standalone copy.
 - Access: pushing needs Write on the repository or Owner on the `Manifold-LLC` organization. Check with `gh api repos/Manifold-LLC/Manifold-LLC.github.io --jq .permissions` before starting work.
-- Form service: Web3Forms, not yet configured. Create the access key for info@manifold-llc.com; the form falls back to `mailto:` until the key in `index.html` is replaced.
+- Form service: Web3Forms, free plan, account info@manifold-llc.com, form "manifold-llc.com contact". The public access key is in `index.html`; submissions are emailed to the account address. Dashboard: app.web3forms.com.
 - Checks: `.github/workflows/checks.yml` runs html-validate, a link check, the banned-pattern grep, a facts grep, the security.txt expiry check and the PDF page count on every pull request.
 
 ## Check and fix

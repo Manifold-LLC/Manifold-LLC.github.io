@@ -444,12 +444,11 @@
 
       <div class="contact-grid">
         <!--
-          Delivery: Web3Forms (https://web3forms.com). Create a free access key for info@manifold-llc.com
-          and paste it into data-access-key below; the script then posts to data-endpoint. Until a real key
-          is present the form falls back to opening the visitor's mail client with the message pre-filled,
-          and the action stays on this page so nothing is sent anywhere without JavaScript.
+          Delivery: Web3Forms (account info@manifold-llc.com, form "manifold-llc.com contact"). The script
+          posts to data-endpoint with the public access key in data-access-key. The action stays on this
+          page so nothing is sent anywhere without JavaScript; the noscript line offers a mail link instead.
         -->
-        <form class="form" id="contact-form" method="POST" action="#contact" data-endpoint="https://api.web3forms.com/submit" data-access-key="REPLACE_WITH_WEB3FORMS_ACCESS_KEY" novalidate>
+        <form class="form" id="contact-form" method="POST" action="#contact" data-endpoint="https://api.web3forms.com/submit" data-access-key="90aa0f86-23a0-4580-89ca-53eff2cb9dd6" novalidate>
           <input type="hidden" name="subject" value="Inquiry from manifold-llc.com">
           <input type="hidden" name="from_name" value="manifold-llc.com contact form">
           <div class="row">

@@ -56,5 +56,8 @@ Owner decisions. Naming Penn State ARL and SAIC in the bios is fine, so the name
 ## 2026-11-08 | Published address precedes the mailbox
 Owner decision. info@manifold-llc.com stays on the site while the Owner adds manifold-llc.com as a Workspace domain alias. The maintainer had switched the address on a misread of "exists"; the Owner chose to keep it rather than revert.
 
+## 2026-11-08 | Contact form delivery through Web3Forms
+Owner set up the account under info@manifold-llc.com on the free plan and supplied the public access key. The key is in the page by design; the service's own docs say so.
+
 ## 2026-11-08 | Commits are authored by the Owner's named person with no tooling trailers
 Owner instruction.
