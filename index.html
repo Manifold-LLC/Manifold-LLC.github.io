@@ -85,9 +85,9 @@
     <div class="wrap">
       <div class="hero-grid">
         <div>
-          <p class="eyebrow">Northern Virginia &middot; AI/ML advice and engineering &middot; Cleared principals</p>
+          <p class="eyebrow">Northern Virginia &middot; AI/ML advice and engineering &middot; Cleared practitioners</p>
           <h1>Independent AI/ML advice and engineering for intelligence and defense programs.</h1>
-          <p class="lead">Manifold is a small Virginia firm run by two cleared practitioners with about ten years each inside Intelligence Community acquisition and research programs. We help program offices decide whether to build or buy, and how to get the result running on accredited networks. When the answer is build, we can do the building, though never for an organization we also advise.</p>
+          <p class="lead">Manifold is a small Virginia firm of cleared practitioners who have spent about ten years each inside Intelligence Community acquisition and research programs. We help program offices decide whether to build or buy, and how to get the result running on accredited networks. When the answer is build, we can do the building, though never for an organization we also advise.</p>
           <div class="actions">
             <a class="btn btn-primary" href="#contact">Start a conversation</a>
             <a class="btn btn-ghost" href="manifold-capability-statement.pdf">Capability statement (PDF)</a>
@@ -106,11 +106,11 @@
         </div>
         <div>
           <dt>Delivery</dt>
-          <dd>By the founding principals, start to finish</dd>
+          <dd>Senior practitioners, start to finish</dd>
         </div>
         <div>
           <dt>Clearances</dt>
-          <dd>TS/SCI with CI polygraph, both principals</dd>
+          <dd>TS/SCI with CI polygraph, everyone at the firm</dd>
         </div>
         <div>
           <dt>Reach us</dt>
@@ -216,9 +216,9 @@
       <div class="section-head">
         <div>
           <p class="eyebrow">02 &nbsp;Selected work</p>
-          <h2 id="work-h">Work our principals have led</h2>
+          <h2 id="work-h">Selected work</h2>
         </div>
-        <p class="intro">Research and delivery our principals have led. Some of it predates the firm, and sponsor names are withheld. We are glad to go into detail in conversation.</p>
+        <p class="intro">Research and delivery led by the people who founded Manifold. Some of it predates the firm, and sponsor names are withheld. We are glad to go into detail in conversation.</p>
       </div>
 
       <ol class="work-list">
@@ -232,7 +232,7 @@
             <dl>
               <dt>Problem</dt>
               <dd>Vessels involved in illegal fishing, sanctions evasion and smuggling switch off AIS, the transponder that reports a ship's identity and position. Satellites still see them, but passes are hours apart, and by the next one a moving ship can be any of many unexplained detections.</dd>
-              <dt>What our principal built</dt>
+              <dt>What was built</dt>
               <dd>A tracker that links detections from public radar, optical and night-light sensors (Sentinel-1 and NISAR, Sentinel-2 and Landsat, VIIRS) across the waters around Denmark and southern Norway. Each sensor has its own detector and attribute model, including heading and speed read from Sentinel-2's band delay and wake, and the motion model is learned from historical AIS. The system was scored against full-rate Danish and Norwegian AIS that it never saw.</dd>
               <dt>Result</dt>
               <dd>Ships at anchor or in port were re-found in most weekly cases. Ships under way were re-found far less often, and the true next sighting was usually within a short ranked list of candidates. No published system was found that measures this problem, so the results stand as a first public baseline. Changes to the tracking algorithm did not improve the moving-ship result; adding sensors did, which points to more looks per day as the lever. Results are from an unpublished draft.</dd>
@@ -250,7 +250,7 @@
             <dl>
               <dt>Problem</dt>
               <dd>Every radar satellite returns raw phase histories that must be formed into images, and the fleet is growing fast. The open-source image-formation codes had never been compared on the same hardware against a common reference, and none ran on TPUs.</dd>
-              <dt>What our principal built</dt>
+              <dt>What was built</dt>
               <dd>A library that forms SAR images on CPUs, NVIDIA GPUs and Google TPUs through one Python interface: exact backprojection, factorized backprojection and polar format, in several floating-point precisions, reading CPHD, SICD, Sentinel-1 and NISAR data. Every configuration was scored against a high-precision reference and priced at on-demand cloud rates, so a user can pick the accuracy, speed and cost they need.</dd>
               <dt>Result</dt>
               <dd>Faster than every open-source implementation tested, by orders of magnitude in most cases, at equal or better accuracy. A full commercial spotlight image forms in seconds on the lowest-priced cloud GPU for a fraction of a cent, and the comparison shows which precision and device to choose for interferometric, radiometric or quick-look use. Written with a co-author at Penn State's Applied Research Laboratory. The code is public under the MIT license on <a href="https://github.com/saulpingerman/FastSAR">GitHub</a> and installs from <a href="https://pypi.org/project/fastsar/">PyPI</a>; the paper is on <a href="https://arxiv.org/abs/2610.33932">arXiv</a> and submitted to IEEE Transactions on Geoscience and Remote Sensing.</dd>
@@ -268,7 +268,7 @@
             <dl>
               <dt>Problem</dt>
               <dd>Forecasting where a vessel will be, and what it is doing, underlies collision avoidance, search and rescue, port planning and fisheries enforcement. Each of those tasks has had its own small model.</dd>
-              <dt>What our principal built</dt>
+              <dt>What was built</dt>
               <dd>A single model pretrained on years of public AIS traffic that forecasts a vessel's position as a probability map at any horizon, with small task heads on the frozen model for the questions analysts ask of a track.</dd>
               <dt>Status</dt>
               <dd>A paper is under review. We can discuss the approach, not the results, until it is published.</dd>
@@ -286,7 +286,7 @@
             <dl>
               <dt>Problem</dt>
               <dd>The laboratory wanted its staff to use a language-model assistant over internal documents that are Controlled Unclassified Information.</dd>
-              <dt>What our principals did</dt>
+              <dt>What was done</dt>
               <dd>Designed and delivered the system on Amazon Bedrock inside an Impact Level 4 AWS GovCloud environment, integrated with the laboratory's directory service (LDAP), with TLS on every connection.</dd>
               <dt>Outcome</dt>
               <dd>Delivered to production on the laboratory's controlled network.</dd>
@@ -304,7 +304,7 @@
             <dl>
               <dt>Problem</dt>
               <dd>A sponsor wanted foundation models trained on large volumes of overhead and geospatial data instead of one narrow model per task.</dd>
-              <dt>What our principals did</dt>
+              <dt>What was done</dt>
               <dd>Served as architects for the modeling and training effort, working directly with vendor engineering teams at Google and NVIDIA on data pipelines, model design, and the compute plan.</dd>
               <dt>What we took from it</dt>
               <dd>The cluster-sizing and cost models we build now come from this work.</dd>
@@ -321,7 +321,7 @@
             <h3>A decade inside Intelligence Community acquisition</h3>
             <dl>
               <dt>Role</dt>
-              <dd>Before Manifold, our principals spent about ten years inside Intelligence Community acquisition offices and research programs: one as a trusted agent at a Navy University Affiliated Research Center, the other as a systems engineering and technical assistance (SETA) contractor.</dd>
+              <dd>Before Manifold, the firm's founders spent about ten years inside Intelligence Community acquisition offices and research programs: one as a trusted agent at a Navy University Affiliated Research Center, the other as a systems engineering and technical assistance (SETA) contractor.</dd>
               <dt>What that involved</dt>
               <dd>Writing technical requirements, serving as evaluators on competitive source selections and Broad Agency Announcements, designing AI/ML training for sponsor staff, and briefing senior leadership on where to put money.</dd>
               <dt>Why it matters</dt>
@@ -347,7 +347,7 @@
       <ol class="approach">
         <li>
           <h3>The people you meet do the work.</h3>
-          <p>A founding principal scopes the engagement and does the work, then briefs it. Manifold has no bench, and nothing is handed to junior staff after the kickoff.</p>
+          <p>The practitioner who scopes an engagement does the work and briefs it. Nothing is handed to junior staff after the kickoff, and nobody is proposed to you who will not be in the room.</p>
         </li>
         <li>
           <h3>A written scope and a fixed deliverable.</h3>
@@ -363,7 +363,7 @@
         </li>
         <li>
           <h3>Cleared, and unclassified by default.</h3>
-          <p>Both principals hold TS/SCI clearances with counterintelligence polygraph and have worked in Intelligence Community spaces for years. Manifold holds no facility clearance of its own; classified work is performed on the customer's premises under the customer's or prime's contract. This site, our email, and first conversations are unclassified; please keep Controlled Unclassified Information and procurement-sensitive material out of both.</p>
+          <p>Everyone at Manifold holds a TS/SCI clearance with counterintelligence polygraph and has worked in Intelligence Community spaces for years. Manifold holds no facility clearance of its own; classified work is performed on the customer's premises under the customer's or prime's contract. This site, our email, and first conversations are unclassified; please keep Controlled Unclassified Information and procurement-sensitive material out of both.</p>
         </li>
         <li>
           <h3>No conflicts of interest.</h3>
@@ -385,12 +385,12 @@
 
       <div class="company-grid">
         <div class="prose">
-          <p class="first">Manifold LLC is a Virginia small business formed by two practitioners who have spent their careers inside Intelligence Community research and acquisition.</p>
-          <p>We started the firm for a simple reason. The people deciding how to spend large sums on AI in government rarely have an advisor who has both worked an acquisition and trained a model. We have done both, and we intend to stay small enough to keep doing both ourselves.</p>
+          <p class="first">Manifold LLC is a Virginia small business founded by two practitioners who have spent their careers inside Intelligence Community research and acquisition.</p>
+          <p>We started the firm for a simple reason. The people deciding how to spend large sums on AI in government rarely have an advisor who has both worked an acquisition and trained a model. We have done both, and that pairing is the standard for everyone who works here.</p>
           <p>The name comes from geometry. A manifold is a space that looks flat from any one point and is not flat as a whole. Most programs look fine from inside any one office.</p>
 
           <h3>Working with us</h3>
-          <p>Program offices can engage us directly as a small business. Integrators and primes can bring us in as a subcontractor when a proposal or a program needs cleared AI/ML depth that is not on their staff. Either way, send a note and a principal will reply.</p>
+          <p>Program offices can engage us directly as a small business. Integrators and primes can bring us in as a subcontractor when a proposal or a program needs cleared AI/ML depth that is not on their staff. Either way, send a note and a senior practitioner will reply.</p>
         </div>
 
         <aside aria-label="Company data">
@@ -401,7 +401,7 @@
             <div><dt>UEI</dt><dd><span class="nowrap">C6P2G6PQLEB8</span></dd></div>
             <div><dt>CAGE</dt><dd>23X60</dd></div>
             <div><dt>NAICS</dt><dd>541715, 541512, 541611, 541690</dd></div>
-            <div><dt>Clearances</dt><dd>TS/SCI with CI polygraph, both principals</dd></div>
+            <div><dt>Clearances</dt><dd>TS/SCI with CI polygraph, everyone at the firm</dd></div>
             <div><dt>Classified work</dt><dd>Performed on customer premises</dd></div>
             <div><dt>Work</dt><dd>Direct award, subcontract, or teaming</dd></div>
             <div><dt>Email</dt><dd><a href="mailto:info@manifold-llc.com">info@manifold-llc.com</a></dd></div>
@@ -412,7 +412,7 @@
 
       <div class="principals-head">
         <h3 id="principals-h">Principals</h3>
-        <p>Two founding principals. Both do the work described on this page.</p>
+        <p>The two founders of the firm. Both lead engagements.</p>
       </div>
       <div class="principals">
         <article class="person">
@@ -439,7 +439,7 @@
           <p class="eyebrow">05 &nbsp;Contact</p>
           <h2 id="contact-h">Tell us what you are working on</h2>
         </div>
-        <p class="intro">A principal reads every message and replies personally. A rough description is enough; details can wait for a call.</p>
+        <p class="intro">A person reads every message and replies personally. A rough description is enough; details can wait for a call.</p>
       </div>
 
       <div class="contact-grid">
