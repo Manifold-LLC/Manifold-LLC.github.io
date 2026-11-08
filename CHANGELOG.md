@@ -21,6 +21,10 @@ Notable changes to manifold-llc.com. The format follows [Keep a Changelog](https
 - Clearance wording: principals hold TS/SCI; classified discussion happens only under a sponsoring contract in the sponsor's spaces. Clearance moved out of the first hero fact.
 - Contact copy asks visitors to keep Controlled Unclassified Information and procurement-sensitive detail out of the form, and names the form service.
 
+### Changed (evening)
+- Current employers in the bios made generic pending confirmation of outside-activity rules.
+- FastSAR now links to its GitHub repository, PyPI package and arXiv preprint.
+
 ### Removed
 - The phone number, on the Owner's instruction. Email is the contact channel.
 - Template files `elements.html`, `generic.html`, `README.txt`, `LICENSE.txt`, `assets/sass/`, jQuery and plugins, Font Awesome and its webfonts, and nine stock photographs (about 8 MB). With the last template file gone, the "Design: HTML5 UP" footer credit is removed in the same commit.

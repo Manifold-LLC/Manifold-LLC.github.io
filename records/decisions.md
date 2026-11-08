@@ -44,5 +44,8 @@ Maintainer decision. With five competencies, five experience entries and two bio
 ## 2026-11-08 | No phone number on the site
 Owner decision. Email is the only published contact channel. The number removed from the page, the PDF, the structured data and the CI check.
 
+## 2026-11-08 | Sponsor agency stays unnamed; employers generic for now; FastSAR linked
+Owner decisions. The public site keeps "an Intelligence Community agency" rather than naming the sponsor. Current employers are described generically until the Owner confirms outside-activity rules. FastSAR is linked to its GitHub repository, PyPI package and arXiv preprint, and described as submitted to IEEE TGRS. Counts in the bios stay.
+
 ## 2026-11-08 | Commits are authored by the Owner's named person with no tooling trailers
 Owner instruction.

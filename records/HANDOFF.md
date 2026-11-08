@@ -23,10 +23,8 @@ npx html-validate@11 index.html capability-statement.html 404.html
 ```
 
 ## Open question
-- Whether to name the sponsor agency on the site, as the July 2026 capability statement does.
-- Whether naming the principals' current employers is permitted under their outside-activity rules.
+- Whether naming the principals' current employers is permitted under their outside-activity rules. Until then the bios say "a Navy University Affiliated Research Center" and "a large defense integrator".
 - NAICS codes are from the July 2026 capability statement; confirm against the SAM record.
-- FastSAR: is the code public, and is the paper submitted, under review or accepted? The site says "written for" the journal and does not claim the code is available.
 - When the review of the trajectory model ends, its case note can be made specific. Owner's standing rule: no numbers from any of the three research projects on the site or in this repository.
 
 ## Traps
