@@ -1,0 +1,4 @@
+Contact: mailto:info@teammanifold.com
+Expires: 2027-11-08T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://manifold-llc.com/.well-known/security.txt

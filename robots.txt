@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://manifold-llc.com/sitemap.xml
