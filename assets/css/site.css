@@ -10,32 +10,11 @@
   src: url("../fonts/newsreader-latin-wght-normal.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Newsreader";
-  font-style: italic;
-  font-weight: 200 800;
-  font-display: swap;
-  src: url("../fonts/newsreader-latin-wght-italic.woff2") format("woff2");
-}
-@font-face {
   font-family: "IBM Plex Sans";
   font-style: normal;
   font-weight: 100 700;
   font-display: swap;
   src: url("../fonts/ibm-plex-sans-latin-wght-normal.woff2") format("woff2");
-}
-@font-face {
-  font-family: "IBM Plex Sans";
-  font-style: italic;
-  font-weight: 100 700;
-  font-display: swap;
-  src: url("../fonts/ibm-plex-sans-latin-wght-italic.woff2") format("woff2");
-}
-@font-face {
-  font-family: "IBM Plex Mono";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("../fonts/ibm-plex-mono-latin-400-normal.woff2") format("woff2");
 }
 @font-face {
   font-family: "IBM Plex Mono";
@@ -52,9 +31,9 @@
   --card: #fbfaf7;
   --ink: #16181d;
   --ink-2: #474b54;
-  --ink-3: #767a83;
+  --ink-3: #62666f;
   --rule: #d9d5cb;
-  --rule-strong: #b9b4a7;
+  --rule-strong: #8f8a7e;
   --accent: #1e3a5f;
   --accent-deep: #142a46;
   --accent-tint: #e6ebf2;
@@ -135,17 +114,19 @@ button, input, textarea { font: inherit; color: inherit; }
   color: var(--ink-3);
   font-weight: 500;
 }
-.serif { font-family: var(--serif); }
 .num {
   font-family: var(--mono);
+  font-weight: 500;
   font-variant-numeric: tabular-nums;
 }
+.nowrap { white-space: nowrap; }
 
 /* ---------- Header ---------- */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 50;
+  background: var(--paper);
   background: color-mix(in srgb, var(--paper) 92%, transparent);
   backdrop-filter: saturate(140%) blur(8px);
   -webkit-backdrop-filter: saturate(140%) blur(8px);
@@ -180,6 +161,7 @@ button, input, textarea { font: inherit; color: inherit; }
   font-family: var(--mono);
   font-size: 0.68rem;
   font-weight: 500;
+  color: var(--ink-3);
   letter-spacing: 0.08em;
   color: var(--ink-3);
   margin-left: 0.55rem;
@@ -211,11 +193,12 @@ button, input, textarea { font: inherit; color: inherit; }
 @media (max-width: 760px) {
   .site-header .wrap { min-height: 0; padding-bottom: 0.5rem; }
   .brand { padding: 0.65rem 0 0.2rem; }
+  html { scroll-padding-top: 7rem; }
   .site-nav {
     width: 100%;
     overflow-x: auto;
     gap: 1.25rem;
-    padding-bottom: 0.35rem;
+    padding: 0.25rem 0 0.4rem;
     scrollbar-width: none;
     font-size: 0.88rem;
   }
@@ -280,10 +263,11 @@ button, input, textarea { font: inherit; color: inherit; }
 }
 .hero .actions { display: flex; flex-wrap: wrap; gap: 0.75rem 1rem; align-items: center; }
 .hero-figure { position: relative; }
-.hero-figure svg, .hero-figure img { width: 100%; height: auto; }
+.hero-figure img { width: 100%; height: auto; }
 .hero-figure figcaption {
   margin-top: 0.8rem;
   font-family: var(--mono);
+  font-weight: 500;
   font-size: 0.72rem;
   color: var(--ink-3);
   letter-spacing: 0.02em;
@@ -320,12 +304,18 @@ button, input, textarea { font: inherit; color: inherit; }
   font-weight: 500;
   margin-bottom: 0.35rem;
 }
-.facts dd { margin: 0; font-size: 0.98rem; line-height: 1.4; }
+.facts dd { margin: 0; font-size: 0.98rem; line-height: 1.4; overflow-wrap: anywhere; }
 .facts dd a { text-decoration: none; border-bottom: 1px solid var(--rule-strong); }
 @media (max-width: 760px) {
   .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .facts > div:nth-child(3) { border-left: 0; padding-left: 0; }
   .facts > div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+}
+@media (max-width: 400px) {
+  .facts { grid-template-columns: 1fr; }
+  .facts > div { border-left: 0; padding-left: 0; }
+  .facts > div:nth-child(n+2) { border-top: 1px solid var(--rule); }
+  .datatable > div { grid-template-columns: 6rem minmax(0, 1fr); }
 }
 
 /* ---------- Sections ---------- */
@@ -409,7 +399,7 @@ button, input, textarea { font: inherit; color: inherit; }
 }
 .work .meta { display: flex; flex-direction: column; gap: 0.5rem; }
 .work .meta .eyebrow { color: var(--accent); }
-.work .meta .tags { font-family: var(--mono); font-size: 0.74rem; color: var(--ink-3); line-height: 1.7; }
+.work .meta .tags { font-family: var(--mono); font-weight: 500; font-size: 0.74rem; color: var(--ink-3); line-height: 1.7; }
 .work h3 {
   font-family: var(--serif);
   font-size: clamp(1.4rem, 2.2vw, 1.8rem);
@@ -421,6 +411,7 @@ button, input, textarea { font: inherit; color: inherit; }
 .work dl { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); gap: 0.6rem 1.25rem; }
 .work dt {
   font-family: var(--mono);
+  font-weight: 500;
   font-size: 0.72rem;
   letter-spacing: 0.07em;
   text-transform: uppercase;
@@ -454,6 +445,7 @@ button, input, textarea { font: inherit; color: inherit; }
   content: counter(approach, decimal-leading-zero);
   display: block;
   font-family: var(--mono);
+  font-weight: 500;
   font-size: 0.76rem;
   color: var(--ink-3);
   letter-spacing: 0.06em;
@@ -502,13 +494,14 @@ button, input, textarea { font: inherit; color: inherit; }
 }
 .datatable dt {
   font-family: var(--mono);
+  font-weight: 500;
   font-size: 0.7rem;
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: var(--ink-3);
   padding-top: 0.25rem;
 }
-.datatable dd { margin: 0; }
+.datatable dd { margin: 0; overflow-wrap: anywhere; }
 .datatable dd .muted { color: var(--ink-3); }
 .datatable-note { margin-top: 0.9rem; font-size: 0.86rem; color: var(--ink-3); }
 @media (max-width: 860px) {
@@ -543,6 +536,9 @@ button, input, textarea { font: inherit; color: inherit; }
   box-shadow: 0 0 0 3px var(--accent-tint);
 }
 .field textarea { min-height: 9rem; resize: vertical; }
+.field input[aria-invalid="true"], .field textarea[aria-invalid="true"] { border-color: var(--warn); }
+.field .err { font-size: 0.84rem; color: var(--warn); min-height: 0; }
+.field .err:empty { display: none; }
 .form .foot { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.25rem; }
 .form .status { font-size: 0.92rem; color: var(--ink-2); min-height: 1.4em; }
 .form .status.ok { color: var(--ok); }
@@ -603,4 +599,7 @@ button, input, textarea { font: inherit; color: inherit; }
   body { background: #fff; color: #000; font-size: 11pt; }
   .section { padding: 1.5rem 0; border: 0; }
   a { text-decoration: none; color: inherit; }
+  .eyebrow, h2, h3, .section-head { break-after: avoid; }
+  .cap, .approach li, .work, .datatable > div, .contact-aside .note { break-inside: avoid; }
+  .hero-figure { max-width: 50%; }
 }

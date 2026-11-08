@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self' https://api.web3forms.com; manifest-src 'self'; upgrade-insecure-requests">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Manifold LLC | AI/ML advisory for intelligence and defense programs</title>
-  <meta name="description" content="Manifold LLC is a small, cleared AI/ML consultancy in Northern Virginia. We advise Intelligence Community and Department of Defense programs on foundation-model strategy, acquisition and compute, program assessment, and secure generative AI on accredited networks.">
+  <title>Manifold LLC | AI/ML advisory for intelligence and defense</title>
+  <meta name="description" content="A small, cleared AI/ML consultancy in Northern Virginia. We advise Intelligence Community and Department of Defense programs on strategy, acquisition, compute, and secure generative AI.">
   <link rel="canonical" href="https://manifold-llc.com/">
   <meta name="theme-color" content="#f6f4ee">
   <meta name="color-scheme" content="light">
@@ -20,11 +21,12 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <link rel="preload" href="assets/fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/ibm-plex-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/ibm-plex-mono-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/site.css">
 
   <script type="application/ld+json">
@@ -33,6 +35,8 @@
     "@type": "ProfessionalService",
     "name": "Manifold LLC",
     "url": "https://manifold-llc.com/",
+    "image": "https://manifold-llc.com/assets/img/og.png",
+    "logo": "https://manifold-llc.com/apple-touch-icon.png",
     "email": "info@teammanifold.com",
     "telephone": "+1-703-436-1308",
     "description": "Independent AI/ML advisory for Intelligence Community and Department of Defense programs: strategy and roadmaps, acquisition and compute planning, program assessment, and secure generative AI deployment.",
@@ -51,9 +55,9 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="/" aria-label="Manifold LLC, home">
+    <a class="brand" href="/">
       <svg aria-hidden="true"><use href="#mark"></use></svg>
-      <span class="word">Manifold<small>LLC</small></span>
+      <span class="word">Manifold <small>LLC</small></span><span class="sr-only">, home</span>
     </a>
     <nav class="site-nav" aria-label="Primary">
       <a href="#capabilities">Capabilities</a>
@@ -75,30 +79,30 @@
         <div>
           <p class="eyebrow">Northern Virginia &middot; AI/ML advisory &middot; Cleared principals</p>
           <h1>Independent AI/ML advice for intelligence and defense programs.</h1>
-          <p class="lead">Manifold is a small Virginia firm run by cleared practitioners who have spent the past decade inside Intelligence Community acquisition and research programs. We help program offices decide what to build, what to buy, and how to get it running on accredited networks.</p>
+          <p class="lead">Manifold is a small Virginia firm run by cleared practitioners with about ten years inside Intelligence Community acquisition and research programs. We help program offices decide whether to build or buy, and how to get the result running on accredited networks.</p>
           <div class="actions">
             <a class="btn btn-primary" href="#contact">Start a conversation</a>
             <a class="btn btn-ghost" href="manifold-capability-statement.pdf">Capability statement (PDF)</a>
           </div>
         </div>
         <figure class="hero-figure">
-          <img src="assets/img/manifold-surface.svg" width="760" height="620" alt="Line drawing of a curved two-dimensional surface drawn as a wire grid." fetchpriority="high">
-          <figcaption><span>Fig. 1. A smooth 2-manifold, drawn in code</span><span>no stock photos were used</span></figcaption>
+          <img src="assets/img/manifold-surface.svg" width="760" height="620" alt="Line drawing of a curved two-dimensional surface drawn as a wire grid.">
+          <figcaption><span>A two-dimensional manifold, drawn as a wire grid.</span></figcaption>
         </figure>
       </div>
 
       <dl class="facts">
         <div>
-          <dt>Clearances</dt>
-          <dd>TS/SCI, held by every principal</dd>
-        </div>
-        <div>
-          <dt>Base</dt>
-          <dd>Northern Virginia, USA</dd>
+          <dt>Location</dt>
+          <dd>Northern Virginia</dd>
         </div>
         <div>
           <dt>Delivery</dt>
-          <dd>Principals only. No bench.</dd>
+          <dd>By the founding principals, start to finish</dd>
+        </div>
+        <div>
+          <dt>Clearances</dt>
+          <dd>TS/SCI, held by the principals</dd>
         </div>
         <div>
           <dt>Reach us</dt>
@@ -116,7 +120,7 @@
           <p class="eyebrow">01 &nbsp;Capabilities</p>
           <h2 id="capabilities-h">What we do</h2>
         </div>
-        <p class="intro">Four kinds of engagement. Each one is scoped in writing before it starts and ends with a deliverable your office keeps.</p>
+        <p class="intro">Four kinds of engagement. Each is scoped in writing before it starts, and each ends with a deliverable your office keeps.</p>
       </div>
 
       <div class="cap-grid">
@@ -138,14 +142,14 @@
         <article class="cap">
           <span class="num">2 / 4</span>
           <h3>Acquisition and compute</h3>
-          <p>Requirements that vendors can bid against, and compute plans that hold up to the budget. We draft technical requirements, RFP and SOW language, and source-selection criteria. We size GPU and TPU clusters against actual training and inference loads, in AWS, Azure, and Google GovCloud regions or on hardware you own.</p>
+          <p>Requirements that vendors can bid against, and compute plans that hold up to the budget. We draft technical requirements, RFP and SOW language, and source-selection criteria. We size GPU and TPU clusters against actual training and inference loads in AWS GovCloud, Azure Government, and Google Cloud's assured regions, or on hardware you own.</p>
           <div class="deliverables">
             <p class="eyebrow">Typical deliverables</p>
             <ul>
               <li>Technical requirements and statement-of-work language</li>
               <li>Source-selection and vendor-evaluation support</li>
               <li>Cluster sizing and cost models for training and inference</li>
-              <li>GovCloud versus on-premises trade studies</li>
+              <li>Government cloud versus on-premises trade studies</li>
             </ul>
           </div>
         </article>
@@ -153,12 +157,11 @@
         <article class="cap">
           <span class="num">3 / 4</span>
           <h3>Program assessment</h3>
-          <p>An outside technical read on an AI program. Where it stands, what it will take to finish, and whether the metrics being briefed mean what they appear to mean. We have sat on the government side of these reviews and write them for the people who have to act on them.</p>
+          <p>An outside technical read on an AI program. Where it stands, what it will take to finish, and whether the metrics being briefed mean what they appear to mean. We have sat in these reviews before and write them for the people who have to act on them.</p>
           <div class="deliverables">
             <p class="eyebrow">Typical deliverables</p>
             <ul>
-              <li>Independent technical evaluation</li>
-              <li>Maturity and risk assessment</li>
+              <li>Independent technical evaluation, with maturity and risk assessment</li>
               <li>Milestone and design reviews</li>
               <li>Sponsor-facing performance metrics</li>
             </ul>
@@ -168,14 +171,15 @@
         <article class="cap">
           <span class="num">4 / 4</span>
           <h3>Secure generative AI</h3>
-          <p>Getting a language-model system onto a controlled network and keeping it there. We design for Controlled Unclassified Information at Impact Level 4 and 5, build retrieval-augmented generation on GovCloud services, choose models and vendors with the accreditation path in mind, and do the evaluation work: bias audits and human-review design included.</p>
+          <p>Getting a language-model system onto a controlled network and keeping it there. We design for Controlled Unclassified Information at Impact Level 4 and 5, build retrieval-augmented generation in government cloud regions, choose models and vendors with the accreditation path in mind, and do the evaluation work, bias audits and human-review design included.</p>
           <div class="deliverables">
             <p class="eyebrow">Typical deliverables</p>
             <ul>
               <li>Reference architectures for IL4 and IL5 environments</li>
               <li>Retrieval-augmented generation design and delivery</li>
-              <li>Model and vendor selection in GovCloud</li>
-              <li>Evaluation plans, bias audits, and human-in-the-loop review design</li>
+              <li>Model and vendor selection in government cloud regions</li>
+              <li>Evaluation plans and bias audits</li>
+              <li>Human-in-the-loop review design</li>
             </ul>
           </div>
         </article>
@@ -191,24 +195,24 @@
           <p class="eyebrow">02 &nbsp;Selected work</p>
           <h2 id="work-h">Work our principals have led</h2>
         </div>
-        <p class="intro">Some of this predates the firm. Sponsor names are withheld here. We are glad to go into detail in conversation.</p>
+        <p class="intro">Some of this predates the firm. Sponsor names are withheld here, and we are glad to go into detail in conversation.</p>
       </div>
 
       <ol class="work-list">
         <li class="work">
           <div class="meta">
             <p class="eyebrow">Generative AI &middot; Navy UARC</p>
-            <p class="tags">Amazon Bedrock &middot; AWS GovCloud<br>Impact Level 4 &middot; CUI<br>LDAP &middot; TLS</p>
+            <p class="tags">Amazon Bedrock &middot; AWS GovCloud<br>Impact Level 4 &middot; CUI<br>Directory integration</p>
           </div>
           <div>
-            <h3>A retrieval-augmented generation system for Controlled Unclassified Information at a Navy research laboratory</h3>
+            <h3>A retrieval-augmented generation system for Controlled Unclassified Information at a Navy University Affiliated Research Center</h3>
             <dl>
               <dt>Problem</dt>
-              <dd>A Navy University Affiliated Research Center wanted its staff to use a language-model assistant over internal documents that are Controlled Unclassified Information. Commercial chat tools were not an option.</dd>
-              <dt>What we did</dt>
-              <dd>Designed and delivered the system on Amazon Bedrock inside an Impact Level 4 AWS GovCloud environment. Authentication tied into the laboratory's existing LDAP directory, with TLS on every connection.</dd>
-              <dt>Where it stands</dt>
-              <dd>In production use on the laboratory's controlled network.</dd>
+              <dd>The laboratory wanted its staff to use a language-model assistant over internal documents that are Controlled Unclassified Information.</dd>
+              <dt>What our principals did</dt>
+              <dd>Designed and delivered the system on Amazon Bedrock inside an Impact Level 4 AWS GovCloud environment, integrated with the laboratory's directory service (LDAP), with TLS on every connection.</dd>
+              <dt>Outcome</dt>
+              <dd>Delivered to production on the laboratory's controlled network.</dd>
             </dl>
           </div>
         </li>
@@ -216,17 +220,17 @@
         <li class="work">
           <div class="meta">
             <p class="eyebrow">Foundation models &middot; Geospatial</p>
-            <p class="tags">Model and training architecture<br>Google and NVIDIA engineering teams<br>Compute planning</p>
+            <p class="tags">Model and training architecture<br>Data pipelines &middot; Compute planning</p>
           </div>
           <div>
-            <h3>Geospatial foundation models, built alongside Google and NVIDIA engineers</h3>
+            <h3>Geospatial foundation models over overhead data</h3>
             <dl>
               <dt>Problem</dt>
-              <dd>A sponsor wanted foundation models trained on large volumes of overhead and geospatial data, instead of one narrow model per task.</dd>
-              <dt>What we did</dt>
-              <dd>Served as architects for the modeling and training effort, working directly with engineers at Google and NVIDIA on data pipelines, model design, and the compute plan.</dd>
-              <dt>Where it stands</dt>
-              <dd>The cluster-sizing and cost models we build for clients today come from this work.</dd>
+              <dd>A sponsor wanted foundation models trained on large volumes of overhead and geospatial data instead of one narrow model per task.</dd>
+              <dt>What our principals did</dt>
+              <dd>Served as architects for the modeling and training effort, working directly with vendor engineering teams at Google and NVIDIA on data pipelines, model design, and the compute plan.</dd>
+              <dt>What we took from it</dt>
+              <dd>The cluster-sizing and cost models we build now come from this work.</dd>
             </dl>
           </div>
         </li>
@@ -234,13 +238,13 @@
         <li class="work">
           <div class="meta">
             <p class="eyebrow">Acquisition &middot; Intelligence Community</p>
-            <p class="tags">Roughly ten years<br>Requirements &middot; Source selection<br>BAA evaluation &middot; Training</p>
+            <p class="tags">About ten years<br>Requirements &middot; Source selection<br>BAA evaluation &middot; Training</p>
           </div>
           <div>
-            <h3>A decade on the government side of Intelligence Community acquisition</h3>
+            <h3>A decade inside Intelligence Community acquisition</h3>
             <dl>
               <dt>Role</dt>
-              <dd>Before Manifold, our principals spent about ten years inside IC acquisition offices and research programs.</dd>
+              <dd>Before Manifold, our principals spent about ten years inside Intelligence Community acquisition offices and research programs.</dd>
               <dt>What that involved</dt>
               <dd>Writing technical requirements, serving as evaluators on competitive source selections and Broad Agency Announcements, designing AI/ML training for sponsor staff, and briefing senior leadership on where to put money.</dd>
               <dt>Why it matters</dt>
@@ -266,27 +270,27 @@
       <ol class="approach">
         <li>
           <h3>The people you meet do the work.</h3>
-          <p>A founding principal scopes the engagement, does it, and briefs it. Manifold does not keep a bench, and we do not hand work to junior staff after the kickoff.</p>
+          <p>A founding principal scopes the engagement and does the work, then briefs it. Manifold has no bench, and nothing is handed to junior staff after the kickoff.</p>
         </li>
         <li>
-          <h3>Written scope, fixed deliverable.</h3>
-          <p>Every engagement starts with a one-page scope and ends with something your office keeps: a report, a requirements package, or a working system. We would rather do a short, well-defined piece of work than hold an open-ended support seat.</p>
+          <h3>A written scope and a fixed deliverable.</h3>
+          <p>Every engagement starts with a one-page scope and ends with something your office keeps, whether that is a report, a requirements package, or a working system. Typical engagements run from a few weeks to a few months.</p>
         </li>
         <li>
           <h3>Sometimes the answer is not to build it.</h3>
-          <p>A fair share of our advice is that a problem is better handled with a rules engine, a database query, or a hire. We say so early. It is cheaper for you and better for the program.</p>
+          <p>A fair share of our advice is that a problem is better handled with a rules engine, a database query, or a hire. When that is the case we say so early, because it is cheaper for you and better for the program.</p>
         </li>
         <li>
           <h3>Current with the research, and with the hardware.</h3>
-          <p>We read the papers and run the models ourselves. When a vendor says its model does something, we can check, and we can tell you what it will cost per month to keep doing it.</p>
+          <p>We read the papers and run the models ourselves, so when a vendor says its model does something we can check. We can also tell you what it will cost each month to keep doing it.</p>
         </li>
         <li>
-          <h3>Cleared, and used to the environment.</h3>
-          <p>Our principals hold TS/SCI clearances and have worked in Intelligence Community spaces for years. Conversations can go where the problem needs them to go.</p>
+          <h3>Cleared.</h3>
+          <p>Our principals hold TS/SCI clearances and have worked in Intelligence Community spaces for years. Classified discussion happens only under a sponsoring contract, in the sponsor's spaces.</p>
         </li>
         <li>
           <h3>Unclassified by default.</h3>
-          <p>This site, email, and first conversations stay unclassified. When a problem needs more than that, we move it to the right space with you.</p>
+          <p>This site, our email, and first conversations are unclassified. Please do not send Controlled Unclassified Information or procurement-sensitive material through either.</p>
         </li>
       </ol>
     </div>
@@ -305,11 +309,11 @@
       <div class="company-grid">
         <div class="prose">
           <p class="first">Manifold LLC is a Virginia small business formed by senior practitioners from the Intelligence Community.</p>
-          <p>We started the firm for a simple reason. The people deciding how to spend large sums on AI in government rarely have an advisor who has both run an acquisition and trained a model. We have done both. We are small on purpose and intend to stay that way.</p>
-          <p>The name comes from geometry. A manifold is a space that looks flat up close and is curved overall, which is a fair description of most AI programs we are asked to look at.</p>
+          <p>We started the firm for a simple reason. The people deciding how to spend large sums on AI in government rarely have an advisor who has both worked an acquisition and trained a model. We have done both, and we intend to stay small enough to keep doing both ourselves.</p>
+          <p>The name comes from geometry. A manifold is a space that looks flat from any one point and is not flat as a whole. Most programs look fine from inside any one office.</p>
 
           <h3>Working with us</h3>
-          <p>Program offices can engage us directly as a small business. Integrators and primes bring us in as a subcontractor when a proposal or a program needs cleared AI/ML depth that is not on their staff. Either way, send a note and a principal will reply.</p>
+          <p>Program offices can engage us directly as a small business. Integrators and primes can bring us in as a subcontractor when a proposal or a program needs cleared AI/ML depth that is not on their staff. Either way, send a note and a principal will reply.</p>
         </div>
 
         <aside aria-label="Company data">
@@ -319,9 +323,8 @@
             <div><dt>Size</dt><dd>Small business</dd></div>
             <div><dt>Clearances</dt><dd>TS/SCI (principals)</dd></div>
             <div><dt>Work</dt><dd>Direct award, subcontract, or teaming</dd></div>
-            <div><dt>UEI / CAGE</dt><dd><span class="muted">On request</span></dd></div>
             <div><dt>Email</dt><dd><a href="mailto:info@teammanifold.com">info@teammanifold.com</a></dd></div>
-            <div><dt>Phone</dt><dd><a href="tel:+17034361308">(703)&nbsp;436&#8209;1308</a></dd></div>
+            <div><dt>Phone</dt><dd><a href="tel:+17034361308"><span class="nowrap">(703) 436-1308</span></a></dd></div>
           </dl>
           <p class="datatable-note">A one-page capability statement is available as a <a href="manifold-capability-statement.pdf">PDF</a>.</p>
         </aside>
@@ -337,27 +340,29 @@
           <p class="eyebrow">05 &nbsp;Contact</p>
           <h2 id="contact-h">Tell us what you are working on</h2>
         </div>
-        <p class="intro">A principal reads every message and replies personally. Please keep anything you send here unclassified.</p>
+        <p class="intro">A principal reads every message and replies personally. A rough description is enough; details can wait for a call.</p>
       </div>
 
       <div class="contact-grid">
         <!--
-          The form posts to Web3Forms (https://web3forms.com), which forwards submissions to email.
-          Setup: create a free access key for info@teammanifold.com at web3forms.com and paste it into
-          data-access-key below. Until a real key is present, the script falls back to opening the
-          visitor's mail client with the message pre-filled.
+          Delivery: Web3Forms (https://web3forms.com). Create a free access key for info@teammanifold.com
+          and paste it into data-access-key below; the script then posts to data-endpoint. Until a real key
+          is present the form falls back to opening the visitor's mail client with the message pre-filled,
+          and the action stays on this page so nothing is sent anywhere without JavaScript.
         -->
-        <form class="form" id="contact-form" method="POST" action="https://api.web3forms.com/submit" data-access-key="REPLACE_WITH_WEB3FORMS_ACCESS_KEY" novalidate>
+        <form class="form" id="contact-form" method="POST" action="#contact" data-endpoint="https://api.web3forms.com/submit" data-access-key="REPLACE_WITH_WEB3FORMS_ACCESS_KEY" novalidate>
           <input type="hidden" name="subject" value="Inquiry from manifold-llc.com">
           <input type="hidden" name="from_name" value="manifold-llc.com contact form">
           <div class="row">
             <div class="field">
               <label for="f-name">Name</label>
-              <input id="f-name" name="name" type="text" autocomplete="name" required>
+              <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-err">
+              <p class="err" id="f-name-err"></p>
             </div>
             <div class="field">
               <label for="f-email">Email</label>
-              <input id="f-email" name="email" type="email" autocomplete="email" required>
+              <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="f-email-err">
+              <p class="err" id="f-email-err"></p>
             </div>
           </div>
           <div class="field">
@@ -366,27 +371,29 @@
           </div>
           <div class="field">
             <label for="f-msg">Message</label>
-            <textarea id="f-msg" name="message" required></textarea>
+            <textarea id="f-msg" name="message" required maxlength="1500" aria-describedby="f-msg-err"></textarea>
+            <p class="err" id="f-msg-err"></p>
           </div>
           <div class="hp" aria-hidden="true">
-            <label for="f-botcheck">Leave this field empty</label>
+            <label for="f-botcheck">Do not check this box</label>
             <input id="f-botcheck" type="checkbox" name="botcheck" tabindex="-1">
           </div>
           <div class="foot">
             <button class="btn btn-primary" type="submit">Send message</button>
             <p class="status" role="status" aria-live="polite"></p>
           </div>
-          <p class="fine">We use what you send only to reply to you.</p>
+          <p class="fine">Messages are delivered by Web3Forms, a form service, and are used only to reply to you.</p>
+          <noscript><p class="fine">This form needs JavaScript. You can also write to <a href="mailto:info@teammanifold.com">info@teammanifold.com</a>.</p></noscript>
         </form>
 
         <aside class="contact-aside" aria-label="Contact details">
           <dl class="datatable">
             <div><dt>Email</dt><dd><a href="mailto:info@teammanifold.com">info@teammanifold.com</a></dd></div>
-            <div><dt>Phone</dt><dd><a href="tel:+17034361308">(703)&nbsp;436&#8209;1308</a></dd></div>
+            <div><dt>Phone</dt><dd><a href="tel:+17034361308"><span class="nowrap">(703) 436-1308</span></a></dd></div>
             <div><dt>Location</dt><dd>Northern Virginia, USA<br><span class="muted">Eastern time</span></dd></div>
           </dl>
           <div class="note">
-            <strong>Good first messages</strong> say which office or program you are in, what decision is in front of you, and when it has to be made. A paragraph is plenty.
+            <strong>Good first messages</strong> say which office or program you are in and what decision is in front of you. A paragraph is plenty. Please keep Controlled Unclassified Information and procurement-sensitive detail out of this form.
           </div>
         </aside>
       </div>
@@ -399,14 +406,14 @@
   <div class="wrap">
     <div class="left">
       <svg aria-hidden="true"><use href="#mark"></use></svg>
-      <span>&copy; <span id="year">2026</span> Manifold LLC. Northern Virginia, USA.</span>
+      <span>&copy; <span id="year">2026</span> Manifold LLC. Northern Virginia.</span>
     </div>
     <ul>
       <li><a href="manifold-capability-statement.pdf">Capability statement</a></li>
       <li><a href="mailto:info@teammanifold.com">info@teammanifold.com</a></li>
-      <li><a href="tel:+17034361308">(703)&nbsp;436&#8209;1308</a></li>
+      <li><a href="tel:+17034361308"><span class="nowrap">(703) 436-1308</span></a></li>
     </ul>
-    <p class="colophon">This site sets no cookies and loads nothing from third parties. Type is set in Newsreader and IBM Plex.</p>
+    <p class="colophon">This site sets no cookies and runs no analytics or third-party scripts. The contact form is delivered by Web3Forms.</p>
   </div>
 </footer>
 
