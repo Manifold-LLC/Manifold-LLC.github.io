@@ -14,8 +14,17 @@ Maintainer decision, pending Owner confirmation. UEI, CAGE and NAICS codes were 
 ## 2026-11-08 | Past work is attributed to the principals, not the firm
 Maintainer decision, pending Owner confirmation. Some referenced work predates the firm. The site says so, uses "our principals" rather than "we" for that work, and names Google and NVIDIA once as vendor engineering teams worked alongside rather than as partners.
 
-## 2026-11-08 | Site domain is manifold-llc.com; email stays on teammanifold.com for now
-Maintainer note, pending Owner decision. The site is served at manifold-llc.com. Email and the capability statement use info@teammanifold.com, and teammanifold.com itself is parked. The Owner has been asked which domain to standardize on.
+## 2026-11-08 | Standardize on manifold-llc.com; email to move
+Owner decision. The site stays at manifold-llc.com and email will move to info@manifold-llc.com once the mailbox exists. Until then every address on the site and PDF stays info@teammanifold.com. When the mailbox is live, change `records/facts.md` first, then every listed location, then re-render the PDF.
+
+## 2026-11-08 | Commit author email stays as is
+Owner decision. The maintainer's commit address is a personal address, and the Owner chose not to rewrite the branch history.
+
+## 2026-11-08 | Independence sentence confirmed
+Owner confirmed: the firm does not compete for work it helped specify and takes no referral or reseller fees. The sentence is on the page under How we work and in the capability statement.
+
+## 2026-11-08 | Bios drawn from résumés, with sponsor and program detail left out
+Maintainer decision under the Owner's instruction to put names, roles and two-line bios on the page. The résumés name a sponsor agency, program codenames, a contract vehicle and funding figures. None of that appears on the site; employers, titles, degrees and the kind of work do. The Owner should confirm that naming current employers is allowed.
 
 ## 2026-11-08 | Commits are authored by the Owner's named person with no tooling trailers
 Owner instruction.

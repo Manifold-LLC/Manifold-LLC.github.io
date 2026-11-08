@@ -32,6 +32,8 @@ Notable changes to manifold-llc.com. The format follows [Keep a Changelog](https
 - Sticky header has a solid fallback where `color-mix()` is unsupported.
 
 ### Claims
+- Added a Principals block naming Paul G. Singerman, Ph.D. and John "Luke" Och, with bios drawn from their résumés (employers, titles, degrees, kind of work; no sponsor names, program names or figures). Names also appear in the JSON-LD and the capability statement's company data and point of contact.
+- Added, on the Owner's confirmation: Manifold does not compete for work it helped specify and takes no referral or reseller fees. The principals' prior roles are stated: a trusted agent at a Navy UARC and a SETA contractor.
 - Corrected "full IL4 / LDAP / SSL compliance" to describe an IL4-accredited AWS GovCloud environment with LDAP integration and TLS.
 - Past work is presented as work led by the principals, some of it before the firm was formed. Google and NVIDIA are named once as vendor engineering teams worked alongside, not as partners.
 - "The government side" was removed from the acquisition experience; the source does not establish whether the principals served as government staff or support contractors.
