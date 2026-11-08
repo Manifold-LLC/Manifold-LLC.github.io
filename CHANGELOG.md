@@ -22,6 +22,8 @@ Notable changes to manifold-llc.com. The format follows [Keep a Changelog](https
 - Contact copy asks visitors to keep Controlled Unclassified Information and procurement-sensitive detail out of the form, and names the form service.
 
 ### Changed (evening)
+- Every published address is now info@manifold-llc.com.
+- Employer names restored in the bios after the Owner confirmed they may appear.
 - Current employers in the bios made generic pending confirmation of outside-activity rules.
 - FastSAR now links to its GitHub repository, PyPI package and arXiv preprint.
 - Paul's bio carries two loosely rounded dollar figures for the program he leads, per the Owner's rule that dollar amounts appear only as rough magnitudes.

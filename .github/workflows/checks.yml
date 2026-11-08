@@ -29,7 +29,7 @@ jobs:
           ! grep -niE '\b(cutting-edge|full-spectrum|seamless|leverage|robust|holistic|comprehensive|mission-critical|best-in-class|innovative|empower|unlock|streamline|delve|testament|pivotal|crucial|showcase|boasts)\b' index.html capability-statement.html 404.html
       - name: Facts appear where expected
         run: |
-          for f in index.html capability-statement.html 404.html; do grep -q 'info@teammanifold.com' "$f" || { echo "email missing in $f"; exit 1; }; done
+          for f in index.html capability-statement.html 404.html; do grep -q 'info@manifold-llc.com' "$f" || { echo "email missing in $f"; exit 1; }; done
           for f in index.html capability-statement.html; do grep -q 'C6P2G6PQLEB8' "$f" && grep -q '23X60' "$f" || { echo "UEI or CAGE missing in $f"; exit 1; }; done
       - name: security.txt expiry is more than 60 days out
         run: |

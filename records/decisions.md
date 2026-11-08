@@ -50,5 +50,8 @@ Owner decisions. The public site keeps "an Intelligence Community agency" rather
 ## 2026-11-08 | Dollar figures only when loosely rounded
 Owner rule. No exact dollar figures anywhere public; rounded magnitudes such as "over two hundred million" are allowed. Applied to Paul's bio: program funding "over ten million dollars a year" and a follow-on contract ceiling "above two hundred million dollars". Research results stay number-free.
 
+## 2026-11-08 | Employers named; email moved to info@manifold-llc.com
+Owner decisions. Naming Penn State ARL and SAIC in the bios is fine, so the names are restored. The mailbox info@manifold-llc.com exists, so every published address moved to it (page, PDF, 404, security.txt, form fallback, JSON-LD, CI check). The feature branch is to be deleted once its last changes are merged.
+
 ## 2026-11-08 | Commits are authored by the Owner's named person with no tooling trailers
 Owner instruction.
