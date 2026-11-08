@@ -23,13 +23,18 @@ dig manifold-llc.com +noall +answer -t A               # four 185.199.x.153 addr
 npx html-validate@11 index.html capability-statement.html 404.html
 ```
 
+## To do outside this repository
+- teammanifold.com still serves a Squarespace "Coming Soon" page. Its DNS is on Google Cloud DNS nameservers (the former Google Domains, now Squarespace Domains), with A records pointing at Squarespace. Set a permanent redirect of teammanifold.com and www.teammanifold.com to https://manifold-llc.com/ in the Squarespace Domains panel (Domains, teammanifold.com, Forwarding), or move the domain's DNS to Cloudflare and use a redirect rule there. Keep the MX, SPF and DKIM records; mail for info@teammanifold.com still lands on them.
+- DMARC for manifold-llc.com is not published. In Cloudflare DNS add a TXT record at `_dmarc` with value `v=DMARC1; p=none; rua=mailto:info@manifold-llc.com`. Consider the same for teammanifold.com.
+- The Web3Forms access key is public by design, so anyone can post to it; domain restriction on Web3Forms is a paid feature. If spam appears, move to the paid plan or switch to a service with a server-side secret.
+
 ## Open question
 - NAICS codes are from the July 2026 capability statement; confirm against the SAM record.
 - When the review of the trajectory model ends, its case note can be made specific. Owner's standing rule: no numbers from any of the three research projects on the site or in this repository.
 
 ## Traps
 - `CNAME` must stay in the repository root or the custom domain drops.
-- The capability statement PDF is generated from `capability-statement.html`. Do not edit the PDF. It is two pages; `scripts/render.js` and CI both fail on any other count.
+- The capability statement PDF is generated from `capability-statement.html` by `scripts/render.js`, which also sets the PDF Author with `scripts/pdf-metadata.py` (needs `pypdf`). Do not edit the PDF. It is two pages, page one standing alone; the render script and CI both fail on any other count. The share image `assets/img/og.png` comes from `scripts/og.html`; change its copy when the headline changes.
 - Facts appear in several files. Change `records/facts.md` first, then grep for the old value.
 - `404.html` uses absolute asset paths and looks unstyled when opened from disk. That is expected.
 

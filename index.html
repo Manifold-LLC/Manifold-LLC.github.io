@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self' https://api.web3forms.com; manifest-src 'self'; upgrade-insecure-requests">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Manifold LLC | AI/ML advice and engineering for IC and DoD programs</title>
   <meta name="description" content="A small, cleared AI/ML firm in Northern Virginia. We advise Intelligence Community and Department of Defense programs on strategy, acquisition, compute and secure generative AI, and we build models, detectors and GPU kernels when a program needs them built.">
   <link rel="canonical" href="https://manifold-llc.com/">
@@ -128,7 +129,7 @@
           <p class="eyebrow">01 &nbsp;Capabilities</p>
           <h2 id="capabilities-h">What we do</h2>
         </div>
-        <p class="intro">Five kinds of engagement. Each is scoped in writing before it starts, and each ends with a deliverable your office keeps. The first four are advice; the fifth is building. We do not do both for the same organization.</p>
+        <p class="intro">Five kinds of engagement. Each is scoped in writing before it starts, and each ends with a deliverable your office keeps. Four are advice. The fifth is building, and so is the delivery half of the fourth. We never advise and build for the same organization.</p>
       </div>
 
       <div class="cap-grid">
@@ -221,8 +222,18 @@
         <p class="intro">Research and delivery led by the people who founded Manifold. Some of it predates the firm, and sponsor names are withheld. We are glad to go into detail in conversation.</p>
       </div>
 
+      <nav class="work-index" aria-label="Case notes on this page">
+        <ol>
+          <li><a href="#dark-vessels">Re-finding ships that switch off AIS</a></li>
+          <li><a href="#fastsar">FastSAR, radar image formation on CPUs, GPUs and TPUs</a></li>
+          <li><a href="#vessel-model">A foundation model for where vessels go</a></li>
+          <li><a href="#uarc-rag">Retrieval-augmented generation for CUI at a Navy UARC</a></li>
+          <li><a href="#geo-fm">Geospatial foundation models</a></li>
+          <li><a href="#ic-acquisition">A decade inside Intelligence Community acquisition</a></li>
+        </ol>
+      </nav>
       <ol class="work-list">
-        <li class="work">
+        <li class="work" id="dark-vessels">
           <div class="meta">
             <p class="eyebrow">Research &middot; Maritime domain awareness</p>
             <p class="tags">Sentinel-1 &middot; Sentinel-2 &middot; Landsat<br>NISAR &middot; VIIRS<br>Multi-target tracking<br>Unpublished draft</p>
@@ -235,12 +246,12 @@
               <dt>What was built</dt>
               <dd>A tracker that links detections from public radar, optical and night-light sensors (Sentinel-1 and NISAR, Sentinel-2 and Landsat, VIIRS) across the waters around Denmark and southern Norway. Each sensor has its own detector and attribute model, including heading and speed read from Sentinel-2's band delay and wake, and the motion model is learned from historical AIS. The system was scored against full-rate Danish and Norwegian AIS that it never saw.</dd>
               <dt>Result</dt>
-              <dd>Ships at anchor or in port were re-found in most weekly cases. Ships under way were re-found far less often, and the true next sighting was usually within a short ranked list of candidates. No published system was found that measures this problem, so the results stand as a first public baseline. Changes to the tracking algorithm did not improve the moving-ship result; adding sensors did, which points to more looks per day as the lever. Results are from an unpublished draft.</dd>
+              <dd>Ships at anchor or in port were re-found in most cases. Ships under way were re-found far less often, and the true next sighting was usually within a short ranked list of candidates. No published system was found that measures this problem, so the results would be a first public baseline once published. Changes to the tracking algorithm did not improve the moving-ship result; adding sensors did, which points to more looks per day as the lever. Results are from an unpublished draft.</dd>
             </dl>
           </div>
         </li>
 
-        <li class="work">
+        <li class="work" id="fastsar">
           <div class="meta">
             <p class="eyebrow">Research &middot; Synthetic aperture radar</p>
             <p class="tags">CPU &middot; NVIDIA GPU &middot; Google TPU<br>C++ &middot; CUDA &middot; JAX Pallas<br>Open source, MIT license<br>Preprint, submitted to IEEE TGRS</p>
@@ -258,7 +269,7 @@
           </div>
         </li>
 
-        <li class="work">
+        <li class="work" id="vessel-model">
           <div class="meta">
             <p class="eyebrow">Research &middot; Vessel movement</p>
             <p class="tags">Foundation model &middot; AIS<br>Under review</p>
@@ -276,7 +287,7 @@
           </div>
         </li>
 
-        <li class="work">
+        <li class="work" id="uarc-rag">
           <div class="meta">
             <p class="eyebrow">Generative AI &middot; Navy UARC</p>
             <p class="tags">Amazon Bedrock &middot; AWS GovCloud<br>Impact Level 4 &middot; CUI<br>Directory integration</p>
@@ -294,7 +305,7 @@
           </div>
         </li>
 
-        <li class="work">
+        <li class="work" id="geo-fm">
           <div class="meta">
             <p class="eyebrow">Foundation models &middot; Geospatial</p>
             <p class="tags">Model and training architecture<br>Data pipelines &middot; Compute planning</p>
@@ -312,7 +323,7 @@
           </div>
         </li>
 
-        <li class="work">
+        <li class="work" id="ic-acquisition">
           <div class="meta">
             <p class="eyebrow">Acquisition &middot; Intelligence Community</p>
             <p class="tags">About ten years<br>Requirements &middot; Source selection<br>BAA evaluation &middot; Training</p>
@@ -351,7 +362,7 @@
         </li>
         <li>
           <h3>A written scope and a fixed deliverable.</h3>
-          <p>Every engagement starts with a one-page scope and ends with something your office keeps, whether that is a report, a requirements package, or a working system. Typical engagements run from a few weeks to a few months.</p>
+          <p>Every engagement starts with a one-page scope and ends with something your office keeps, whether that is a report, a requirements package, or a working system. Typical engagements run from a few weeks to a few months. Our founders also hold positions at Penn State ARL and SAIC, so we take on only what we can deliver on the schedule we quote, and we say so when we cannot.</p>
         </li>
         <li>
           <h3>Sometimes the answer is not to build it.</h3>
@@ -367,7 +378,7 @@
         </li>
         <li>
           <h3>No conflicts of interest.</h3>
-          <p>We advise or we build, never both for the same organization. Where we help write requirements or evaluate bids, we do not compete for the resulting work, and we take no referral or reseller fees from any vendor. That is what the word independent means on this page.</p>
+          <p>We advise or we build, never both for the same organization. Where we help write requirements or evaluate bids, we do not compete for the resulting work, and we take no referral or reseller fees from any vendor. We do not pursue work at an organization where a member of the firm serves as a trusted agent or evaluator. That is what the word independent means on this page.</p>
         </li>
       </ol>
     </div>
@@ -387,7 +398,7 @@
         <div class="prose">
           <p class="first">Manifold LLC is a Virginia small business founded by two practitioners who have spent their careers inside Intelligence Community research and acquisition.</p>
           <p>We started the firm for a simple reason. The people deciding how to spend large sums on AI in government rarely have an advisor who has both worked an acquisition and trained a model. We have done both, and that pairing is the standard for everyone who works here.</p>
-          <p>The name comes from geometry. A manifold is a space that looks flat from any one point and is not flat as a whole. Most programs look fine from inside any one office.</p>
+          <p>The name comes from geometry. A manifold is a space that looks flat from any one point and need not be flat as a whole. Most programs look fine from inside any one office.</p>
 
           <h3>Working with us</h3>
           <p>Program offices can engage us directly as a small business. Integrators and primes can bring us in as a subcontractor when a proposal or a program needs cleared AI/ML depth that is not on their staff. Either way, send a note and a senior practitioner will reply.</p>
@@ -424,7 +435,7 @@
         <article class="person">
           <p class="eyebrow">Principal</p>
           <h4>John "Luke" Och</h4>
-          <p>Luke leads a team of ten systems engineering and technical assistance (SETA) engineers at SAIC, supporting early-stage AI/ML initiatives for a national security space program: shaping acquisition strategies, writing technical requirements for more than ten low-maturity AI/ML capabilities, and setting the performance metrics and evaluation criteria behind investment decisions. Before that he spent five years there as a satellite ground systems engineer, running source selections from RFP development through proposal evaluation and contract negotiation. He has worked in Chantilly, Virginia, since 2015.</p>
+          <p>Luke leads a team of ten systems engineering and technical assistance (SETA) engineers at SAIC, supporting early-stage AI/ML initiatives for a national security space program: shaping acquisition strategies, writing technical requirements for more than ten low-maturity AI/ML capabilities, and setting the performance metrics and evaluation criteria behind investment decisions. Before that he spent five years there as a satellite ground systems engineer, running source selections from RFP development through proposal evaluation and contract negotiation. He has worked in Northern Virginia since 2015.</p>
           <p class="person-meta">Regents Bachelor of Arts, West Virginia University (mathematics and communications) &middot; SAFe Agilist &middot; TS/SCI with counterintelligence polygraph</p>
         </article>
       </div>

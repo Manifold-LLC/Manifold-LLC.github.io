@@ -4,8 +4,10 @@
   <meta charset="utf-8">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'self'; form-action 'self'; script-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; upgrade-insecure-requests">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="author" content="Manifold LLC">
   <title>Manifold LLC | Capability statement</title>
-  <meta name="description" content="Two-page capability statement for Manifold LLC: AI/ML strategy, acquisition and compute, program assessment, and secure generative AI for Intelligence Community and Department of Defense programs.">
+  <meta name="description" content="Two-page capability statement for Manifold LLC: AI/ML strategy, acquisition and compute, program assessment, secure generative AI, and applied research and development for Intelligence Community and Department of Defense programs.">
   <meta name="robots" content="noindex">
   <meta name="theme-color" content="#f6f4ee">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -51,6 +53,21 @@
         <h3>Applied research and development</h3>
         <p>Detectors and trackers over satellite imagery, foundation models pretrained on sponsor data with scaling studies, CPU, GPU and TPU implementations priced per run. Evaluation protocol first; negative results reported.</p>
       </section>
+      <section class="block pp">
+        <h2>Past performance &middot; the founders, before Manifold</h2>
+      <div class="entry">
+          <span class="tag">Navy UARC &middot; Generative AI</span>
+          <p>Designed and delivered a production retrieval-augmented generation system for CUI on Amazon Bedrock in an IL4 AWS GovCloud environment, with LDAP integration.</p>
+        </div>
+      <div class="entry">
+          <span class="tag">Geospatial foundation models</span>
+          <p>Architected the modeling and training effort for foundation models over overhead data, working directly with Google and NVIDIA engineering teams on pipelines, model design and compute planning.</p>
+        </div>
+      <div class="entry">
+          <span class="tag">Intelligence Community acquisition</span>
+          <p>About ten years inside IC acquisition offices and research programs: requirements, source-selection and BAA evaluation, AI/ML training design, leadership briefings.</p>
+        </div>
+      </section>
 
     </div>
 
@@ -77,7 +94,7 @@
           <dt>NAICS</dt><dd>541715, 541512, 541611, 541690</dd>
           <dt>Clearances</dt><dd>TS/SCI with CI polygraph, everyone at the firm</dd>
           <dt>Classified work</dt><dd>On customer premises</dd>
-          <dt>Work types</dt><dd>Direct award, subcontract, teaming</dd>
+          <dt>Contract vehicles</dt><dd>None yet. Direct award, subcontract or teaming</dd>
           <dt>Principals</dt><dd>Paul G. Singerman, Ph.D.; John "Luke" Och</dd>
         </dl>
       </section>
@@ -97,37 +114,25 @@
   <div class="page-break"></div>
   <header class="cs-head cs-head-2">
     <span class="word-small">Manifold LLC &middot; Capability statement, page 2</span>
-    <span class="right">Relevant experience and principals</span>
+    <span class="right">Research and principals</span>
   </header>
 
   <div class="cols cols-2">
     <section class="block pp">
-      <h2>Relevant experience</h2>
+      <h2>Research</h2>
       <div class="entry">
         <span class="tag">Maritime domain awareness &middot; Research</span>
-        <p>Built and measured a tracker that re-finds ships that have switched off AIS from one satellite pass to the next, over the waters around Denmark and southern Norway, using public radar, optical and night-light sensors (Sentinel-1, NISAR, Sentinel-2, Landsat, VIIRS), a motion model learned from historical AIS, and scoring against withheld Danish and Norwegian AIS. No published system was found that measures this problem; the results stand as a first public baseline. Unpublished draft.</p>
+        <p>Built and measured a tracker that re-finds ships that have switched off AIS from one satellite pass to the next, over the waters around Denmark and southern Norway, using public radar, optical and night-light sensors (Sentinel-1, NISAR, Sentinel-2, Landsat, VIIRS), a motion model learned from historical AIS, and scoring against withheld Danish and Norwegian AIS. No published system was found that measures this problem; the results would be a first public baseline once published. Unpublished draft.</p>
       </div>
       <div class="entry">
         <span class="tag">Synthetic aperture radar &middot; Open-source software</span>
-        <p>FastSAR, a library that forms SAR images on CPUs, NVIDIA GPUs and Google TPUs through one Python interface (exact and factorized backprojection, polar format; CPHD, SICD, Sentinel-1 and NISAR inputs). Every configuration scored against a high-precision reference and priced at cloud rates: faster than every open-source implementation tested, by orders of magnitude in most cases, at equal or better accuracy. Open source (MIT) at github.com/saulpingerman/FastSAR and on PyPI as fastsar; preprint arXiv:2610.33932, submitted to IEEE TGRS.</p>
+        <p>FastSAR, a library that forms SAR images on CPUs, NVIDIA GPUs and Google TPUs through one Python interface (exact and factorized backprojection, polar format; CPHD, SICD, Sentinel-1 and NISAR inputs). Every configuration scored against a high-precision reference and priced at cloud rates: faster than every open-source implementation tested, by orders of magnitude in most cases, at equal or better accuracy. Open source (MIT) at <a href="https://github.com/saulpingerman/FastSAR">github.com/saulpingerman/FastSAR</a> and on <a href="https://pypi.org/project/fastsar/">PyPI as fastsar</a>; preprint <a href="https://arxiv.org/abs/2610.33932">arXiv:2610.33932</a>, submitted to IEEE TGRS.</p>
       </div>
       <div class="entry">
         <span class="tag">Vessel movement &middot; Foundation model</span>
         <p>A single model pretrained on public AIS traffic that forecasts a vessel's position as a probability map at any horizon, with small task heads on the frozen model for analysts' questions. Paper under review.</p>
       </div>
-      <div class="entry">
-        <span class="tag">Navy UARC &middot; Generative AI</span>
-        <p>Designed and delivered a production retrieval-augmented generation system for CUI on Amazon Bedrock in an Impact Level 4 AWS GovCloud environment, integrated with the laboratory's directory service (LDAP).</p>
-      </div>
-      <div class="entry">
-        <span class="tag">Geospatial foundation models</span>
-        <p>Architected the modeling and training effort for foundation models over overhead and geospatial data, working directly with vendor engineering teams (Google, NVIDIA) on data pipelines, model design and compute planning.</p>
-      </div>
-      <div class="entry">
-        <span class="tag">Intelligence Community acquisition</span>
-        <p>About ten years inside IC acquisition offices and research programs, one founder as a Navy UARC trusted agent and the other as a SETA lead: technical requirements, source-selection and BAA evaluation, AI/ML training design, and senior-leadership briefings.</p>
-      </div>
-      <p>Led by the firm's founders; some of it predates the firm. Details and references are available in conversation.</p>
+      <p class="small">Led by the firm's founders. Code, preprints and drafts are available where their status allows.</p>
     </section>
 
     <section class="block">
