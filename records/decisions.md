@@ -35,8 +35,8 @@ Maintainer decision under the Owner's instruction to add the SAM codes. UEI and 
 ## 2026-11-08 | Development is in scope; advise or build, never both for one organization
 Owner decision: the site need not be limited to consulting. The headline now reads "advice and engineering", a fifth capability covers applied research and development, and the conflict-of-interest item states the rule. Two research projects supplied by the Owner are described under Selected work within the limits their write-ups allow.
 
-## 2026-11-08 | A paper under anonymous review stays off the site and out of the repository
-Maintainer decision. One of the three project write-ups is under double-blind review and marked do not distribute. Describing it on a public site could identify the authors to reviewers. Its skills are listed generically in records/skills-inventory.md; nothing else appears until the Owner says the review has ended.
+## 2026-11-08 | Research described without numbers; the paper under review mentioned only generically
+Owner decision: publish no numbers from the three research projects; describe the dark-vessel and SAR work freely otherwise; mention the trajectory model without specifics. Applied to the page, the PDF, the facts register and the skills inventory. The trajectory model has one generic case note with no name, venue, numbers or architecture detail.
 
 ## 2026-11-08 | Capability statement becomes two pages
 Maintainer decision. With five competencies, five experience entries and two bios, one page would have needed type under 8 points. Page one stands alone (competencies, differentiators, company data, contact); page two carries experience and principals. CI now checks for exactly two pages.

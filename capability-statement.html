@@ -106,15 +106,19 @@
       <h2>Relevant experience of the principals</h2>
       <div class="entry">
         <span class="tag">Maritime domain awareness &middot; Research</span>
-        <p>Built and measured a tracker that re-finds ships that have switched off AIS from one satellite pass to the next, over about 350,000 square kilometers of water around Denmark and southern Norway. Detections from five public sensors (Sentinel-1 and NISAR radar, Sentinel-2 and Landsat optical, VIIRS night lights), a detector and attribute model per sensor, a motion model learned from a year of AIS, and scoring against full-rate Danish and Norwegian AIS withheld from the system. Over six summer weeks of 2026: 70 to 86 percent of stationary and 10 to 17 percent of moving dark vessels re-found per week, a first public baseline. Unpublished draft, 2026.</p>
+        <p>Built and measured a tracker that re-finds ships that have switched off AIS from one satellite pass to the next, over the waters around Denmark and southern Norway, using public radar, optical and night-light sensors (Sentinel-1, NISAR, Sentinel-2, Landsat, VIIRS), a motion model learned from historical AIS, and scoring against withheld Danish and Norwegian AIS. No published system was found that measures this problem; the results stand as a first public baseline. Unpublished draft.</p>
       </div>
       <div class="entry">
         <span class="tag">Synthetic aperture radar &middot; Open-source software</span>
-        <p>FastSAR, a library that forms SAR images on CPUs, NVIDIA GPUs and Google TPUs through one Python interface (exact and factorized backprojection, polar format; CPHD, SICD, Sentinel-1 and NISAR inputs). Every configuration scored against a float64 reference and priced at cloud rates: 1.06 to 22,000 times faster than the open-source implementations tested at equal or better accuracy; a 108-megapixel image in about three seconds on the lowest-priced cloud GPU. Written with a co-author at Penn State's Applied Research Laboratory for IEEE Transactions on Geoscience and Remote Sensing.</p>
+        <p>FastSAR, a library that forms SAR images on CPUs, NVIDIA GPUs and Google TPUs through one Python interface (exact and factorized backprojection, polar format; CPHD, SICD, Sentinel-1 and NISAR inputs). Every configuration scored against a high-precision reference and priced at cloud rates: faster than every open-source implementation tested, by orders of magnitude in most cases, at equal or better accuracy. Written with a co-author at Penn State's Applied Research Laboratory for IEEE Transactions on Geoscience and Remote Sensing.</p>
+      </div>
+      <div class="entry">
+        <span class="tag">Vessel movement &middot; Foundation model</span>
+        <p>A single model pretrained on public AIS traffic that forecasts a vessel's position as a probability map at any horizon, with small task heads on the frozen model for analysts' questions. Paper under review.</p>
       </div>
       <div class="entry">
         <span class="tag">Navy UARC &middot; Generative AI</span>
-        <p>Designed and delivered a production retrieval-augmented generation system for Controlled Unclassified Information on Amazon Bedrock in an Impact Level 4 AWS GovCloud environment, integrated with the laboratory's directory service (LDAP), TLS on every connection.</p>
+        <p>Designed and delivered a production retrieval-augmented generation system for CUI on Amazon Bedrock in an Impact Level 4 AWS GovCloud environment, integrated with the laboratory's directory service (LDAP).</p>
       </div>
       <div class="entry">
         <span class="tag">Geospatial foundation models</span>

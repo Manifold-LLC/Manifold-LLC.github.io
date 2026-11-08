@@ -196,7 +196,7 @@
         <article class="cap wide">
           <span class="num">5 / 5</span>
           <h3>Applied research and development</h3>
-          <p>When a program needs something built rather than bought, we build it: detectors and trackers over satellite imagery, foundation models pretrained on a sponsor's own data, and the GPU or TPU kernels that make them affordable to run. We write the evaluation protocol before the model, score against data the model never sees, and report the negative results with the positive ones. Two examples are under Selected work below.</p>
+          <p>When a program needs something built rather than bought, we build it: detectors and trackers over satellite imagery, foundation models pretrained on a sponsor's own data, and the GPU or TPU kernels that make them affordable to run. We write the evaluation protocol before the model, score against data the model never sees, and report the negative results with the positive ones. Examples are under Selected work below.</p>
           <div class="deliverables">
             <p class="eyebrow">Typical deliverables</p>
             <ul>
@@ -226,17 +226,17 @@
         <li class="work">
           <div class="meta">
             <p class="eyebrow">Research &middot; Maritime domain awareness</p>
-            <p class="tags">Sentinel-1 &middot; Sentinel-2 &middot; Landsat<br>NISAR &middot; VIIRS<br>Multi-target tracking<br>Unpublished draft, 2026</p>
+            <p class="tags">Sentinel-1 &middot; Sentinel-2 &middot; Landsat<br>NISAR &middot; VIIRS<br>Multi-target tracking<br>Unpublished draft</p>
           </div>
           <div>
             <h3>Re-finding ships that switch off AIS, from one satellite pass to the next</h3>
             <dl>
               <dt>Problem</dt>
-              <dd>Vessels involved in illegal fishing, sanctions evasion and smuggling switch off AIS, the transponder that reports a ship's identity and position. Satellites still see them, but passes are hours apart, and by the next one a moving ship can be any of hundreds of detections.</dd>
+              <dd>Vessels involved in illegal fishing, sanctions evasion and smuggling switch off AIS, the transponder that reports a ship's identity and position. Satellites still see them, but passes are hours apart, and by the next one a moving ship can be any of many unexplained detections.</dd>
               <dt>What our principal built</dt>
-              <dd>A tracker that links detections from five public sensors (Sentinel-1 and NISAR radar, Sentinel-2 and Landsat optical imagery, VIIRS night-time lights) across about 350,000 square kilometers of water around Denmark and southern Norway. Each sensor has its own detector and attribute model, including heading and speed read from Sentinel-2's band delay and wake, and the motion model is learned from a year of AIS. The system was scored against full-rate Danish and Norwegian AIS that it never saw.</dd>
+              <dd>A tracker that links detections from public radar, optical and night-light sensors (Sentinel-1 and NISAR, Sentinel-2 and Landsat, VIIRS) across the waters around Denmark and southern Norway. Each sensor has its own detector and attribute model, including heading and speed read from Sentinel-2's band delay and wake, and the motion model is learned from historical AIS. The system was scored against full-rate Danish and Norwegian AIS that it never saw.</dd>
               <dt>Result</dt>
-              <dd>Over six summer weeks of 2026, ships at anchor or in port were re-found in 70 to 86 percent of weekly cases. Ships under way were re-found in 10 to 17 percent, with the true next sighting among five ranked candidates about half the time. No published system was found that measures this problem, so these figures stand as a first public baseline. Thirteen changes to the tracker did not move the moving-ship figure; adding sensors did. Results are from an unpublished draft.</dd>
+              <dd>Ships at anchor or in port were re-found in most weekly cases. Ships under way were re-found far less often, and the true next sighting was usually within a short ranked list of candidates. No published system was found that measures this problem, so the results stand as a first public baseline. Changes to the tracking algorithm did not improve the moving-ship result; adding sensors did, which points to more looks per day as the lever. Results are from an unpublished draft.</dd>
             </dl>
           </div>
         </li>
@@ -252,9 +252,27 @@
               <dt>Problem</dt>
               <dd>Every radar satellite returns raw phase histories that must be formed into images, and the fleet is growing fast. The open-source image-formation codes had never been compared on the same hardware against a common reference, and none ran on TPUs.</dd>
               <dt>What our principal built</dt>
-              <dd>A library that forms SAR images on CPUs, NVIDIA GPUs and Google TPUs through one Python interface: exact backprojection, factorized backprojection and polar format, in four floating-point formats, reading CPHD, SICD, Sentinel-1 and NISAR data. Every configuration was scored against a float64 reference and priced at on-demand cloud rates, so a user can pick the accuracy, speed and cost they need.</dd>
+              <dd>A library that forms SAR images on CPUs, NVIDIA GPUs and Google TPUs through one Python interface: exact backprojection, factorized backprojection and polar format, in several floating-point precisions, reading CPHD, SICD, Sentinel-1 and NISAR data. Every configuration was scored against a high-precision reference and priced at on-demand cloud rates, so a user can pick the accuracy, speed and cost they need.</dd>
               <dt>Result</dt>
-              <dd>Between 1.06 and 22,000 times faster than the open-source implementations tested, at equal or better accuracy. A 108-megapixel commercial image forms in about three seconds on the lowest-priced cloud GPU, for under a tenth of a cent. Written with a co-author at Penn State's Applied Research Laboratory for IEEE Transactions on Geoscience and Remote Sensing.</dd>
+              <dd>Faster than every open-source implementation tested, by orders of magnitude in most cases, at equal or better accuracy. A full commercial spotlight image forms in seconds on the lowest-priced cloud GPU for a fraction of a cent, and the comparison shows which precision and device to choose for interferometric, radiometric or quick-look use. Written with a co-author at Penn State's Applied Research Laboratory for IEEE Transactions on Geoscience and Remote Sensing.</dd>
+            </dl>
+          </div>
+        </li>
+
+        <li class="work">
+          <div class="meta">
+            <p class="eyebrow">Research &middot; Vessel movement</p>
+            <p class="tags">Foundation model &middot; AIS<br>Under review</p>
+          </div>
+          <div>
+            <h3>A foundation model for where vessels go</h3>
+            <dl>
+              <dt>Problem</dt>
+              <dd>Forecasting where a vessel will be, and what it is doing, underlies collision avoidance, search and rescue, port planning and fisheries enforcement. Each of those tasks has had its own small model.</dd>
+              <dt>What our principal built</dt>
+              <dd>A single model pretrained on years of public AIS traffic that forecasts a vessel's position as a probability map at any horizon, with small task heads on the frozen model for the questions analysts ask of a track.</dd>
+              <dt>Status</dt>
+              <dd>A paper is under review. We can discuss the approach, not the results, until it is published.</dd>
             </dl>
           </div>
         </li>

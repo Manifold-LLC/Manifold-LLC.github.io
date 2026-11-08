@@ -28,8 +28,7 @@ npx html-validate@11 index.html capability-statement.html 404.html
 - Whether naming the principals' current employers is permitted under their outside-activity rules.
 - NAICS codes are from the July 2026 capability statement; confirm against the SAM record.
 - FastSAR: is the code public, and is the paper submitted, under review or accepted? The site says "written for" the journal and does not claim the code is available.
-- Dark-vessel work: may any of the paper's figures be used on the site? The brief says to ask first.
-- When the anonymous review of the trajectory model ends, it can be named under Selected work.
+- When the review of the trajectory model ends, its case note can be made specific. Owner's standing rule: no numbers from any of the three research projects on the site or in this repository.
 
 ## Traps
 - `CNAME` must stay in the repository root or the custom domain drops.
