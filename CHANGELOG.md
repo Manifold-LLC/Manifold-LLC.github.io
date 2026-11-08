@@ -22,6 +22,7 @@ Notable changes to manifold-llc.com. The format follows [Keep a Changelog](https
 - Contact copy asks visitors to keep Controlled Unclassified Information and procurement-sensitive detail out of the form, and names the form service.
 
 ### Changed (evening)
+- Founder-centric wording replaced with wording that survives hiring: "senior practitioners" deliver the work, "everyone at the firm" is cleared, past work is "led by the people who founded Manifold". Capability statement PDF re-rendered.
 - Contact form now delivers through Web3Forms (account info@manifold-llc.com). The mail-link fallback remains for visitors without JavaScript.
 - Every published address is now info@manifold-llc.com.
 - Employer names restored in the bios after the Owner confirmed they may appear.

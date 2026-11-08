@@ -61,3 +61,6 @@ Owner set up the account under info@manifold-llc.com on the free plan and suppli
 
 ## 2026-11-08 | Commits are authored by the Owner's named person with no tooling trailers
 Owner instruction.
+
+## 2026-11-08 | Founder-centric wording removed so the site survives hiring
+Owner decision: the firm intends to grow, so the page and PDF no longer say that the two founding principals do all the work. Operational claims now read "senior practitioners", "everyone at the firm", "the practitioner who scopes an engagement does the work". The founders are still named in the Principals block, the JSON-LD and the PDF, and past work is still attributed to them ("led by the people who founded Manifold"). The clearance line now says "everyone at the firm"; change it the day someone uncleared joins.
