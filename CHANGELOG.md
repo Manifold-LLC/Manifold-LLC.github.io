@@ -24,6 +24,7 @@ Notable changes to manifold-llc.com. The format follows [Keep a Changelog](https
 ### Changed (evening)
 - Current employers in the bios made generic pending confirmation of outside-activity rules.
 - FastSAR now links to its GitHub repository, PyPI package and arXiv preprint.
+- Paul's bio carries two loosely rounded dollar figures for the program he leads, per the Owner's rule that dollar amounts appear only as rough magnitudes.
 
 ### Removed
 - The phone number, on the Owner's instruction. Email is the contact channel.

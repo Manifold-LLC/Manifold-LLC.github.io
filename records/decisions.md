@@ -47,5 +47,8 @@ Owner decision. Email is the only published contact channel. The number removed 
 ## 2026-11-08 | Sponsor agency stays unnamed; employers generic for now; FastSAR linked
 Owner decisions. The public site keeps "an Intelligence Community agency" rather than naming the sponsor. Current employers are described generically until the Owner confirms outside-activity rules. FastSAR is linked to its GitHub repository, PyPI package and arXiv preprint, and described as submitted to IEEE TGRS. Counts in the bios stay.
 
+## 2026-11-08 | Dollar figures only when loosely rounded
+Owner rule. No exact dollar figures anywhere public; rounded magnitudes such as "over two hundred million" are allowed. Applied to Paul's bio: program funding "over ten million dollars a year" and a follow-on contract ceiling "above two hundred million dollars". Research results stay number-free.
+
 ## 2026-11-08 | Commits are authored by the Owner's named person with no tooling trailers
 Owner instruction.
