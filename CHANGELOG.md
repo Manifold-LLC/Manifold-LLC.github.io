@@ -31,6 +31,10 @@ Notable changes to manifold-llc.com. The format follows [Keep a Changelog](https
 - The form no longer posts anywhere when JavaScript is off.
 - Sticky header has a solid fallback where `color-mix()` is unsupported.
 
+### Changed (later the same day)
+- Logo mark replaced with the company's own symbol from Drive; wire-grid drawing kept as the hero figure.
+- Company data added from primary records: UEI C6P2G6PQLEB8, CAGE 23X60, NAICS 541715, 541512, 541611, 541690, formed March 2026, Loudoun County, both principals TS/SCI with CI polygraph, classified work on customer premises. The company table, JSON-LD and PDF carry them.
+
 ### Claims
 - Added a Principals block naming Paul G. Singerman, Ph.D. and John "Luke" Och, with bios drawn from their résumés (employers, titles, degrees, kind of work; no sponsor names, program names or figures). Names also appear in the JSON-LD and the capability statement's company data and point of contact.
 - Added, on the Owner's confirmation: Manifold does not compete for work it helped specify and takes no referral or reseller fees. The principals' prior roles are stated: a trusted agent at a Navy UARC and a SETA contractor.

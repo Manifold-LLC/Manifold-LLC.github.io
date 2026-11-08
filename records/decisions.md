@@ -26,5 +26,11 @@ Owner confirmed: the firm does not compete for work it helped specify and takes 
 ## 2026-11-08 | Bios drawn from résumés, with sponsor and program detail left out
 Maintainer decision under the Owner's instruction to put names, roles and two-line bios on the page. The résumés name a sponsor agency, program codenames, a contract vehicle and funding figures. None of that appears on the site; employers, titles, degrees and the kind of work do. The Owner should confirm that naming current employers is allowed.
 
+## 2026-11-08 | Adopt the existing brand symbol as the site mark
+Maintainer decision. The Owner's Drive holds a designed symbol (a calligraphic M drawn as a wave). It replaces the wire-grid mark in the header, footer, favicon, touch icon, share image and PDF. The wire-grid drawing stays as the hero figure.
+
+## 2026-11-08 | Company data published from primary records
+Maintainer decision under the Owner's instruction to add the SAM codes. UEI and CAGE come from the SAM.gov activation email, the formation date from the Virginia SCC acknowledgement, the county from the registered address, NAICS from the July 2026 capability statement, and the facility-clearance posture ("performed on customer premises") from the same document. The registered street address is a principal's home and is not published.
+
 ## 2026-11-08 | Commits are authored by the Owner's named person with no tooling trailers
 Owner instruction.
