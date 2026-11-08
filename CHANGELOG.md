@@ -22,6 +22,7 @@ Notable changes to manifold-llc.com. The format follows [Keep a Changelog](https
 - Contact copy asks visitors to keep Controlled Unclassified Information and procurement-sensitive detail out of the form, and names the form service.
 
 ### Removed
+- The phone number, on the Owner's instruction. Email is the contact channel.
 - Template files `elements.html`, `generic.html`, `README.txt`, `LICENSE.txt`, `assets/sass/`, jQuery and plugins, Font Awesome and its webfonts, and nine stock photographs (about 8 MB). With the last template file gone, the "Design: HTML5 UP" footer credit is removed in the same commit.
 - "UEI / CAGE: On request" rows. Unconfirmed company data is not shown.
 

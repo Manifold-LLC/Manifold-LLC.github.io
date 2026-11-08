@@ -30,7 +30,6 @@ jobs:
       - name: Facts appear where expected
         run: |
           for f in index.html capability-statement.html 404.html; do grep -q 'info@teammanifold.com' "$f" || { echo "email missing in $f"; exit 1; }; done
-          for f in index.html capability-statement.html; do grep -q '(703) 436-1308' "$f" || { echo "phone missing in $f"; exit 1; }; done
           for f in index.html capability-statement.html; do grep -q 'C6P2G6PQLEB8' "$f" && grep -q '23X60' "$f" || { echo "UEI or CAGE missing in $f"; exit 1; }; done
       - name: security.txt expiry is more than 60 days out
         run: |

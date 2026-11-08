@@ -23,7 +23,6 @@ npx html-validate@11 index.html capability-statement.html 404.html
 ```
 
 ## Open question
-- Which phone number to publish: (703) 436-1308 (site) or the number on the July 2026 capability statement in Drive.
 - Whether to name the sponsor agency on the site, as the July 2026 capability statement does.
 - Whether naming the principals' current employers is permitted under their outside-activity rules.
 - NAICS codes are from the July 2026 capability statement; confirm against the SAM record.

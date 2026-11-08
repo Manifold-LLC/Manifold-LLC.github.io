@@ -28,7 +28,7 @@ The site is one hand-written content page, a 404 page and a print-styled capabil
 
 Edit `index.html` directly. Sections are marked with comments (`<!-- 01 Capabilities -->` and so on). Keep the house style: plain sentences, concrete nouns, no em-dashes, sentence-case headings. If a sentence could appear on any consultancy's site, replace it with a fact only Manifold can state.
 
-When you change company facts (clearances, location, phone, email), start in `records/facts.md`, which lists every place each fact appears (hero facts strip, Company data table, Contact aside, footer, JSON-LD, `capability-statement.html`, `404.html`, `.well-known/security.txt`, `assets/js/site.js`). Then re-render the PDF (below).
+When you change company facts (clearances, location, email), start in `records/facts.md`, which lists every place each fact appears (hero facts strip, Company data table, Contact aside, footer, JSON-LD, `capability-statement.html`, `404.html`, `.well-known/security.txt`, `assets/js/site.js`). Then re-render the PDF (below).
 
 ## Contact form
 

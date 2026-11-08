@@ -41,5 +41,8 @@ Owner decision: publish no numbers from the three research projects; describe th
 ## 2026-11-08 | Capability statement becomes two pages
 Maintainer decision. With five competencies, five experience entries and two bios, one page would have needed type under 8 points. Page one stands alone (competencies, differentiators, company data, contact); page two carries experience and principals. CI now checks for exactly two pages.
 
+## 2026-11-08 | No phone number on the site
+Owner decision. Email is the only published contact channel. The number removed from the page, the PDF, the structured data and the CI check.
+
 ## 2026-11-08 | Commits are authored by the Owner's named person with no tooling trailers
 Owner instruction.
