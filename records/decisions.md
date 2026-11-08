@@ -53,5 +53,8 @@ Owner rule. No exact dollar figures anywhere public; rounded magnitudes such as 
 ## 2026-11-08 | Employers named; email moved to info@manifold-llc.com
 Owner decisions. Naming Penn State ARL and SAIC in the bios is fine, so the names are restored. The mailbox info@manifold-llc.com exists, so every published address moved to it (page, PDF, 404, security.txt, form fallback, JSON-LD, CI check). The feature branch is to be deleted once its last changes are merged.
 
+## 2026-11-08 | Published address precedes the mailbox
+Owner decision. info@manifold-llc.com stays on the site while the Owner adds manifold-llc.com as a Workspace domain alias. The maintainer had switched the address on a misread of "exists"; the Owner chose to keep it rather than revert.
+
 ## 2026-11-08 | Commits are authored by the Owner's named person with no tooling trailers
 Owner instruction.
