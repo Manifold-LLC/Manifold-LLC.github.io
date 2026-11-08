@@ -15,7 +15,7 @@
   var key = (form.getAttribute("data-access-key") || "").trim();
   var endpoint = (form.getAttribute("data-endpoint") || "").trim();
   var keyConfigured = !!key && key.indexOf("REPLACE_WITH") !== 0 && !!endpoint;
-  var TO = "info@teammanifold.com";
+  var TO = "info@manifold-llc.com";
 
   function say(msg, cls) {
     if (!status) return;

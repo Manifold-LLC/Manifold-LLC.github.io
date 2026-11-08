@@ -36,7 +36,7 @@ The form posts to [Web3Forms](https://web3forms.com) (free tier: 250 submissions
 
 To turn on real delivery:
 
-1. Go to web3forms.com, enter `info@teammanifold.com`, and confirm the email it sends you. It contains an access key.
+1. Go to web3forms.com, enter `info@manifold-llc.com`, and confirm the email it sends you. It contains an access key.
 2. In `index.html`, replace `REPLACE_WITH_WEB3FORMS_ACCESS_KEY` in the `data-access-key` attribute of the form with that key. The key is meant to be public. Leave `action="#contact"` as it is; the script posts to `data-endpoint` when a key is present, and visitors without JavaScript see a mailto line instead of sending data anywhere.
 3. Optionally, in the Web3Forms dashboard, turn on hCaptcha and restrict the key to the `manifold-llc.com` domain.
 
