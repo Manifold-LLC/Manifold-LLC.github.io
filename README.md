@@ -18,6 +18,9 @@ The site is one hand-written HTML page with one stylesheet and one small script.
 | `favicon.svg`, `favicon.ico`, `apple-touch-icon.png`, `assets/img/og.png` | Icons and the social-share image. |
 | `CNAME` | Custom domain for GitHub Pages. Do not delete. |
 | `robots.txt`, `sitemap.xml`, `.well-known/security.txt` | Crawler and security-contact files. |
+| `CHANGELOG.md`, `CREDITS.md` | What changed and when; every third-party item and its license. |
+| `records/facts.md`, `records/HANDOFF.md`, `records/decisions.md` | Facts register (company data and its sources), live operational state, and the decision log. |
+| `docs/website-repo-guide.md` | How this repository is run: structure, quality gates, writing rules, launch checklist. |
 
 ## Editing copy
 
