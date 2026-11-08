@@ -32,13 +32,9 @@ When you change company facts (clearances, location, email), start in `records/f
 
 ## Contact form
 
-The form posts to [Web3Forms](https://web3forms.com) (free tier: 250 submissions a month, no account required, built-in spam filtering). Until a key is configured the form falls back to opening the visitor's mail client with the message pre-filled.
+The form posts to [Web3Forms](https://web3forms.com) (free plan: 250 submissions a month, spam filtering included). The account is info@manifold-llc.com and the form is named "manifold-llc.com contact"; its public access key sits in the `data-access-key` attribute of the form in `index.html`. Submissions are emailed to the account address. The `action` stays `#contact` so that visitors without JavaScript see a mail link instead of sending data anywhere.
 
-To turn on real delivery:
-
-1. Go to web3forms.com, enter `info@manifold-llc.com`, and confirm the email it sends you. It contains an access key.
-2. In `index.html`, replace `REPLACE_WITH_WEB3FORMS_ACCESS_KEY` in the `data-access-key` attribute of the form with that key. The key is meant to be public. Leave `action="#contact"` as it is; the script posts to `data-endpoint` when a key is present, and visitors without JavaScript see a mailto line instead of sending data anywhere.
-3. Optionally, in the Web3Forms dashboard, turn on hCaptcha and restrict the key to the `manifold-llc.com` domain.
+To rotate the key, create a new form in the Web3Forms dashboard (app.web3forms.com) and replace the attribute value. Optional hardening in the dashboard: turn on hCaptcha and restrict the key to the `manifold-llc.com` domain.
 
 If you prefer Formspree, change the form's `action` to your Formspree endpoint and remove the `data-access-key` attribute; the script will then send a plain POST.
 
