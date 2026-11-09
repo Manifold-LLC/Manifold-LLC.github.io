@@ -15,33 +15,31 @@ body { font-size: 9.5pt; line-height: 1.38; color: var(--ink); }
 .brand-line small { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.14em; margin-left: 0.3rem; color: rgba(246,244,238,0.7); }
 .eyebrow.light { color: rgba(246,244,238,0.7); margin-bottom: 0.4rem; }
 .band h1 { font-family: var(--serif); font-weight: 400; font-size: 1.6rem; line-height: 1.12; letter-spacing: -0.015em; color: #fff; margin: 0 0 0.5rem; }
-.band .lead { font-size: 0.86rem; line-height: 1.4; color: rgba(246,244,238,0.86); margin: 0; }
+.band .lead { font-size: 0.84rem; line-height: 1.38; color: rgba(246,244,238,0.86); margin: 0; }
 .band-figure { position: absolute; right: -0.35in; top: -0.05in; width: 3.5in; height: auto; opacity: 0.9; }
 .chips { list-style: none; margin: 0.6rem 0 0; padding: 0.45rem 0 0; display: flex; gap: 1.1rem; white-space: nowrap; border-top: 1px solid rgba(246,244,238,0.25); position: relative; z-index: 1; }
 .chips li { font-family: var(--mono); font-weight: 500; font-size: 0.66rem; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(246,244,238,0.85); }
 
 /* capabilities */
 .section-label { font-family: var(--mono); font-weight: 500; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 0.6rem; }
-.caps { padding: 0.2in 0.55in 0.18in; }
-.caps ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.4rem 0.3in; }
+.caps { padding: 0.18in 0.55in 0.14in; }
+.caps ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.3rem 0.3in; }
 .caps li { position: relative; padding: 0.55rem 0 0; border-top: 1px solid var(--rule-strong); }
 .caps .n { position: absolute; right: 0; top: 0.5rem; font-family: var(--mono); font-size: 0.66rem; color: var(--ink-3); letter-spacing: 0.08em; }
 .caps h3 { font-family: var(--serif); font-weight: 400; font-size: 0.98rem; margin: 0 0 0.15rem; line-height: 1.2; }
-.caps p { margin: 0; font-size: 0.8rem; line-height: 1.34; color: var(--ink-2); }
-.caps li.rule { background: var(--accent-tint); border-top-color: var(--accent); padding: 0.55rem 0.7rem 0.6rem; }
-.caps li.rule h3 { color: var(--accent-deep); }
+.caps p { margin: 0; font-size: 0.78rem; line-height: 1.32; color: var(--ink-2); }
 
-/* selected work */
-.sw { background: var(--paper-2); padding: 0.2in 0.55in; display: grid; grid-template-columns: 2.5in 1fr; gap: 0 0.4in; align-items: start; flex: 1; }
-.sw figure { margin: 0; }
-.sw img { width: 100%; height: auto; display: block; border: 1px solid var(--rule); }
-.sw figcaption { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.04em; color: var(--ink-3); margin-top: 0.4rem; line-height: 1.4; }
-.sw dl { margin: 0; display: grid; grid-template-columns: 1.15in 1fr; gap: 0.28rem 0.45rem; }
-.sw dt { font-family: var(--serif); font-size: 0.95rem; line-height: 1.25; text-transform: none; letter-spacing: 0; color: var(--ink); font-weight: 400; }
-.sw dd { margin: 0; font-size: 0.8rem; line-height: 1.34; color: var(--ink-2); }
+/* acquisition cycle and the two columns */
+.sw { background: var(--paper-2); padding: 0.16in 0.55in 0.12in; flex: 1; }
+.sw .cycle { width: 100%; height: auto; display: block; margin: 0 0 0.15rem; }
+.sw .two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 0.4in; margin-top: 0.2rem; }
+.sw h3 { font-family: var(--serif); font-weight: 400; font-size: 0.96rem; margin: 0 0 0.2rem; padding-top: 0.28rem; border-top: 1px solid var(--rule-strong); }
+.sw ul { list-style: none; margin: 0; padding: 0; }
+.sw li { font-size: 0.78rem; line-height: 1.32; color: var(--ink-2); margin: 0 0 0.28rem; }
+.sw li strong { font-weight: 500; color: var(--ink); }
 
 /* footer */
-.foot { display: flex; align-items: center; gap: 0.28in; padding: 0.15in 0.55in 0.2in; border-top: 1px solid var(--rule-strong); }
+.foot { display: flex; align-items: center; gap: 0.28in; padding: 0.13in 0.55in 0.16in; border-top: 1px solid var(--rule-strong); }
 .foot .qr { width: 0.75in; height: 0.75in; flex: none; }
 .foot-main { flex: 1; }
 .foot p { margin: 0 0 0.15rem; font-size: 0.8rem; color: var(--ink-2); }
