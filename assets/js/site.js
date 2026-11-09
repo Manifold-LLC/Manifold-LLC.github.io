@@ -6,6 +6,22 @@
   var y = document.getElementById("year");
   if (y) y.textContent = String(new Date().getFullYear());
 
+  // In-page links scroll to their section without putting a hash in the address bar,
+  // so a refresh returns to the top instead of the last section visited.
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+  var reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
+    if (!a) return;
+    var id = a.getAttribute("href").slice(1), el = id && document.getElementById(id);
+    if (!el) return;
+    e.preventDefault();
+    el.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
+    if (!el.hasAttribute("tabindex")) el.setAttribute("tabindex", "-1");
+    el.focus({ preventScroll: true });
+    history.replaceState(null, "", location.pathname + location.search);
+  });
+
   // Contact form
   var form = document.getElementById("contact-form");
   if (!form) return;
