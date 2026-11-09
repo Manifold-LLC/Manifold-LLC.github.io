@@ -118,3 +118,6 @@ Owner and co-founder found the Work section too much text. Each case note is now
 
 ## 2026-11-09 | Capabilities and bios shortened the same way
 Owner said to keep going after the Work cards. Capabilities became an accordion list (first sentence visible, remainder and deliverables one click away, text unchanged). Bios show a one-sentence summary drawn from the full bio, the credentials line, and a toggle for the full text. The capability statement PDF still carries everything in full.
+
+## 2026-11-09 | The site leans into AI
+Owner decision: the firm sells AI expertise, so the page should not open its services by suggesting the customer may not need AI. "Not every mission needs a foundation model", "Sometimes the answer is not to build it ... not a preference for AI" and the overview's "where they do not yet" are replaced with statements about putting foundation models to work and matching the AI approach to the mission. The honest-advisor point survives in "when buying is smarter than building" and in "we say plainly what each will take to build and to run".
