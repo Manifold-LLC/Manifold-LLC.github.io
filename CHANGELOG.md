@@ -28,7 +28,8 @@ Notable changes to manifold-llc.com. The format follows [Keep a Changelog](https
 - Every statement that Manifold holds no facility clearance or performs classified work on customer premises: the approach item, the company table row, the capability statement row and the overview line. The clearance item now says only that everyone holds TS/SCI with CI polygraph.
 
 ### Added (photos)
-- Portraits of the two principals beside their bios, cropped from the photograph on the previous site and shown in greyscale, and the full photograph in the Company section.
+- Portraits of the two principals beside their bios, cropped from the photograph on the previous site and shown in greyscale. (The full photograph was added to the Company section and removed again the same day.)
+- The hero drawing is now a live model: `assets/js/manifold.js` draws the same surface on a canvas, turns with a drag or the arrow keys, and carries a four-step lesson on the data manifold (data on a surface, locally flat, globally curved, off the surface). The still SVG remains for visitors without JavaScript.
 
 ### Changed (contact)
 - Contact heading is now "Tell us where you need help".
