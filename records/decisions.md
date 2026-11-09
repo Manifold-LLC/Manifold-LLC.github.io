@@ -76,3 +76,6 @@ Owner decision, prompted by a colleague's note that the opening read generically
 
 ## 2026-11-09 | No handling instructions for visitors
 Owner decision. The approach item that told visitors to keep CUI and procurement-sensitive material out of the site and email, and the same sentence in the contact aside, were removed as talking down to the reader. The item now states the facts only: everyone is cleared, there is no facility clearance, classified work happens on customer premises.
+
+## 2026-11-09 | Bios in the past tense
+Owner decision. The founders plan to leave their positions at Penn State ARL and SAIC once the firm wins a contract, so the bios describe those roles as experience ("led", "served") rather than current jobs, and the sentence disclosing current employment under How we work is removed. The employers are still named.
