@@ -28,6 +28,7 @@ Notable changes to manifold-llc.com. The format follows [Keep a Changelog](https
 - Every statement that Manifold holds no facility clearance or performs classified work on customer premises: the approach item, the company table row, the capability statement row and the overview line. The clearance item now says only that everyone holds TS/SCI with CI polygraph.
 
 ### Changed (bios)
+- Paul's degree line now lists all four degrees: Ph.D. and M.S. electrical engineering and M.A. mathematics from Penn State, B.S. physics from Indiana University of Pennsylvania.
 - Bios describe the Penn State ARL and SAIC roles in the past tense, and the sentence about the founders holding those positions is removed from How we work.
 
 ### Removed (tone)
