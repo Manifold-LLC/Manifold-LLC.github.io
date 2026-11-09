@@ -82,3 +82,6 @@ Owner decision. The founders plan to leave their positions at Penn State ARL and
 
 ## 2026-11-09 | Facility clearance not mentioned
 Owner decision. The site, capability statement and overview no longer say that Manifold holds no facility clearance or that classified work happens on customer premises. The clearance item says only that everyone holds TS/SCI with CI polygraph. The fact stays in the facts register for use in conversation.
+
+## 2026-11-09 | Principal photos from the old site's photograph
+Owner instruction. The old site's images/pic01.jpg (uploaded 2026-05-18) is a photograph of the two founders. Each was cropped to a 4:5 portrait (`assets/img/principal-left.jpg`, `assets/img/principal-right.jpg`) and placed beside the bios, shown in greyscale to match the page. The earlier decision note that "no photography of people is used because none depicts staff" was wrong about this one image. The Owner confirmed the photograph shows Luke on the left and Paul on the right; the crops are assigned accordingly. The full photograph also appears in the Company section above the Principals block.
