@@ -22,7 +22,7 @@
     { a: 0.85, e: 1.00, z: 1.25 },
     { a: 0.70, e: 1.05, z: ZOOM },
     { a: 0.10, e: 0.48, z: 1.0 },
-    { a: 0.10, e: 0.48, z: 1.1 }
+    { a: 0.00, e: 0.30, z: 1.1 }
   ];
   function rot(x, y, zz) {
     var ca = Math.cos(view.azim), sa = Math.sin(view.azim);
@@ -158,7 +158,7 @@
       ctx.strokeStyle = accent; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.moveTo(p0[0], p0[1]); ctx.lineTo(pf[0], pf[1]); ctx.stroke(); // the flat guess, carried out from the sample
       dot(pt, 8, paper); dot(pt, 5, ink);
       dot(pf, 9, paper); ring(pf, 5.5, warn); dot(pf, 2, warn);
-      tag(pf, "what the model says", warn, -12); tag(pt, "what is true", ink, 20);
+      tag(pf, "what the model says", warn, -12); tag(pt, "what is true", ink, 0, true);
       dot(proj([P[0], P[1], z(P[0], P[1])]), 4.5, accent);
     }
     if (step === 4) {
@@ -170,11 +170,15 @@
   function dot(p, r, c) { ctx.fillStyle = c; ctx.beginPath(); ctx.arc(p[0], p[1], r, 0, 6.2832); ctx.fill(); }
   function ring(p, r, c) { ctx.strokeStyle = c; ctx.lineWidth = 1.6; ctx.beginPath(); ctx.arc(p[0], p[1], r, 0, 6.2832); ctx.stroke(); }
   function dashed(a, b, c) { ctx.save(); ctx.strokeStyle = c; ctx.lineWidth = 1.2; ctx.setLineDash([4, 4]); ctx.beginPath(); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); ctx.stroke(); ctx.restore(); }
-  function tag(p, s, c, dy) {
+  function tag(p, s, c, dy, below) {
     ctx.font = "500 11px 'IBM Plex Mono', ui-monospace, monospace"; ctx.fillStyle = c;
     var w = ctx.measureText(s).width, left = p[0] + 10 + w > W - 4;
     var y = p[1] + (dy || -8); if (y < 14) y = p[1] + 18;
     var x = left ? p[0] - 12 : p[0] + 12;
+    if (below) { // centred under the point, kept inside the canvas
+      x = Math.max(w / 2 + 4, Math.min(W - w / 2 - 4, p[0])); y = p[1] + 22;
+      ctx.textAlign = "center"; ctx.lineJoin = "round"; ctx.strokeStyle = paper; ctx.lineWidth = 4; ctx.strokeText(s, x, y); ctx.fillText(s, x, y); ctx.textAlign = "left"; return;
+    }
     ctx.textAlign = left ? "right" : "left";
     ctx.lineJoin = "round"; ctx.strokeStyle = paper; ctx.lineWidth = 4; ctx.strokeText(s, x, y); // a paper-coloured halo so the label reads over the grid
     ctx.fillText(s, x, y); ctx.textAlign = "left";
