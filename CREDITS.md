@@ -11,3 +11,6 @@ Everything in this repository that was not written for it is listed here with it
 The logo mark (`assets/img/mark.svg`, the inline `#mark` symbol, `favicon.svg`) is Manifold LLC's own symbol, from the "MANIFOLD Symbols SVG" folder in the company Drive. Everything else (HTML, CSS, JavaScript, the wire-grid drawing, the generator scripts, the PDF and the copy) was written for this site and is owned by Manifold LLC.
 
 No stock photography, icon fonts, template code or third-party JavaScript remains in the repository. The previous version used the HTML5 UP "Solid State" template (CC BY 3.0). The last file from it, and the footer credit, were removed in the commit "Replace template site with a hand-built page and rewritten copy" (November 2026).
+
+## Photographs
+- `assets/img/principal-left.jpg` and `assets/img/principal-right.jpg` are crops of the founders' photograph supplied by Manifold LLC for the previous site. All rights reserved by Manifold LLC.

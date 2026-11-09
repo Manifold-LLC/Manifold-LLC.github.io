@@ -642,3 +642,8 @@ button, input, textarea { font: inherit; color: inherit; }
 .work-index a { color: var(--ink); text-decoration-color: var(--rule-strong); }
 .work-index a:hover { text-decoration-color: currentColor; }
 .work { scroll-margin-top: 5rem; }
+
+/* Principal photos */
+.person { display: grid; grid-template-columns: minmax(0, 7.5rem) minmax(0, 1fr); gap: 1.4rem; align-items: start; }
+.person-photo { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 4px; filter: grayscale(100%); border: 1px solid var(--rule); }
+@media (max-width: 560px) { .person { grid-template-columns: minmax(0, 1fr); gap: 1rem; } .person-photo { width: 6.5rem; } }
