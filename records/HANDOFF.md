@@ -24,7 +24,7 @@ npx html-validate@11 index.html capability-statement.html 404.html
 ```
 
 ## To do outside this repository
-- teammanifold.com still serves a Squarespace "Coming Soon" page. Its DNS is on Google Cloud DNS nameservers (the former Google Domains, now Squarespace Domains), with A records pointing at Squarespace. Set a permanent redirect of teammanifold.com and www.teammanifold.com to https://manifold-llc.com/ in the Squarespace Domains panel (Domains, teammanifold.com, Forwarding), or move the domain's DNS to Cloudflare and use a redirect rule there. Keep the MX, SPF and DKIM records; mail for info@teammanifold.com still lands on them.
+- teammanifold.com forwards to https://manifold-llc.com with a 301 since 2026-11-09, set in Squarespace Domains (Website, Domain Forwarding, subdomains @ and www). The bare domain redirected within minutes; check that www.teammanifold.com also resolves and redirects once Squarespace's 24 to 48 hour window has passed. MX, SPF and DKIM for teammanifold.com were untouched.
 - DMARC for manifold-llc.com was published on 2026-11-09 through the Cloudflare API (`p=none`, reports to info@manifold-llc.com). Consider the same for teammanifold.com, whose DNS is not on Cloudflare.
 - The Web3Forms access key is public by design, so anyone can post to it; domain restriction on Web3Forms is a paid feature. If spam appears, move to the paid plan or switch to a service with a server-side secret.
 
