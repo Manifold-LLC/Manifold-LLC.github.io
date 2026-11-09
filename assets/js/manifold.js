@@ -22,7 +22,8 @@
     { a: 0.85, e: 1.00, z: 1.25 },
     { a: 0.70, e: 1.05, z: ZOOM },
     { a: 0.10, e: 0.48, z: 1.0 },
-    { a: 0.00, e: 0.30, z: 1.1 }
+    { a: 0.00, e: 0.30, z: 1.1 },
+    { a: 0.10, e: 0.48, z: 1.0 }
   ];
   function rot(x, y, zz) {
     var ca = Math.cos(view.azim), sa = Math.sin(view.azim);
@@ -36,7 +37,8 @@
     { label: "Data", text: "Real data lives on a manifold. Images, signals and text are high-dimensional, but real examples sit near a thin, curved surface inside that space. Modern AI is, in large part, the attempt to learn that manifold from samples." },
     { label: "Up close", text: "Up close, it looks flat. Move in on any sample and the surface is nearly a plane, so a model interpolates well between examples it has seen. Most demos live here." },
     { label: "Beyond the data", text: "Far from the data, it bends. Extend the flat patch beyond the samples and it points into empty space, but the model answers there with the same confidence. That is extrapolation, and it is where programs get hurt." },
-    { label: "Off the surface", text: "Some inputs sit right among the data and still are not on the surface: a sensor drifting out of calibration, a changed pipeline, a corrupted frame. Nothing about them looks far away, so the model answers with full confidence. Scoring against data it never saw, from the places it will actually be used, is how you find out." }
+    { label: "Off the surface", text: "Some inputs sit right among the data and still are not on the surface: a sensor drifting out of calibration, a changed pipeline, a corrupted frame. Nothing about them looks far away, so the model answers with full confidence. Scoring against data it never saw, from the places it will actually be used, is how you find out." },
+    { label: "Why this matters", text: "Everyone inside an AI program sees the patch they stand on, and the patch is flat. Seeing the curve takes someone standing outside it. That is what an independent advisor is for, and it is what Manifold does.", link: { href: "#contact", label: "Start a conversation." } }
   ];
   var step = 0, fadeT = null;
 
@@ -93,7 +95,11 @@
     // Cross-fade the text under the arrows in step with the camera move.
     text.classList.add("is-fading");
     clearTimeout(fadeT);
-    fadeT = setTimeout(function () { text.textContent = steps[i].text; text.classList.remove("is-fading"); }, reduced ? 0 : 200);
+    fadeT = setTimeout(function () {
+      text.textContent = steps[i].text;
+      if (steps[i].link) { var a = document.createElement("a"); a.href = steps[i].link.href; a.textContent = steps[i].link.label; text.appendChild(document.createTextNode(" ")); text.appendChild(a); }
+      text.classList.remove("is-fading");
+    }, reduced ? 0 : 200);
     var c = CAM[i];
     go(c.a, c.e, c.z, i === 4 ? [TOP[0], TOP[1], z(TOP[0], TOP[1]) + 0.45] : [P[0], P[1], z(P[0], P[1])]);
   }
@@ -147,9 +153,9 @@
         ctx.beginPath(); o.L.forEach(function (p, k) { var X = ox + p[0] * sc, Y = oy - p[2] * sc; if (k) ctx.lineTo(X, Y); else ctx.moveTo(X, Y); }); ctx.stroke();
       });
     ctx.globalAlpha = 1;
-    if (step >= 1) { ctx.globalAlpha = step === 3 ? 0.4 : 1; samples.forEach(function (s) { dot(proj(s), 2.6, accent); }); ctx.globalAlpha = 1; }
+    if (step >= 1) { ctx.globalAlpha = (step === 3 || step === 5) ? 0.4 : 1; samples.forEach(function (s) { dot(proj(s), 2.6, accent); }); ctx.globalAlpha = 1; }
     if (step === 2) { patch(0.32, 0.26); dot(proj([P[0], P[1], z(P[0], P[1])]), 4.5, accent); }
-    if (step === 3) {
+    if (step === 3 || step === 5) {
       patch(DU + 0.1, DV + 0.2);
       var far = FAR, truth = [far[0], far[1], z(far[0], far[1])];
       var p0 = proj([P[0], P[1], z(P[0], P[1])]);
@@ -158,7 +164,8 @@
       ctx.strokeStyle = accent; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.moveTo(p0[0], p0[1]); ctx.lineTo(pf[0], pf[1]); ctx.stroke(); // the flat guess, carried out from the sample
       dot(pt, 8, paper); dot(pt, 5, ink);
       dot(pf, 9, paper); ring(pf, 5.5, warn); dot(pf, 2, warn);
-      tag(pf, "what the model says", warn, -12); tag(pt, "what is true", ink, 0, true);
+      if (step === 5) { ring(pt, 10, accent); tag(pf, "what the model says", warn, -12); tag(pt, "checked", accent, 0, true); }
+      else { tag(pf, "what the model says", warn, -12); tag(pt, "what is true", ink, 0, true); }
       dot(proj([P[0], P[1], z(P[0], P[1])]), 4.5, accent);
     }
     if (step === 4) {
