@@ -9,6 +9,7 @@ The site is one hand-written content page, a 404 page and a print-styled capabil
 | Path | What it is |
 |---|---|
 | `index.html` | The site. All copy lives here. |
+| `scripts/stamp.py` | Rewrites the `?v=` content hash on every CSS and JS link in the four pages. Run after changing assets; CI checks it. |
 | `assets/js/manifold.js` | The hero drawing as a live model with a four-step lesson on the data manifold. Same surface as `scripts/surface.py`. |
 | `capability-statement.html` | Print-styled two-page capability statement (styles in `assets/css/capability-statement.css`). `manifold-capability-statement.pdf` is rendered from it. |
 | `slick-sheet.html` | One-page overview for capture teams and events (styles in `assets/css/slick-sheet.css`). `manifold-overview.pdf` is rendered from it. |

@@ -21,7 +21,7 @@ jobs:
       - name: Check links
         uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
         with:
-          args: --root-dir ${{ github.workspace }} --offline --no-progress index.html capability-statement.html slick-sheet.html 404.html
+          args: --root-dir ${{ github.workspace }} --offline --no-progress --exclude '\?v=[0-9a-f]+$' index.html capability-statement.html slick-sheet.html 404.html
           fail: true
       - name: Banned punctuation and words in site copy
         run: |
@@ -31,6 +31,11 @@ jobs:
         run: |
           for f in index.html capability-statement.html slick-sheet.html 404.html; do grep -q 'info@manifold-llc.com' "$f" || { echo "email missing in $f"; exit 1; }; done
           for f in index.html capability-statement.html slick-sheet.html; do grep -q 'C6P2G6PQLEB8' "$f" && grep -q '23X60' "$f" || { echo "UEI or CAGE missing in $f"; exit 1; }; done
+      - name: Asset links carry current content hashes
+        run: |
+          python3 scripts/stamp.py
+          git diff --exit-code -- index.html capability-statement.html slick-sheet.html 404.html || { echo 'run python3 scripts/stamp.py and commit'; exit 1; }
+          for f in assets/css/site.css assets/css/capability-statement.css assets/css/slick-sheet.css assets/js/site.js assets/js/manifold.js; do test -f "$f" || { echo "missing $f"; exit 1; }; done
       - name: security.txt expiry is more than 60 days out
         run: |
           exp=$(grep -i '^Expires:' .well-known/security.txt | cut -d' ' -f2)
