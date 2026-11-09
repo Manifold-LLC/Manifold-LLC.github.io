@@ -4,6 +4,9 @@ Notable changes to manifold-llc.com. The format follows [Keep a Changelog](https
 
 ## [Unreleased]
 
+### Changed (lead)
+- The lead paragraph on the page and the capability statement now says "firsthand experience supporting the Intelligence Community"; the clause naming DoW research and acquisition programs is gone. Capability statement PDF re-rendered.
+
 ### Changed (headline)
 - The front-page headline is now the short form, "Independent AI/ML guidance for Intelligence Community program offices." The "grounded in firsthand experience" clause stays on the share image.
 
