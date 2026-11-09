@@ -32,7 +32,7 @@
   }
 
   var steps = [
-    { label: "Why the name Manifold?", text: "A manifold is a space that looks flat up close and is curved as a whole: a surface in any number of dimensions that, from any one point, looks like ordinary flat space. Most programs look fine from inside any one office. Turn it, then step through why that matters for AI." },
+    { label: "Why the name Manifold?", text: "A manifold is a smooth surface, of any dimension, that looks flat up close however it curves as a whole. Most programs look fine from inside any one office. Turn it, then step through why that matters for AI." },
     { label: "Data", text: "Data lives on a surface. Images, signals and text are high-dimensional, but real examples sit near a thin, curved surface inside that space: the data manifold. A model's job is to learn that surface from samples." },
     { label: "Up close", text: "Up close, it looks flat. Move in on any sample and the surface is nearly a plane, so a model interpolates well between examples it has seen. Most demos live here." },
     { label: "Far away", text: "Far away, it bends. Extend the flat patch and it points into empty space, but a model asked about a region it never saw answers with the same confidence. That is extrapolation, and it is where programs get hurt." },

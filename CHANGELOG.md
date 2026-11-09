@@ -32,7 +32,7 @@ Notable changes to manifold-llc.com. The format follows [Keep a Changelog](https
 - The hero drawing is now a live model: `assets/js/manifold.js` draws the same surface on a canvas, turns with a drag or the arrow keys, and carries a four-step lesson on the data manifold (data on a surface, locally flat, globally curved, off the surface). The opening step is "Why the name Manifold?". A hint above the drawing says it can be grabbed and turned, and dims once the visitor has turned it. Each step moves the camera with a smooth turn and zoom, the controls are a previous/next stepper that also answers the left and right arrow keys, and the text beneath cross-fades between steps. On the far-away step the true point and the model's point carry halos and backed labels, and the sample dots dim, so the gap between them reads at a glance. The off-surface point on the last step now floats above the unsampled far corner, away from the samples as well as off the sheet. The still SVG remains for visitors without JavaScript.
 
 ### Changed (definition)
-- The opening lesson step and the Company section now say that a manifold is a space in any number of dimensions that looks like ordinary flat space from any one point, not only a surface.
+- The opening lesson step, the no-script caption and the Company section define a manifold as a smooth surface, of any dimension, that looks flat up close however it curves as a whole.
 
 ### Changed (top of page)
 - The hero's second button now opens the one-page overview; the header button keeps the capability statement, the document buyers search for by name. Both remain linked from the company table and the footer.
