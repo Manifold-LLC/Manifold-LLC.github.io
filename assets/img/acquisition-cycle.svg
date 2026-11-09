@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 118" width="740" height="118" role="img" aria-label="The five stages of an acquisition, from need and strategy through requirements, source selection and execution to assessment, with what Manifold provides at each.">
+<polygon points="0.0,14.0 128.0,14.0 140.0,36.0 128.0,58.0 0.0,58.0" fill="#1e3a5f"/>
+<text x="70.0" y="40.5" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12.5" fill="#fff">Need and strategy</text>
+<text x="2.0" y="75.0" font-family="IBM Plex Sans, sans-serif" font-size="10.5" fill="#474b54">Roadmaps, build-versus-buy,</text>
+<text x="2.0" y="89.0" font-family="IBM Plex Sans, sans-serif" font-size="10.5" fill="#474b54">technology forecasts</text>
+<polygon points="150.0,14.0 278.0,14.0 290.0,36.0 278.0,58.0 150.0,58.0 162.0,36.0" fill="#2f4f7a"/>
+<text x="225.0" y="40.5" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12.5" fill="#fff">Requirements</text>
+<text x="152.0" y="75.0" font-family="IBM Plex Sans, sans-serif" font-size="10.5" fill="#474b54">Technical requirements,</text>
+<text x="152.0" y="89.0" font-family="IBM Plex Sans, sans-serif" font-size="10.5" fill="#474b54">RFP and SOW language</text>
+<polygon points="300.0,14.0 428.0,14.0 440.0,36.0 428.0,58.0 300.0,58.0 312.0,36.0" fill="#1e3a5f"/>
+<text x="375.0" y="40.5" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12.5" fill="#fff">Source selection</text>
+<text x="302.0" y="75.0" font-family="IBM Plex Sans, sans-serif" font-size="10.5" fill="#474b54">Evaluation criteria,</text>
+<text x="302.0" y="89.0" font-family="IBM Plex Sans, sans-serif" font-size="10.5" fill="#474b54">evaluators, BAA panels</text>
+<polygon points="450.0,14.0 578.0,14.0 590.0,36.0 578.0,58.0 450.0,58.0 462.0,36.0" fill="#2f4f7a"/>
+<text x="525.0" y="40.5" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12.5" fill="#fff">Execution</text>
+<text x="452.0" y="75.0" font-family="IBM Plex Sans, sans-serif" font-size="10.5" fill="#474b54">Cost models, design</text>
+<text x="452.0" y="89.0" font-family="IBM Plex Sans, sans-serif" font-size="10.5" fill="#474b54">reviews, vendor checks</text>
+<polygon points="600.0,14.0 728.0,14.0 740.0,36.0 728.0,58.0 600.0,58.0 612.0,36.0" fill="#1e3a5f"/>
+<text x="675.0" y="40.5" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12.5" fill="#fff">Assessment</text>
+<text x="602.0" y="75.0" font-family="IBM Plex Sans, sans-serif" font-size="10.5" fill="#474b54">Independent evaluation,</text>
+<text x="602.0" y="89.0" font-family="IBM Plex Sans, sans-serif" font-size="10.5" fill="#474b54">metrics, training</text>
+<text x="2" y="114" font-family="IBM Plex Mono, monospace" font-size="9" letter-spacing="0.06em" fill="#62666f">WHAT MANIFOLD PROVIDES AT EACH STAGE</text>
+</svg>
