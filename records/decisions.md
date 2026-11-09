@@ -115,3 +115,6 @@ Owner edits, returned in a Word copy of every passage on the site and applied ve
 
 ## 2026-11-09 | Selected work becomes cards with expandable case notes
 Owner and co-founder found the Work section too much text. Each case note is now a card with an animated line drawing, a one-sentence summary and a native details toggle holding the full text exactly as last edited. Summaries follow the standing rules: no research numbers, the vessel-movement model stated generically, no customer names. FastSAR's card carries its GitHub, PyPI and arXiv links up front because they are the checkable proof.
+
+## 2026-11-09 | Capabilities and bios shortened the same way
+Owner said to keep going after the Work cards. Capabilities became an accordion list (first sentence visible, remainder and deliverables one click away, text unchanged). Bios show a one-sentence summary drawn from the full bio, the credentials line, and a toggle for the full text. The capability statement PDF still carries everything in full.
