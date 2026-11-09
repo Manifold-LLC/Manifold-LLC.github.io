@@ -33,12 +33,12 @@
   }
 
   var steps = [
-    { label: "Why the name Manifold?", text: "A manifold is a mathematical term for a smooth surface of any dimension, and the idea is central to understanding AI. Press the arrow to find out why." },
+    { label: "Why the name Manifold?", text: "A manifold is a mathematical term for a smooth surface of any dimension, and the idea is central to Artificial Intelligence. Press the arrow to find out why." },
     { label: "Data", text: "Real data lives on a manifold. Images, signals and text are high-dimensional, but real examples sit near a thin, curved surface inside that space. Modern AI is, in large part, the attempt to learn that manifold from samples." },
     { label: "Up close", text: "Up close, it looks flat. Move in on any sample and the surface is nearly a plane, so a model interpolates well between examples it has seen. Most demos live here." },
-    { label: "Beyond the data", text: "Far from the data, it bends. Extend the flat patch beyond the samples and it points into empty space, but the model answers there with the same confidence. That is extrapolation, and it is where programs get hurt." },
-    { label: "Off the surface", text: "Some inputs sit right among the data and still are not on the surface: a sensor drifting out of calibration, a changed pipeline, a corrupted frame. Nothing about them looks far away, so the model answers with full confidence. Scoring against data it never saw, from the places it will actually be used, is how you find out." },
-    { label: "Why this matters", text: "It is easy, inside an AI program, to see only the patch you stand on, and the patch is flat. Seeing the curve takes someone who can see outside it. That is what Manifold does, as independent advisors or as the team doing the research and development.", link: { href: "#contact", label: "Start a conversation." } }
+    { label: "Beyond the data", text: "The surface curves, but the model's flat approximation continues in a straight line. Beyond the training samples, the two diverge. The model can still produce confident predictions, even where it has little evidence to support them. This is extrapolation, and it is a critical source of operational risk." },
+    { label: "Off the surface", text: "An input can fall near the training data without following the patterns the model learned. Sensor drift, pipeline changes, and corrupted imagery can push observations off the learned manifold, even when they appear familiar. The model may still respond confidently. Evaluating against unseen operational data and testing these failure modes reveals where its predictions become unreliable." },
+    { label: "Why this matters", text: "It is easy, inside an AI program, to see only the flat patch you stand on. Seeing the curve takes someone who has experience seeing outside it. That is what Manifold does, as independent advisors or as the team doing the research and development.", link: { href: "#contact", label: "Start a conversation." } }
   ];
   var step = 0, fadeT = null;
 

@@ -4,6 +4,12 @@ Notable changes to manifold-llc.com. The format follows [Keep a Changelog](https
 
 ## [Unreleased]
 
+### Changed (Owner's copy revision)
+- The Owner's edits from a returned Word copy of the site text. Headline is now "Independent AI/ML guidance for Intelligence Community program offices, grounded in firsthand experience supporting government acquisition and mission decisions"; new lead paragraph naming the IC and DoW; "customer" replaces "sponsor" everywhere; the capabilities intro, the Strategy and Acquisition cards, case note 6, rules 1 to 6 under How we work, the contact note and three lesson steps are reworded; "cradle to grave" in the facts strip; the drawing caption says "central to Artificial Intelligence". The headline change is carried to the capability statement, the overview, the share image and the link-preview title; the approach, clearance and bio changes are carried to the PDFs. Both PDFs and the share image re-rendered; the capability statement's print type tightened slightly to hold two pages.
+
+### Claims
+- Removed from the page: "we take no referral or reseller fees from any vendor" (still on both PDFs as "no vendor fees"), the sentence about not pursuing work where a member serves as a trusted agent or evaluator, "Typical engagements run from a few weeks to a few months", and "He has worked in Northern Virginia since 2015". The founders' time in IC acquisition is now "nearly a decade"; the overview's foundation-model credential now says "for the IC and DoW".
+
 ### Added
 - Hand-built single content page replacing the HTML5 UP "Solid State" template: `index.html`, `assets/css/site.css`, `assets/js/site.js`.
 - Self-hosted fonts: Newsreader, IBM Plex Sans, IBM Plex Mono (SIL Open Font License), with license files in `assets/fonts/`.
