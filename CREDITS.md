@@ -13,4 +13,4 @@ The logo mark (`assets/img/mark.svg`, the inline `#mark` symbol, `favicon.svg`) 
 No stock photography, icon fonts, template code or third-party JavaScript remains in the repository. The previous version used the HTML5 UP "Solid State" template (CC BY 3.0). The last file from it, and the footer credit, were removed in the commit "Replace template site with a hand-built page and rewritten copy" (November 2026).
 
 ## Photographs
-- `assets/img/principal-left.jpg` and `assets/img/principal-right.jpg` are crops of the founders' photograph supplied by Manifold LLC for the previous site. All rights reserved by Manifold LLC.
+- `assets/img/founders.jpg`, `assets/img/principal-left.jpg` and `assets/img/principal-right.jpg` are the photograph and crops of the founders' photograph supplied by Manifold LLC for the previous site. All rights reserved by Manifold LLC.

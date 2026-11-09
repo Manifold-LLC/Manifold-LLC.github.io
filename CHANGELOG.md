@@ -28,7 +28,7 @@ Notable changes to manifold-llc.com. The format follows [Keep a Changelog](https
 - Every statement that Manifold holds no facility clearance or performs classified work on customer premises: the approach item, the company table row, the capability statement row and the overview line. The clearance item now says only that everyone holds TS/SCI with CI polygraph.
 
 ### Added (photos)
-- Portraits of the two principals beside their bios, cropped from the photograph on the previous site and shown in greyscale.
+- Portraits of the two principals beside their bios, cropped from the photograph on the previous site and shown in greyscale, and the full photograph in the Company section.
 
 ### Changed (contact)
 - Contact heading is now "Tell us where you need help".
