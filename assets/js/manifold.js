@@ -22,7 +22,7 @@
     { a: 0.85, e: 1.00, z: 1.25 },
     { a: 0.70, e: 1.05, z: ZOOM },
     { a: 0.10, e: 0.48, z: 1.0 },
-    { a: 0.45, e: 1.05, z: 1.1 }
+    { a: 0.10, e: 0.48, z: 1.1 }
   ];
   function rot(x, y, zz) {
     var ca = Math.cos(view.azim), sa = Math.sin(view.azim);
@@ -36,7 +36,7 @@
     { label: "Data", text: "Real data lives on a manifold. Images, signals and text are high-dimensional, but real examples sit near a thin, curved surface inside that space. Modern AI is, in large part, the attempt to learn that manifold from samples." },
     { label: "Up close", text: "Up close, it looks flat. Move in on any sample and the surface is nearly a plane, so a model interpolates well between examples it has seen. Most demos live here." },
     { label: "Beyond the data", text: "Far from the data, it bends. Extend the flat patch beyond the samples and it points into empty space, but the model answers there with the same confidence. That is extrapolation, and it is where programs get hurt." },
-    { label: "Off the surface", text: "Some inputs are not on the surface at all, and nowhere near the samples either: a new sensor, a different theater, a corrupted file. The model still returns an answer. Scoring against data it never saw, from the places it will actually be used, is how you find out." }
+    { label: "Off the surface", text: "Some inputs sit right among the data and still are not on the surface: a sensor drifting out of calibration, a changed pipeline, a corrupted frame. Nothing about them looks far away, so the model answers with full confidence. Scoring against data it never saw, from the places it will actually be used, is how you find out." }
   ];
   var step = 0, fadeT = null;
 
@@ -108,7 +108,7 @@
   var FAR, TOP;
   function tangent(u, v, du, dv) { var h = 1e-3; var zu = (z(u + h, v) - z(u - h, v)) / (2 * h), zv = (z(u, v + h) - z(u, v - h)) / (2 * h); return [u + du, v + dv, z(u, v) + zu * du + zv * dv]; }
 
-  FAR = tangent(P[0], P[1], DU, DV); TOP = [1.95, 1.45, z(1.95, 1.45) + 1.1]; // over the unsampled far corner, lifted into empty space above the sheet
+  FAR = tangent(P[0], P[1], DU, DV); TOP = [-0.55, 0.35, z(-0.55, 0.35) + 1.7]; // inside the sampled region, lifted off the sheet
   var W, H, sc, ox, oy, dpr;
   function size() {
     dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -163,7 +163,7 @@
     }
     if (step === 4) {
       var top = TOP, base = [top[0], top[1], z(top[0], top[1])];
-      var pp = proj(top); dashed(pp, proj(base), warn); dot(pp, 9, paper); ring(pp, 6, warn); dot(pp, 2, warn); tag(pp, "not on the surface", warn, -12);
+      var pp = proj(top), pb = proj(base); dashed(pp, pb, warn); dot(pb, 6, paper); dot(pb, 3, ink); dot(pp, 9, paper); ring(pp, 6, warn); dot(pp, 2, warn); tag(pp, "not on the surface", warn, -12);
     }
     canvas.setAttribute("aria-label", "Wire-grid drawing of a curved surface. " + steps[step].text);
   }
