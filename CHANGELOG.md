@@ -24,6 +24,9 @@ Notable changes to manifold-llc.com. The format follows [Keep a Changelog](https
 ### Added (overview)
 - A one-page overview, the slick sheet: `slick-sheet.html`, `assets/css/slick-sheet.css`, rendered to `manifold-overview.pdf`. Navy header with the manifold drawing, six advisory and SETA services, an acquisition-cycle diagram showing what Manifold provides at each stage, why-us and how-we-work columns, a QR code to the site and the company codes. Linked from the footer and the company table. CI validates the page and checks the PDF is one page.
 
+### Changed (opening)
+- The opening now speaks to Intelligence Community program offices directly: headline "Independent AI/ML advice for Intelligence Community program offices, from people who have sat on the government's side of the table", a lead that names trusted agents, SETA engineers, source-selection and BAA panels, the front office and the high side, and an eyebrow carrying TS/SCI with CI polygraph and "advise or build, never both". Page title, meta description, share image, structured data, overview and capability statement follow. Hero headline size reduced.
+
 ### Changed (evening)
 - Review fixes: Luke's bio names Northern Virginia rather than the town; the conflict-of-interest item says the firm does not pursue work where a member serves as a trusted agent or evaluator; the approach section discloses the founders' positions at Penn State ARL and SAIC; the capabilities intro says the delivery half of Secure generative AI is building; the manifold sentence says "need not be flat"; the dark-vessel note says the results "would be" a first public baseline once published.
 - Share image regenerated with the current headline and all five capabilities.

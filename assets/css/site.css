@@ -248,7 +248,7 @@ button, input, textarea { font: inherit; color: inherit; }
 .hero h1 {
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(2.35rem, 5vw, 3.9rem);
+  font-size: clamp(2.05rem, 4.1vw, 3.2rem);
   line-height: 1.07;
   letter-spacing: -0.018em;
   margin: 1.1rem 0 1.4rem;
