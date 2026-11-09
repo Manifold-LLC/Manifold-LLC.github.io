@@ -100,3 +100,6 @@ Owner question: does an out-of-distribution point belong so close to the samples
 
 ## 2026-11-09 | The opening step and the definition of a manifold
 Owner wording, after several drafts: "A manifold is a mathematical term for a smooth surface of any dimension, and the idea is central to understanding AI. Press the arrow to find out why." The Company section pairs "The name comes from geometry" with the same definition. The line "Most programs look fine from inside any one office" is struck everywhere as unclear.
+
+## 2026-11-09 | Extrapolation is shown where there is no data
+Owner question: why would a model guess badly where it has nearby samples? It would not. The samples now cover only part of the surface, the third step is titled "Beyond the data", and its flat guess runs from the sample into the unsampled part, with a line showing where it came from. The text says "beyond the samples".

@@ -21,7 +21,7 @@
     { a: 0.50, e: 1.12, z: 1.0 },
     { a: 0.85, e: 1.00, z: 1.25 },
     { a: 0.70, e: 1.05, z: ZOOM },
-    { a: 1.20, e: 0.98, z: 1.0 },
+    { a: 0.85, e: 1.00, z: 1.0 },
     { a: 0.45, e: 1.05, z: 1.1 }
   ];
   function rot(x, y, zz) {
@@ -35,7 +35,7 @@
     { label: "Why the name Manifold?", text: "A manifold is a mathematical term for a smooth surface of any dimension, and the idea is central to understanding AI. Press the arrow to find out why." },
     { label: "Data", text: "Data lives on a surface. Images, signals and text are high-dimensional, but real examples sit near a thin, curved surface inside that space: the data manifold. A model's job is to learn that surface from samples." },
     { label: "Up close", text: "Up close, it looks flat. Move in on any sample and the surface is nearly a plane, so a model interpolates well between examples it has seen. Most demos live here." },
-    { label: "Far away", text: "Far away, it bends. Extend the flat patch and it points into empty space, but a model asked about a region it never saw answers with the same confidence. That is extrapolation, and it is where programs get hurt." },
+    { label: "Beyond the data", text: "Far from the data, it bends. Extend the flat patch beyond the samples and it points into empty space, but the model answers there with the same confidence. That is extrapolation, and it is where programs get hurt." },
     { label: "Off the surface", text: "Some inputs are not on the surface at all, and nowhere near the samples either: a new sensor, a different theater, a corrupted file. The model still returns an answer. Scoring against data it never saw, from the places it will actually be used, is how you find out." }
   ];
   var step = 0, fadeT = null;
@@ -100,7 +100,9 @@
 
   // Deterministic sample points on the surface.
   var seed = 7; function rnd() { seed = (seed * 16807) % 2147483647; return seed / 2147483647; }
-  var samples = []; for (var k = 0; k < 44; k++) { var su = U0 + 0.3 + (U1 - U0 - 0.6) * rnd(), sv = V0 + 0.3 + (V1 - V0 - 0.6) * rnd(); samples.push([su, sv, z(su, sv)]); }
+  // Samples cover only part of the surface (u up to SAMPLED_TO); the rest is where the model has no data.
+  var SAMPLED_TO = 0.9;
+  var samples = []; for (var k = 0; k < 48; k++) { var su = U0 + 0.3 + (SAMPLED_TO - U0 - 0.3) * rnd(), sv = V0 + 0.3 + (V1 - V0 - 0.6) * rnd(); samples.push([su, sv, z(su, sv)]); }
   var P = [0.35, -0.25]; // the sample we zoom in on
   var DU = 1.45, DV = 0.4;
   var FAR, TOP;
@@ -150,8 +152,10 @@
     if (step === 3) {
       patch(DU + 0.1, DV + 0.2);
       var far = FAR, truth = [far[0], far[1], z(far[0], far[1])];
+      var p0 = proj([P[0], P[1], z(P[0], P[1])]);
       dashed(proj(far), proj(truth), warn);
       var pt = proj(truth), pf = proj(far);
+      ctx.strokeStyle = accent; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.moveTo(p0[0], p0[1]); ctx.lineTo(pf[0], pf[1]); ctx.stroke(); // the flat guess, carried out from the sample
       dot(pt, 8, paper); dot(pt, 5, ink);
       dot(pf, 9, paper); ring(pf, 5.5, warn); dot(pf, 2, warn);
       tag(pf, "what the model says", warn, -12); tag(pt, "what is true", ink, 20);
