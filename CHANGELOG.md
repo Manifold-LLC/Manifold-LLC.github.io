@@ -24,6 +24,9 @@ Notable changes to manifold-llc.com. The format follows [Keep a Changelog](https
 ### Added (overview)
 - A one-page overview, the slick sheet: `slick-sheet.html`, `assets/css/slick-sheet.css`, rendered to `manifold-overview.pdf`. Navy header with the manifold drawing, six advisory and SETA services, an acquisition-cycle diagram showing what Manifold provides at each stage, why-us and how-we-work columns, a QR code to the site and the company codes. Linked from the footer and the company table. CI validates the page and checks the PDF is one page.
 
+### Removed (tone)
+- The sentences asking visitors to keep Controlled Unclassified Information and procurement-sensitive material out of the site, email and form. The clearance item now states facts only; its heading is "Cleared, with no facility of our own."
+
 ### Changed (opening)
 - Paul's bio now describes the program's vehicle as an IDIQ contract with a ceiling in the hundreds of millions of dollars, on the Owner's instruction, in place of "sole-source follow-on" and "above two hundred million".
 - The opening now speaks to Intelligence Community program offices directly: headline "Independent AI/ML advice for Intelligence Community program offices, from people who have sat on the government's side of the table", a lead that names trusted agents, SETA engineers, source-selection and BAA panels, the front office and the high side, and an eyebrow carrying TS/SCI with CI polygraph and "advise or build, never both". Page title, meta description, share image, structured data, overview and capability statement follow. Hero headline size reduced.
