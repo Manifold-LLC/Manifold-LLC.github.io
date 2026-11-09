@@ -121,3 +121,6 @@ Owner said to keep going after the Work cards. Capabilities became an accordion 
 
 ## 2026-11-09 | The site leans into AI
 Owner decision: the firm sells AI expertise, so the page should not open its services by suggesting the customer may not need AI. "Not every mission needs a foundation model", "Sometimes the answer is not to build it ... not a preference for AI" and the overview's "where they do not yet" are replaced with statements about putting foundation models to work and matching the AI approach to the mission. The honest-advisor point survives in "when buying is smarter than building" and in "we say plainly what each will take to build and to run".
+
+## 2026-11-09 | Fixes from the review of the two PDFs
+Owner said to fix the defects found in the review. Applied: absolute logo link and clickable contact details on the capability statement; "Contracting" row without "None yet", in line with the earlier decision not to advertise what the firm lacks; the overview's diagram inlined for fonts, its chip row fitted to the margin, its footer address unbroken, and a plural corrected. Left for the Owner to decide: DoW or DoD, the past-or-present tense of the founders' roles, the empty space on page two of the capability statement, and whether the overview should mention research and development.

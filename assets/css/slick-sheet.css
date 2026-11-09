@@ -17,8 +17,8 @@ body { font-size: 9.5pt; line-height: 1.38; color: var(--ink); }
 .band h1 { font-family: var(--serif); font-weight: 400; font-size: 1.6rem; line-height: 1.12; letter-spacing: -0.015em; color: #fff; margin: 0 0 0.5rem; }
 .band .lead { font-size: 0.84rem; line-height: 1.38; color: rgba(246,244,238,0.86); margin: 0; }
 .band-figure { position: absolute; right: -0.35in; top: -0.05in; width: 3.5in; height: auto; opacity: 0.9; }
-.chips { list-style: none; margin: 0.6rem 0 0; padding: 0.45rem 0 0; display: flex; gap: 1.1rem; white-space: nowrap; border-top: 1px solid rgba(246,244,238,0.25); position: relative; z-index: 1; }
-.chips li { font-family: var(--mono); font-weight: 500; font-size: 0.66rem; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(246,244,238,0.85); }
+.chips { list-style: none; margin: 0.6rem 0 0; padding: 0.45rem 0 0; display: flex; justify-content: space-between; gap: 0.6rem; white-space: nowrap; border-top: 1px solid rgba(246,244,238,0.25); position: relative; z-index: 1; }
+.chips li { font-family: var(--mono); font-weight: 500; font-size: 0.62rem; letter-spacing: 0.04em; text-transform: uppercase; color: rgba(246,244,238,0.85); }
 
 /* capabilities */
 .section-label { font-family: var(--mono); font-weight: 500; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 0.6rem; }
@@ -47,3 +47,6 @@ body { font-size: 9.5pt; line-height: 1.38; color: var(--ink); }
 .foot a { color: inherit; text-decoration: none; }
 .foot .codes { font-family: var(--mono); font-weight: 500; font-size: 0.66rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-3); margin: 0.3rem 0 0; }
 @media print { .screen-only { display: none; } .page { margin: 0; box-shadow: none; } }
+/* Acquisition-cycle diagram, inline so its labels use the page fonts. */
+.cycle .cy-s { font-family: var(--sans); }
+.cycle .cy-m { font-family: var(--mono); font-weight: 500; }
