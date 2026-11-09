@@ -43,3 +43,10 @@ body { background: #fff; font-size: 9pt; line-height: 1.36; color: var(--ink); }
 }
 /* Contact details are links, but should read as plain text on the sheet. */
 .cs-head .right a, .kv a { color: inherit; text-decoration: none; }
+/* Page two: stacked left column and the acquisition-cycle diagram. */
+.stack { display: flex; flex-direction: column; gap: 0.5rem; }
+.cs-cycle { margin-top: 0.6rem; }
+.cs-cycle .cycle { display: block; width: 100%; height: auto; }
+.cycle .cy-s { font-family: var(--sans); }
+.cycle .cy-m { font-family: var(--mono); font-weight: 500; }
+.cols-2 .block li { font-size: 0.86rem; }
