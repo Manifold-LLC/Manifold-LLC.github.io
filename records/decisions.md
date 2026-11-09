@@ -106,3 +106,6 @@ Owner question: why would a model guess badly where it has nearby samples? It wo
 
 ## 2026-11-09 | Step 4 shows an input inside the data but off the surface
 Owner suggestion. With step 3 now showing a point on the surface beyond the data, step 4 shows the complementary case: a point lifted off the surface directly above the sampled cluster, standing for sensor drift, pipeline changes and corrupted inputs that arrive looking ordinary. The text says nothing about them looks far away.
+
+## 2026-11-09 | A closing step for the lesson
+Owner choice among three options, then revised: the picture shows everything at once (dimmed samples, a dashed outline where the data ends, the flat guess beyond it with its gap, the input off the surface), and the text reads: "Everyone inside an AI program sees the patch they stand on, and the patch is flat. Seeing the curve takes someone standing outside it. That is what Manifold does, as independent advisors or as the team doing the research and development." It ends with a link to the contact form.

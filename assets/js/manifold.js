@@ -22,7 +22,8 @@
     { a: 0.85, e: 1.00, z: 1.25 },
     { a: 0.70, e: 1.05, z: ZOOM },
     { a: 0.10, e: 0.48, z: 1.0 },
-    { a: 0.00, e: 0.30, z: 1.1 }
+    { a: 0.00, e: 0.30, z: 1.1 },
+    { a: 0.22, e: 0.70, z: 1.0 }
   ];
   function rot(x, y, zz) {
     var ca = Math.cos(view.azim), sa = Math.sin(view.azim);
@@ -36,7 +37,8 @@
     { label: "Data", text: "Real data lives on a manifold. Images, signals and text are high-dimensional, but real examples sit near a thin, curved surface inside that space. Modern AI is, in large part, the attempt to learn that manifold from samples." },
     { label: "Up close", text: "Up close, it looks flat. Move in on any sample and the surface is nearly a plane, so a model interpolates well between examples it has seen. Most demos live here." },
     { label: "Beyond the data", text: "Far from the data, it bends. Extend the flat patch beyond the samples and it points into empty space, but the model answers there with the same confidence. That is extrapolation, and it is where programs get hurt." },
-    { label: "Off the surface", text: "Some inputs sit right among the data and still are not on the surface: a sensor drifting out of calibration, a changed pipeline, a corrupted frame. Nothing about them looks far away, so the model answers with full confidence. Scoring against data it never saw, from the places it will actually be used, is how you find out." }
+    { label: "Off the surface", text: "Some inputs sit right among the data and still are not on the surface: a sensor drifting out of calibration, a changed pipeline, a corrupted frame. Nothing about them looks far away, so the model answers with full confidence. Scoring against data it never saw, from the places it will actually be used, is how you find out." },
+    { label: "Why this matters", text: "Everyone inside an AI program sees the patch they stand on, and the patch is flat. Seeing the curve takes someone standing outside it. That is what Manifold does, as independent advisors or as the team doing the research and development.", link: { href: "#contact", label: "Start a conversation." } }
   ];
   var step = 0, fadeT = null;
 
@@ -93,7 +95,11 @@
     // Cross-fade the text under the arrows in step with the camera move.
     text.classList.add("is-fading");
     clearTimeout(fadeT);
-    fadeT = setTimeout(function () { text.textContent = steps[i].text; text.classList.remove("is-fading"); }, reduced ? 0 : 200);
+    fadeT = setTimeout(function () {
+      text.textContent = steps[i].text;
+      if (steps[i].link) { var a = document.createElement("a"); a.href = steps[i].link.href; a.textContent = steps[i].link.label; text.appendChild(document.createTextNode(" ")); text.appendChild(a); }
+      text.classList.remove("is-fading");
+    }, reduced ? 0 : 200);
     var c = CAM[i];
     go(c.a, c.e, c.z, i === 4 ? [TOP[0], TOP[1], z(TOP[0], TOP[1]) + 0.45] : [P[0], P[1], z(P[0], P[1])]);
   }
@@ -147,7 +153,7 @@
         ctx.beginPath(); o.L.forEach(function (p, k) { var X = ox + p[0] * sc, Y = oy - p[2] * sc; if (k) ctx.lineTo(X, Y); else ctx.moveTo(X, Y); }); ctx.stroke();
       });
     ctx.globalAlpha = 1;
-    if (step >= 1) { ctx.globalAlpha = step === 3 ? 0.4 : 1; samples.forEach(function (s) { dot(proj(s), 2.6, accent); }); ctx.globalAlpha = 1; }
+    if (step >= 1) { ctx.globalAlpha = (step === 3 || step === 5) ? 0.35 : 1; samples.forEach(function (s) { dot(proj(s), 2.6, accent); }); ctx.globalAlpha = 1; }
     if (step === 2) { patch(0.32, 0.26); dot(proj([P[0], P[1], z(P[0], P[1])]), 4.5, accent); }
     if (step === 3) {
       patch(DU + 0.1, DV + 0.2);
@@ -165,7 +171,28 @@
       var top = TOP, base = [top[0], top[1], z(top[0], top[1])];
       var pp = proj(top), pb = proj(base); dashed(pp, pb, warn); dot(pb, 6, paper); dot(pb, 3, ink); dot(pp, 9, paper); ring(pp, 6, warn); dot(pp, 2, warn); tag(pp, "not on the surface", warn, -12);
     }
+    if (step === 5) {
+      // The whole picture at once: where the data ends, the guess beyond it, and the input off the surface.
+      edge();
+      var far5 = FAR, truth5 = [far5[0], far5[1], z(far5[0], far5[1])], pt5 = proj(truth5), pf5 = proj(far5), p05 = proj([P[0], P[1], z(P[0], P[1])]);
+      ctx.strokeStyle = accent; ctx.lineWidth = 1.1; ctx.beginPath(); ctx.moveTo(p05[0], p05[1]); ctx.lineTo(pf5[0], pf5[1]); ctx.stroke();
+      dashed(pf5, pt5, warn); dot(pt5, 6, paper); dot(pt5, 3.5, ink); dot(pf5, 8, paper); ring(pf5, 5, warn); dot(pf5, 1.8, warn);
+      var top5 = proj(TOP), base5 = proj([TOP[0], TOP[1], z(TOP[0], TOP[1])]);
+      dashed(top5, base5, warn); dot(base5, 5, paper); dot(base5, 2.6, ink); dot(top5, 8, paper); ring(top5, 5, warn); dot(top5, 1.8, warn);
+      dot(p05, 7, paper); ring(p05, 4.5, accent); dot(p05, 2.2, accent);
+    }
     canvas.setAttribute("aria-label", "Wire-grid drawing of a curved surface. " + steps[step].text);
+  }
+  function edge() {
+    var u0 = U0 + 0.3, u1 = SAMPLED_TO, v0 = V0 + 0.3, v1 = V1 - 0.3, pts = [], k;
+    for (k = 0; k <= 24; k++) pts.push([u0 + (u1 - u0) * k / 24, v0]);
+    for (k = 0; k <= 24; k++) pts.push([u1, v0 + (v1 - v0) * k / 24]);
+    for (k = 0; k <= 24; k++) pts.push([u1 - (u1 - u0) * k / 24, v1]);
+    for (k = 0; k <= 24; k++) pts.push([u0, v1 - (v1 - v0) * k / 24]);
+    ctx.save(); ctx.strokeStyle = accent; ctx.lineWidth = 1.6; ctx.setLineDash([6, 4]); ctx.beginPath();
+    pts.forEach(function (q, i) { var r = proj([q[0], q[1], z(q[0], q[1]) + 0.02]); if (i) ctx.lineTo(r[0], r[1]); else ctx.moveTo(r[0], r[1]); });
+    ctx.closePath(); ctx.stroke(); ctx.restore();
+    var lab = proj([u1 + 0.1, v0 + 0.05, z(u1 + 0.1, v0 + 0.05)]); tag(lab, "where the data ends", accent, 18);
   }
   function dot(p, r, c) { ctx.fillStyle = c; ctx.beginPath(); ctx.arc(p[0], p[1], r, 0, 6.2832); ctx.fill(); }
   function ring(p, r, c) { ctx.strokeStyle = c; ctx.lineWidth = 1.6; ctx.beginPath(); ctx.arc(p[0], p[1], r, 0, 6.2832); ctx.stroke(); }
