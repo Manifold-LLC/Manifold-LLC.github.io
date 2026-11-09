@@ -11,7 +11,7 @@ Every company data point that appears on the site, its source, and when it was l
 | Size status | Small business | SAM.gov registration; July 2026 capability statement | 2026-11-08 | index.html, capability-statement.html |
 | Socioeconomic status | not shown | unconfirmed; none claimed on the earlier site | 2026-11-08 | not shown |
 | Clearances | TS/SCI with CI polygraph, everyone at the firm (currently the two founders) | Singerman CV; July 2026 capability statement in Drive ("Both Principals TS/SCI w/ CI Poly") | 2026-11-08 | index.html (hero facts, approach, company table), capability-statement.html |
-| Facility clearance | None; classified work performed on customer premises | July 2026 capability statement ("Classified Work: Performed on customer premises"); no DCSA or FCL correspondence in the company mailbox | 2026-11-08 | index.html (approach, company table), capability-statement.html |
+| Facility clearance | not shown | None held (July 2026 capability statement: "Classified Work: Performed on customer premises"; no DCSA or FCL correspondence in the company mailbox). Owner decision 2026-11-09: not stated on the site, PDFs or overview; answer in conversation if asked. | 2026-11-09 | not shown |
 | UEI | C6P2G6PQLEB8 | SAM.gov activation email, 2026-08-21 (company mailbox) | 2026-11-08 | index.html (company table, JSON-LD), capability-statement.html, slick-sheet.html |
 | CAGE | 23X60 | SAM.gov activation email, 2026-08-21 | 2026-11-08 | index.html (company table, JSON-LD), capability-statement.html, slick-sheet.html |
 | NAICS | 541715, 541512, 541611, 541690 | July 2026 capability statement in Drive; Owner to confirm these match the SAM record | 2026-11-08 | index.html (company table), capability-statement.html, slick-sheet.html |

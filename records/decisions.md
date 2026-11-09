@@ -79,3 +79,6 @@ Owner decision. The approach item that told visitors to keep CUI and procurement
 
 ## 2026-11-09 | Bios in the past tense
 Owner decision. The founders plan to leave their positions at Penn State ARL and SAIC once the firm wins a contract, so the bios describe those roles as experience ("led", "served") rather than current jobs, and the sentence disclosing current employment under How we work is removed. The employers are still named.
+
+## 2026-11-09 | Facility clearance not mentioned
+Owner decision. The site, capability statement and overview no longer say that Manifold holds no facility clearance or that classified work happens on customer premises. The clearance item says only that everyone holds TS/SCI with CI polygraph. The fact stays in the facts register for use in conversation.
