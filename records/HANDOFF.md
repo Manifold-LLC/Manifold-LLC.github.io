@@ -25,7 +25,7 @@ npx html-validate@11 index.html capability-statement.html 404.html
 
 ## To do outside this repository
 - teammanifold.com still serves a Squarespace "Coming Soon" page. Its DNS is on Google Cloud DNS nameservers (the former Google Domains, now Squarespace Domains), with A records pointing at Squarespace. Set a permanent redirect of teammanifold.com and www.teammanifold.com to https://manifold-llc.com/ in the Squarespace Domains panel (Domains, teammanifold.com, Forwarding), or move the domain's DNS to Cloudflare and use a redirect rule there. Keep the MX, SPF and DKIM records; mail for info@teammanifold.com still lands on them.
-- DMARC for manifold-llc.com is not published. In Cloudflare DNS add a TXT record at `_dmarc` with value `v=DMARC1; p=none; rua=mailto:info@manifold-llc.com`. Consider the same for teammanifold.com.
+- DMARC for manifold-llc.com is not published. In Cloudflare DNS add a TXT record at `_dmarc` with value `v=DMARC1; p=none; rua=mailto:info@manifold-llc.com`. Consider the same for teammanifold.com. A working "Edit zone DNS" API token for manifold-llc.com is now saved on the maintainer's cloud environment (2026-11-09); the old invalid token can be deleted.
 - The Web3Forms access key is public by design, so anyone can post to it; domain restriction on Web3Forms is a paid feature. If spam appears, move to the paid plan or switch to a service with a server-side secret.
 
 ## Open question
@@ -34,7 +34,7 @@ npx html-validate@11 index.html capability-statement.html 404.html
 
 ## Traps
 - `CNAME` must stay in the repository root or the custom domain drops.
-- The capability statement PDF is generated from `capability-statement.html` by `scripts/render.js`, which also sets the PDF Author with `scripts/pdf-metadata.py` (needs `pypdf`). Do not edit the PDF. It is two pages, page one standing alone; the render script and CI both fail on any other count. The share image `assets/img/og.png` comes from `scripts/og.html`; change its copy when the headline changes.
+- The capability statement PDF is generated from `capability-statement.html` and the one-page overview (the slick sheet) from `slick-sheet.html`, both by `scripts/render.js`, which also sets the PDF Author with `scripts/pdf-metadata.py` (needs `pypdf`). Do not edit the PDFs. The capability statement is two pages and the overview is one; the render script and CI fail on any other count. The overview's QR code (`assets/img/qr-site.svg`, made with `segno`) and schematic (`assets/img/passes.svg`) are generated, not drawn by hand. The share image `assets/img/og.png` comes from `scripts/og.html`; change its copy when the headline changes.
 - Facts appear in several files. Change `records/facts.md` first, then grep for the old value.
 - `404.html` uses absolute asset paths and looks unstyled when opened from disk. That is expected.
 

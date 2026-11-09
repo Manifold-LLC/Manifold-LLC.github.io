@@ -10,6 +10,7 @@ The site is one hand-written content page, a 404 page and a print-styled capabil
 |---|---|
 | `index.html` | The site. All copy lives here. |
 | `capability-statement.html` | Print-styled two-page capability statement (styles in `assets/css/capability-statement.css`). `manifold-capability-statement.pdf` is rendered from it. |
+| `slick-sheet.html` | One-page overview for capture teams and events (styles in `assets/css/slick-sheet.css`). `manifold-overview.pdf` is rendered from it. |
 | `404.html` | Not-found page (GitHub Pages serves it automatically). |
 | `assets/css/site.css` | All styles. Design tokens are at the top. |
 | `assets/js/site.js` | Footer year and the contact form handler. |

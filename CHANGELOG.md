@@ -21,6 +21,9 @@ Notable changes to manifold-llc.com. The format follows [Keep a Changelog](https
 - Clearance wording: principals hold TS/SCI; classified discussion happens only under a sponsoring contract in the sponsor's spaces. Clearance moved out of the first hero fact.
 - Contact copy asks visitors to keep Controlled Unclassified Information and procurement-sensitive detail out of the form, and names the form service.
 
+### Added (overview)
+- A one-page overview, the slick sheet: `slick-sheet.html`, `assets/css/slick-sheet.css`, rendered to `manifold-overview.pdf`. Navy header with the manifold drawing, five capabilities, a generated schematic of the dark-vessel tracker, four work items, a QR code to the site and the company codes. Linked from the footer and the company table. CI validates the page and checks the PDF is one page.
+
 ### Changed (evening)
 - Review fixes: Luke's bio names Northern Virginia rather than the town; the conflict-of-interest item says the firm does not pursue work where a member serves as a trusted agent or evaluator; the approach section discloses the founders' positions at Penn State ARL and SAIC; the capabilities intro says the delivery half of Secure generative AI is building; the manifold sentence says "need not be flat"; the dark-vessel note says the results "would be" a first public baseline once published.
 - Share image regenerated with the current headline and all five capabilities.
