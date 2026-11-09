@@ -21,7 +21,7 @@
     { a: 0.50, e: 1.12, z: 1.0 },
     { a: 0.85, e: 1.00, z: 1.25 },
     { a: 0.70, e: 1.05, z: ZOOM },
-    { a: 0.85, e: 1.00, z: 1.0 },
+    { a: 0.10, e: 0.48, z: 1.0 },
     { a: 0.45, e: 1.05, z: 1.1 }
   ];
   function rot(x, y, zz) {
@@ -204,6 +204,8 @@
     stopAnim();
     if (focus) view.focus = focus;
     if (reduced) { view.azim = a; view.elev = clamp(el); view.zoom = zm; draw(); return; }
+    // Take the shortest way round, so the surface never spins however far it has been dragged.
+    var TAU = Math.PI * 2; a = view.azim + ((((a - view.azim) % TAU) + TAU * 1.5) % TAU - Math.PI);
     var a0 = view.azim, e0 = view.elev, z0 = view.zoom, t0 = null;
     function frame(ts) { if (!t0) t0 = ts; var t = Math.min(1, (ts - t0) / 1100), s = t * t * (3 - 2 * t); view.azim = a0 + (a - a0) * s; view.elev = clamp(e0 + (el - e0) * s); view.zoom = z0 + (zm - z0) * s; draw(); if (t < 1) anim = requestAnimationFrame(frame); }
     anim = requestAnimationFrame(frame);
