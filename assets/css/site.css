@@ -653,8 +653,13 @@ button, input, textarea { font: inherit; color: inherit; }
 @media (max-width: 560px) { .person { grid-template-columns: minmax(0, 1fr); gap: 1rem; } .person-photo { width: 6.5rem; } }
 
 /* Manifold lesson */
-.lesson { display: flex; flex-wrap: wrap; gap: 0.4rem; width: 100%; }
-.lesson button { font: 500 0.68rem/1 var(--mono); letter-spacing: 0.04em; padding: 0.42rem 0.65rem; border: 1px solid var(--rule-strong); border-radius: 999px; background: transparent; color: var(--ink-2); cursor: pointer; }
-.lesson button:hover { border-color: var(--ink); color: var(--ink); }
-.lesson button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
-.lesson-text { width: 100%; margin: 0.7rem 0 0; font-family: var(--sans); font-weight: 400; font-size: 0.92rem; line-height: 1.5; color: var(--ink-2); letter-spacing: 0; min-height: 4.5em; }
+.lesson { display: flex; align-items: center; gap: 0.9rem; width: 100%; border-top: 1px solid var(--rule); padding-top: 0.7rem; }
+.lesson-arrow { width: 2rem; height: 2rem; border: 1px solid var(--rule-strong); border-radius: 50%; background: none; color: var(--ink); font: 400 1rem/1 var(--sans); cursor: pointer; display: inline-flex; align-items: center; justify-content: center; }
+.lesson-arrow:hover { border-color: var(--ink); }
+.lesson-arrow:disabled { opacity: 0.3; cursor: default; }
+.lesson-arrow:focus-visible, .manifold-stage canvas:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.lesson-title { font: 500 0.7rem/1.2 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); flex: 1; }
+.lesson-title .n { color: var(--accent); margin-right: 0.8em; }
+.lesson-text { width: 100%; margin: 0.8rem 0 0; font-family: var(--sans); font-weight: 400; font-size: 0.92rem; line-height: 1.5; color: var(--ink-2); letter-spacing: 0; min-height: 4.5em; transition: opacity 0.25s ease; }
+.lesson-text.is-fading { opacity: 0; }
+@media (prefers-reduced-motion: reduce) { .lesson-text { transition: none; } }
