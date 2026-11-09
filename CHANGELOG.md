@@ -4,6 +4,9 @@ Notable changes to manifold-llc.com. The format follows [Keep a Changelog](https
 
 ## [Unreleased]
 
+### Changed (headline)
+- The front-page headline is now the short form, "Independent AI/ML guidance for Intelligence Community program offices." The "grounded in firsthand experience" clause stays on the share image.
+
 ### Changed (Owner's copy revision)
 - The Owner's edits from a returned Word copy of the site text. Headline is now "Independent AI/ML guidance for Intelligence Community program offices, grounded in firsthand experience supporting government acquisition and mission decisions"; new lead paragraph naming the IC and DoW; "customer" replaces "sponsor" everywhere; the capabilities intro, the Strategy and Acquisition cards, case note 6, rules 1 to 6 under How we work, the contact note and three lesson steps are reworded; "cradle to grave" in the facts strip; the drawing caption says "central to Artificial Intelligence". The headline change is carried to the capability statement, the overview, the share image and the link-preview title; the approach, clearance and bio changes are carried to the PDFs. Both PDFs and the share image re-rendered; the capability statement's print type tightened slightly to hold two pages.
 
