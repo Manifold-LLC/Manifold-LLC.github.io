@@ -73,3 +73,6 @@ Owner asked whether the capability statement was also the slick sheet and chose 
 
 ## 2026-11-09 | Opening rewritten in the Intelligence Community's own terms
 Owner decision, prompted by a colleague's note that the opening read generically. The headline now leads with Intelligence Community program offices and "people who have sat on the government's side of the table"; the lead names trusted agents, SETA engineers, source-selection and BAA panels, the front office and the high side. The same opening is on the share image, the overview and the capability statement, shortened where space required. Insider terms that would imply a facility clearance (ICD 503, SCIF, SAP) are deliberately absent. The hero headline size was reduced to fit the longer line.
+
+## 2026-11-09 | No handling instructions for visitors
+Owner decision. The approach item that told visitors to keep CUI and procurement-sensitive material out of the site and email, and the same sentence in the contact aside, were removed as talking down to the reader. The item now states the facts only: everyone is cleared, there is no facility clearance, classified work happens on customer premises.
