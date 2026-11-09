@@ -22,7 +22,7 @@
     { a: 0.85, e: 1.00, z: 1.25 },
     { a: 0.70, e: 1.05, z: ZOOM },
     { a: 1.20, e: 0.98, z: 1.0 },
-    { a: 0.15, e: 0.72, z: 1.35 }
+    { a: 0.45, e: 1.05, z: 1.1 }
   ];
   function rot(x, y, zz) {
     var ca = Math.cos(view.azim), sa = Math.sin(view.azim);
@@ -36,7 +36,7 @@
     { label: "Data", text: "Data lives on a surface. Images, signals and text are high-dimensional, but real examples sit near a thin, curved surface inside that space: the data manifold. A model's job is to learn that surface from samples." },
     { label: "Up close", text: "Up close, it looks flat. Move in on any sample and the surface is nearly a plane, so a model interpolates well between examples it has seen. Most demos live here." },
     { label: "Far away", text: "Far away, it bends. Extend the flat patch and it points into empty space, but a model asked about a region it never saw answers with the same confidence. That is extrapolation, and it is where programs get hurt." },
-    { label: "Off the surface", text: "Some inputs are not on the surface at all: a new sensor, a different theater, a corrupted file. The model still returns an answer. Scoring against data it never saw, from the places it will actually be used, is how you find out." }
+    { label: "Off the surface", text: "Some inputs are not on the surface at all, and nowhere near the samples either: a new sensor, a different theater, a corrupted file. The model still returns an answer. Scoring against data it never saw, from the places it will actually be used, is how you find out." }
   ];
   var step = 0, fadeT = null;
 
@@ -106,7 +106,7 @@
   var FAR, TOP;
   function tangent(u, v, du, dv) { var h = 1e-3; var zu = (z(u + h, v) - z(u - h, v)) / (2 * h), zv = (z(u, v + h) - z(u, v - h)) / (2 * h); return [u + du, v + dv, z(u, v) + zu * du + zv * dv]; }
 
-  FAR = tangent(P[0], P[1], DU, DV); TOP = [-0.6, 1.0, z(-0.6, 1.0) + 0.9];
+  FAR = tangent(P[0], P[1], DU, DV); TOP = [1.95, 1.45, z(1.95, 1.45) + 1.1]; // over the unsampled far corner, lifted into empty space above the sheet
   var W, H, sc, ox, oy, dpr;
   function size() {
     dpr = Math.min(window.devicePixelRatio || 1, 2);

@@ -94,3 +94,6 @@ Owner questions. Every step now has its own camera (turn and zoom), "Up close" z
 
 ## 2026-11-09 | Asset links carry content hashes
 Maintainer decision after the Owner's phone showed the previous lesson script with the new stylesheet. GitHub Pages caches for ten minutes and cannot be configured, so every CSS and JS link is stamped with a short content hash by `scripts/stamp.py`, and CI fails when the stamps are stale.
+
+## 2026-11-09 | The off-surface point sits away from the samples
+Owner question: does an out-of-distribution point belong so close to the samples? Off the manifold is about leaving the surface, not distance along it, so a corrupted input can sit above well-sampled data. But the drawing is clearer when both are true, so the point now floats above the unsampled far corner, and the text says "nowhere near the samples either".
