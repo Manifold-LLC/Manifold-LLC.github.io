@@ -24,6 +24,16 @@ Notable changes to manifold-llc.com. The format follows [Keep a Changelog](https
 ### Added (overview)
 - A one-page overview, the slick sheet: `slick-sheet.html`, `assets/css/slick-sheet.css`, rendered to `manifold-overview.pdf`. Navy header with the manifold drawing, six advisory and SETA services, an acquisition-cycle diagram showing what Manifold provides at each stage, why-us and how-we-work columns, a QR code to the site and the company codes. Linked from the footer and the company table. CI validates the page and checks the PDF is one page.
 
+### Removed (facility clearance)
+- Every statement that Manifold holds no facility clearance or performs classified work on customer premises: the approach item, the company table row, the capability statement row and the overview line. The clearance item now says only that everyone holds TS/SCI with CI polygraph.
+
+### Changed (contact)
+- Contact heading is now "Tell us where you need help".
+
+### Changed (bios)
+- Paul's degree line now lists all four degrees: Ph.D. and M.S. electrical engineering and M.A. mathematics from Penn State, B.S. physics from Indiana University of Pennsylvania.
+- Bios describe the Penn State ARL and SAIC roles in the past tense, and the sentence about the founders holding those positions is removed from How we work.
+
 ### Removed (tone)
 - The sentences asking visitors to keep Controlled Unclassified Information and procurement-sensitive material out of the site, email and form. The clearance item now states facts only; its heading is "Cleared, with no facility of our own."
 
