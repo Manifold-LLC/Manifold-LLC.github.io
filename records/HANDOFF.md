@@ -40,4 +40,4 @@ npx html-validate@11 index.html capability-statement.html 404.html
 - `404.html` uses absolute asset paths and looks unstyled when opened from disk. That is expected.
 
 ## Last updated
-2026-11-08
+2026-11-09
