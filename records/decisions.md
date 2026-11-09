@@ -91,3 +91,6 @@ Owner instruction: make the manifold interactive and teach a lesson about AI wit
 
 ## 2026-11-09 | Lesson step 2 zooms; no third-person talk about sponsors
 Owner questions. Every step now has its own camera (turn and zoom), "Up close" zooming in on the highlighted sample so the surface visibly flattens. The five pill buttons were replaced, at the Owner's request, by a previous/next stepper with arrows that also answer the left and right keys; the text beneath cross-fades. Shift with the arrow keys turns the surface for keyboard users. The step-4 sentence "before the sponsor does" was cut: sponsors read this site, and the page should not talk about them in the third person as people to get ahead of. Descriptive uses of "sponsor" (a sponsor's portfolio, sponsor staff, a sponsor we also advise) stay.
+
+## 2026-11-09 | Asset links carry content hashes
+Maintainer decision after the Owner's phone showed the previous lesson script with the new stylesheet. GitHub Pages caches for ten minutes and cannot be configured, so every CSS and JS link is stamped with a short content hash by `scripts/stamp.py`, and CI fails when the stamps are stale.

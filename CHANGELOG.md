@@ -31,6 +31,9 @@ Notable changes to manifold-llc.com. The format follows [Keep a Changelog](https
 - Portraits of the two principals beside their bios, cropped from the photograph on the previous site and shown in greyscale. (The full photograph was added to the Company section and removed again the same day.)
 - The hero drawing is now a live model: `assets/js/manifold.js` draws the same surface on a canvas, turns with a drag or the arrow keys, and carries a four-step lesson on the data manifold (data on a surface, locally flat, globally curved, off the surface). The opening step is "Why the name Manifold?". Each step moves the camera with a smooth turn and zoom, the controls are a previous/next stepper that also answers the left and right arrow keys, and the text beneath cross-fades between steps. The still SVG remains for visitors without JavaScript.
 
+### Fixed (caching)
+- CSS and JS links now carry a content hash, stamped by `scripts/stamp.py` and checked in CI, so a browser never runs a cached script against a new stylesheet after a deploy.
+
 ### Changed (contact)
 - Contact heading is now "Tell us where you need help".
 
