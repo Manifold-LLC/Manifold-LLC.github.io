@@ -9,7 +9,7 @@
   if (!stage || !img || !caption) return;
 
   var reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var ink = "#16181d", accent = "#1e3a5f", warn = "#8a3b1f", tint = "rgba(30,58,95,0.10)";
+  var ink = "#16181d", accent = "#1e3a5f", warn = "#8a3b1f", tint = "rgba(30,58,95,0.10)", paper = "#f6f4ee";
 
   // The same surface as scripts/surface.py, so the still drawing and the live one agree.
   function z(u, v) { return 0.70 * Math.sin(1.15 * u) * Math.cos(0.85 * v) + 0.20 * Math.sin(2.1 * u + 0.7 * v) - 0.10 * u * v; }
@@ -145,19 +145,21 @@
         ctx.beginPath(); o.L.forEach(function (p, k) { var X = ox + p[0] * sc, Y = oy - p[2] * sc; if (k) ctx.lineTo(X, Y); else ctx.moveTo(X, Y); }); ctx.stroke();
       });
     ctx.globalAlpha = 1;
-    if (step >= 1) samples.forEach(function (s) { dot(proj(s), 2.6, accent); });
+    if (step >= 1) { ctx.globalAlpha = step === 3 ? 0.4 : 1; samples.forEach(function (s) { dot(proj(s), 2.6, accent); }); ctx.globalAlpha = 1; }
     if (step === 2) { patch(0.32, 0.26); dot(proj([P[0], P[1], z(P[0], P[1])]), 4.5, accent); }
     if (step === 3) {
       patch(DU + 0.1, DV + 0.2);
       var far = FAR, truth = [far[0], far[1], z(far[0], far[1])];
       dashed(proj(far), proj(truth), warn);
-      dot(proj(truth), 3.2, ink); ring(proj(far), 5, warn);
-      tag(proj(far), "what the model says", warn, -10); tag(proj(truth), "what is true", ink, 16);
+      var pt = proj(truth), pf = proj(far);
+      dot(pt, 8, paper); dot(pt, 5, ink);
+      dot(pf, 9, paper); ring(pf, 5.5, warn); dot(pf, 2, warn);
+      tag(pf, "what the model says", warn, -12); tag(pt, "what is true", ink, 20);
       dot(proj([P[0], P[1], z(P[0], P[1])]), 4.5, accent);
     }
     if (step === 4) {
       var top = TOP, base = [top[0], top[1], z(top[0], top[1])];
-      dashed(proj(top), proj(base), warn); ring(proj(top), 6, warn); tag(proj(top), "not on the surface", warn, -10);
+      var pp = proj(top); dashed(pp, proj(base), warn); dot(pp, 9, paper); ring(pp, 6, warn); dot(pp, 2, warn); tag(pp, "not on the surface", warn, -12);
     }
     canvas.setAttribute("aria-label", "Wire-grid drawing of a curved surface. " + steps[step].text);
   }
@@ -168,7 +170,10 @@
     ctx.font = "500 11px 'IBM Plex Mono', ui-monospace, monospace"; ctx.fillStyle = c;
     var w = ctx.measureText(s).width, left = p[0] + 10 + w > W - 4;
     var y = p[1] + (dy || -8); if (y < 14) y = p[1] + 18;
-    ctx.textAlign = left ? "right" : "left"; ctx.fillText(s, left ? p[0] - 10 : p[0] + 10, y); ctx.textAlign = "left";
+    var x = left ? p[0] - 12 : p[0] + 12;
+    ctx.textAlign = left ? "right" : "left";
+    ctx.lineJoin = "round"; ctx.strokeStyle = paper; ctx.lineWidth = 4; ctx.strokeText(s, x, y); // a paper-coloured halo so the label reads over the grid
+    ctx.fillText(s, x, y); ctx.textAlign = "left";
   }
   function patch(du, dv) {
     var c = [tangent(P[0], P[1], -0.3, -dv), tangent(P[0], P[1], du, -dv), tangent(P[0], P[1], du, dv), tangent(P[0], P[1], -0.3, dv)].map(proj);
