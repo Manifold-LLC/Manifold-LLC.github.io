@@ -33,7 +33,7 @@
 
   var steps = [
     { label: "Why the name Manifold?", text: "A manifold is a mathematical term for a smooth surface of any dimension, and the idea is central to understanding AI. Press the arrow to find out why." },
-    { label: "Data", text: "Data lives on a surface. Images, signals and text are high-dimensional, but real examples sit near a thin, curved surface inside that space: the data manifold. A model's job is to learn that surface from samples." },
+    { label: "Data", text: "Real data lives on a manifold. Images, signals and text are high-dimensional, but real examples sit near a thin, curved surface inside that space. Modern AI is, in large part, the attempt to learn that manifold from samples." },
     { label: "Up close", text: "Up close, it looks flat. Move in on any sample and the surface is nearly a plane, so a model interpolates well between examples it has seen. Most demos live here." },
     { label: "Beyond the data", text: "Far from the data, it bends. Extend the flat patch beyond the samples and it points into empty space, but the model answers there with the same confidence. That is extrapolation, and it is where programs get hurt." },
     { label: "Off the surface", text: "Some inputs are not on the surface at all, and nowhere near the samples either: a new sensor, a different theater, a corrupted file. The model still returns an answer. Scoring against data it never saw, from the places it will actually be used, is how you find out." }
