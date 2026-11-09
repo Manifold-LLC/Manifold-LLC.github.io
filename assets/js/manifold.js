@@ -14,7 +14,8 @@
   // The same surface as scripts/surface.py, so the still drawing and the live one agree.
   function z(u, v) { return 0.70 * Math.sin(1.15 * u) * Math.cos(0.85 * v) + 0.20 * Math.sin(2.1 * u + 0.7 * v) - 0.10 * u * v; }
   var U0 = -2.4, U1 = 2.4, V0 = -1.9, V1 = 1.9;
-  var view = { elev: 1.12, azim: 0.50 };
+  var view = { elev: 1.12, azim: 0.50, zoom: 1 };
+  var ZOOM = 2.6;
   function rot(x, y, zz) {
     var ca = Math.cos(view.azim), sa = Math.sin(view.azim);
     var x1 = x * ca - y * sa, y1 = x * sa + y * ca;
@@ -25,9 +26,9 @@
   var steps = [
     { label: "The drawing", text: "A two-dimensional manifold, drawn as a wire grid. Drag to turn it, then step through the lesson." },
     { label: "1 · Data", text: "Data lives on a surface. Images, signals and text are high-dimensional, but real examples sit near a thin, curved surface inside that space: the data manifold. A model's job is to learn that surface from samples." },
-    { label: "2 · Up close", text: "Up close, it looks flat. Around any sample the surface is nearly a plane, so a model interpolates well between examples it has seen. Most demos live here." },
+    { label: "2 · Up close", text: "Up close, it looks flat. Move in on any sample and the surface is nearly a plane, so a model interpolates well between examples it has seen. Most demos live here." },
     { label: "3 · Far away", text: "Far away, it bends. Extend the flat patch and it points into empty space, but a model asked about a region it never saw answers with the same confidence. That is extrapolation, and it is where programs get hurt." },
-    { label: "4 · Off the surface", text: "Some inputs are not on the surface at all: a new sensor, a different theater, a corrupted file. The model still returns an answer. Scoring against data it never saw, from the places it will actually be used, is how you find out before the sponsor does." }
+    { label: "4 · Off the surface", text: "Some inputs are not on the surface at all: a new sensor, a different theater, a corrupted file. The model still returns an answer. Scoring against data it never saw, from the places it will actually be used, is how you find out." }
   ];
   var step = 0;
 
@@ -59,7 +60,9 @@
     step = i;
     buttons.forEach(function (b, k) { b.setAttribute("aria-pressed", k === i ? "true" : "false"); });
     text.textContent = steps[i].text;
-    if (i === 3 && !reduced) turnTo(view.azim + 0.7, view.elev - 0.12); else draw();
+    if (i === 2) go(view.azim, view.elev, ZOOM);
+    else if (i === 3) go(view.azim + 0.7, view.elev - 0.12, 1);
+    else go(view.azim, view.elev, 1);
   }
 
   // Deterministic sample points on the surface.
@@ -92,6 +95,12 @@
     extra.forEach(function (q) { var r = rot(q[0], q[1], q[2]); if (r[0] < x0) x0 = r[0]; if (r[0] > x1) x1 = r[0]; if (r[2] < y0) y0 = r[2]; if (r[2] > y1) y1 = r[2]; });
     var fit = extra.length ? 0.84 : 0.92;
     sc = Math.min(W * fit / (x1 - x0), H * fit / (y1 - y0)); ox = W / 2 - (x0 + x1) / 2 * sc; oy = H / 2 + (y0 + y1) / 2 * sc;
+    if (view.zoom > 1) { // zoom toward the highlighted sample, keeping it at the centre
+      var f = rot(P[0], P[1], z(P[0], P[1])), t = (view.zoom - 1) / (ZOOM - 1);
+      var fx = ox + f[0] * sc, fy = oy - f[2] * sc;
+      sc *= view.zoom; ox = fx + (ox - fx) * view.zoom; oy = fy + (oy - fy) * view.zoom;
+      ox += (W / 2 - fx) * t; oy += (H / 2 - fy) * t;
+    }
     ctx.clearRect(0, 0, W, H);
     ctx.lineCap = "round"; ctx.lineJoin = "round";
     lines.map(function (L) { var d = 0; L.forEach(function (p) { d += p[1]; }); return { d: d / L.length, L: L }; })
@@ -103,7 +112,7 @@
       });
     ctx.globalAlpha = 1;
     if (step >= 1) samples.forEach(function (s) { dot(proj(s), 2.6, accent); });
-    if (step === 2) { patch(0.45, 0.35); dot(proj([P[0], P[1], z(P[0], P[1])]), 4.5, accent); }
+    if (step === 2) { patch(0.32, 0.26); dot(proj([P[0], P[1], z(P[0], P[1])]), 4.5, accent); }
     if (step === 3) {
       patch(DU + 0.1, DV + 0.2);
       var far = FAR, truth = [far[0], far[1], z(far[0], far[1])];
@@ -133,22 +142,24 @@
     ctx.beginPath(); c.forEach(function (p, k) { if (k) ctx.lineTo(p[0], p[1]); else ctx.moveTo(p[0], p[1]); }); ctx.closePath(); ctx.fill(); ctx.stroke();
   }
 
-  // Turning: pointer drag, arrow keys, and a short animated turn for step 3.
+  // Turning: pointer drag, arrow keys, and short animated moves between steps.
   var drag = null, anim = null;
   canvas.style.touchAction = "none";
-  canvas.addEventListener("pointerdown", function (e) { drag = { x: e.clientX, y: e.clientY, a: view.azim, el: view.elev }; canvas.setPointerCapture(e.pointerId); canvas.classList.add("is-dragging"); });
+  canvas.addEventListener("pointerdown", function (e) { stopAnim(); drag = { x: e.clientX, y: e.clientY, a: view.azim, el: view.elev }; canvas.setPointerCapture(e.pointerId); canvas.classList.add("is-dragging"); });
   canvas.addEventListener("pointermove", function (e) { if (!drag) return; view.azim = drag.a + (e.clientX - drag.x) * 0.008; view.elev = clamp(drag.el + (e.clientY - drag.y) * 0.006); draw(); });
   function end() { drag = null; canvas.classList.remove("is-dragging"); }
   canvas.addEventListener("pointerup", end); canvas.addEventListener("pointercancel", end);
   canvas.addEventListener("keydown", function (e) {
-    var k = e.key; if (k === "ArrowLeft") view.azim -= 0.08; else if (k === "ArrowRight") view.azim += 0.08; else if (k === "ArrowUp") view.elev = clamp(view.elev - 0.06); else if (k === "ArrowDown") view.elev = clamp(view.elev + 0.06); else return;
+    var k = e.key; if (k.indexOf("Arrow") === 0) stopAnim(); if (k === "ArrowLeft") view.azim -= 0.08; else if (k === "ArrowRight") view.azim += 0.08; else if (k === "ArrowUp") view.elev = clamp(view.elev - 0.06); else if (k === "ArrowDown") view.elev = clamp(view.elev + 0.06); else return;
     e.preventDefault(); draw();
   });
   function clamp(x) { return Math.max(0.25, Math.min(1.5, x)); }
-  function turnTo(a, el) {
-    if (anim) cancelAnimationFrame(anim);
-    var a0 = view.azim, e0 = view.elev, t0 = null;
-    function frame(ts) { if (!t0) t0 = ts; var t = Math.min(1, (ts - t0) / 1100), s = t * t * (3 - 2 * t); view.azim = a0 + (a - a0) * s; view.elev = clamp(e0 + (el - e0) * s); draw(); if (t < 1) anim = requestAnimationFrame(frame); }
+  function stopAnim() { if (anim) { cancelAnimationFrame(anim); anim = null; } }
+  function go(a, el, zm) {
+    stopAnim();
+    if (reduced) { view.azim = a; view.elev = clamp(el); view.zoom = zm; draw(); return; }
+    var a0 = view.azim, e0 = view.elev, z0 = view.zoom, t0 = null;
+    function frame(ts) { if (!t0) t0 = ts; var t = Math.min(1, (ts - t0) / 1100), s = t * t * (3 - 2 * t); view.azim = a0 + (a - a0) * s; view.elev = clamp(e0 + (el - e0) * s); view.zoom = z0 + (zm - z0) * s; draw(); if (t < 1) anim = requestAnimationFrame(frame); }
     anim = requestAnimationFrame(frame);
   }
 

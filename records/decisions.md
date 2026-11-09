@@ -88,3 +88,6 @@ Owner instruction. The old site's images/pic01.jpg (uploaded 2026-05-18) is a ph
 
 ## 2026-11-09 | The manifold drawing teaches a lesson
 Owner instruction: make the manifold interactive and teach a lesson about AI with it. The hero figure is now the same surface drawn live on a canvas, turnable by drag or arrow keys, with four steps: data lies on a curved surface; up close the surface is flat, which is why models interpolate well; far away it bends, which is why extrapolation fails with full confidence; some inputs are off the surface entirely, which is why scoring on unseen data from the real operating environment matters. No dependencies, no third-party scripts, still image kept for visitors without JavaScript, animation skipped when the visitor prefers reduced motion.
+
+## 2026-11-09 | Lesson step 2 zooms; no third-person talk about sponsors
+Owner questions. "Up close" now zooms in on the highlighted sample so the surface visibly flattens, and zooms back out on the next step. The step-4 sentence "before the sponsor does" was cut: sponsors read this site, and the page should not talk about them in the third person as people to get ahead of. Descriptive uses of "sponsor" (a sponsor's portfolio, sponsor staff, a sponsor we also advise) stay.
