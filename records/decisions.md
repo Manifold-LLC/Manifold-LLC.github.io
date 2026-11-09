@@ -97,3 +97,6 @@ Maintainer decision after the Owner's phone showed the previous lesson script wi
 
 ## 2026-11-09 | The off-surface point sits away from the samples
 Owner question: does an out-of-distribution point belong so close to the samples? Off the manifold is about leaving the surface, not distance along it, so a corrupted input can sit above well-sampled data. But the drawing is clearer when both are true, so the point now floats above the unsampled far corner, and the text says "nowhere near the samples either".
+
+## 2026-11-09 | The opening step and the definition of a manifold
+Owner wording, after several drafts: "A manifold is a mathematical term for a smooth surface of any dimension, and the idea is central to understanding AI. Press the arrow to find out why." The Company section pairs "The name comes from geometry" with the same definition. The line "Most programs look fine from inside any one office" is struck everywhere as unclear.
