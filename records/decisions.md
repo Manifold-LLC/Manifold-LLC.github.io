@@ -103,3 +103,6 @@ Owner wording, after several drafts: "A manifold is a mathematical term for a sm
 
 ## 2026-11-09 | Extrapolation is shown where there is no data
 Owner question: why would a model guess badly where it has nearby samples? It would not. The samples now cover only part of the surface, the third step is titled "Beyond the data", and its flat guess runs from the sample into the unsampled part, with a line showing where it came from. The text says "beyond the samples".
+
+## 2026-11-09 | Step 4 shows an input inside the data but off the surface
+Owner suggestion. With step 3 now showing a point on the surface beyond the data, step 4 shows the complementary case: a point lifted off the surface directly above the sampled cluster, standing for sensor drift, pipeline changes and corrupted inputs that arrive looking ordinary. The text says nothing about them looks far away.
