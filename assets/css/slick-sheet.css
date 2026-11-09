@@ -8,7 +8,7 @@ body { font-size: 9.5pt; line-height: 1.38; color: var(--ink); }
 .screen-only { font-size: 0.9rem; color: var(--ink-2); text-align: center; margin: 1.5rem 1rem 0; }
 
 /* header band */
-.band { position: relative; background: var(--accent); color: #f6f4ee; padding: 0.3in 0.55in 0.25in; overflow: hidden; }
+.band { position: relative; background: var(--accent); color: #f6f4ee; padding: 0.26in 0.55in 0.2in; overflow: hidden; }
 .band-text { position: relative; z-index: 1; max-width: 4.55in; }
 .brand-line { display: flex; align-items: center; gap: 0.45rem; font-family: var(--serif); font-size: 1.35rem; color: #fff; margin: 0 0 0.55rem; }
 .brand-line svg { width: 1.5rem; height: 1.5rem; fill: currentColor; }
@@ -22,7 +22,7 @@ body { font-size: 9.5pt; line-height: 1.38; color: var(--ink); }
 
 /* capabilities */
 .section-label { font-family: var(--mono); font-weight: 500; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 0.6rem; }
-.caps { padding: 0.18in 0.55in 0.14in; }
+.caps { padding: 0.15in 0.55in 0.12in; }
 .caps ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.3rem 0.3in; }
 .caps li { position: relative; padding: 0.55rem 0 0; border-top: 1px solid var(--rule-strong); }
 .caps .n { position: absolute; right: 0; top: 0.5rem; font-family: var(--mono); font-size: 0.66rem; color: var(--ink-3); letter-spacing: 0.08em; }
@@ -30,7 +30,7 @@ body { font-size: 9.5pt; line-height: 1.38; color: var(--ink); }
 .caps p { margin: 0; font-size: 0.78rem; line-height: 1.32; color: var(--ink-2); }
 
 /* acquisition cycle and the two columns */
-.sw { background: var(--paper-2); padding: 0.16in 0.55in 0.12in; flex: 1; }
+.sw { background: var(--paper-2); padding: 0.13in 0.55in 0.1in; flex: 1; }
 .sw .cycle { width: 100%; height: auto; display: block; margin: 0 0 0.15rem; }
 .sw .two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 0.4in; margin-top: 0.2rem; }
 .sw h3 { font-family: var(--serif); font-weight: 400; font-size: 0.96rem; margin: 0 0 0.2rem; padding-top: 0.28rem; border-top: 1px solid var(--rule-strong); }
@@ -50,3 +50,6 @@ body { font-size: 9.5pt; line-height: 1.38; color: var(--ink); }
 /* Acquisition-cycle diagram, inline so its labels use the page fonts. */
 .cycle .cy-s { font-family: var(--sans); }
 .cycle .cy-m { font-family: var(--mono); font-weight: 500; }
+/* The build service: one full-width row under the six advisory services. */
+.caps li.wide { grid-column: 1 / -1; display: grid; grid-template-columns: 2.75in 1fr; gap: 0 0.3in; align-items: baseline; padding-right: 0.3in; }
+.caps li.wide h3 { margin: 0; }
