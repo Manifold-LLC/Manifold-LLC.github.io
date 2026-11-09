@@ -28,7 +28,7 @@
   <link rel="preload" href="assets/fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/ibm-plex-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/ibm-plex-mono-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/site.css?v=5e6886cc5d">
+  <link rel="stylesheet" href="assets/css/site.css?v=fcb6003b40">
 
   <script type="application/ld+json">
   {
@@ -224,123 +224,144 @@
         <p class="intro">Research and delivery led by the people who founded Manifold. Some of it predates the firm, and customer names are withheld. We are glad to go into detail in conversation.</p>
       </div>
 
-      <nav class="work-index" aria-label="Case notes on this page">
-        <ol>
-          <li><a href="#dark-vessels">Re-finding ships that switch off AIS</a></li>
-          <li><a href="#fastsar">FastSAR, radar image formation on CPUs, GPUs and TPUs</a></li>
-          <li><a href="#vessel-model">A foundation model for where vessels go</a></li>
-          <li><a href="#uarc-rag">Retrieval-augmented generation for CUI at a Navy UARC</a></li>
-          <li><a href="#geo-fm">Geospatial foundation models</a></li>
-          <li><a href="#ic-acquisition">A decade inside Intelligence Community acquisition</a></li>
-        </ol>
-      </nav>
       <ol class="work-list">
         <li class="work" id="dark-vessels">
-          <div class="meta">
-            <p class="eyebrow">Research &middot; Maritime domain awareness</p>
-            <p class="tags">Sentinel-1 &middot; Sentinel-2 &middot; Landsat<br>NISAR &middot; VIIRS<br>Multi-target tracking<br>Unpublished draft</p>
+          <div class="work-fig" aria-hidden="true">
+            <svg viewBox="0 0 240 120" focusable="false">
+              <polygon class="a" points="22,8 70,8 92,112 44,112" fill="currentColor" fill-opacity=".07"/><polygon class="a" points="96,8 144,8 150,112 102,112" fill="currentColor" fill-opacity=".1"/><polygon class="a" points="176,8 224,8 208,112 160,112" fill="currentColor" fill-opacity=".13"/>
+              <g fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="40" cy="30" r="2.4"/><circle cx="72" cy="86" r="2.4"/><circle cx="58" cy="64" r="2.4"/><circle cx="112" cy="28" r="2.4"/><circle cx="136" cy="92" r="2.4"/><circle cx="108" cy="76" r="2.4"/><circle cx="198" cy="34" r="2.4"/><circle cx="178" cy="60" r="2.4"/><circle cx="204" cy="98" r="2.4"/></g>
+              <path class="a wf-draw" d="M52 40 L124 58 L190 80" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="150"/>
+              <g class="a" fill="currentColor"><circle class="wf-pulse d1" cx="52" cy="40" r="4"/><circle class="wf-pulse d2" cx="124" cy="58" r="4"/><circle class="wf-pulse d3" cx="190" cy="80" r="4"/></g>
+            </svg>
           </div>
-          <div>
-            <h3>Re-finding ships that switch off AIS, from one satellite pass to the next</h3>
+          <p class="eyebrow">Research &middot; Maritime &middot; Unpublished draft</p>
+          <h3>Re-finding ships that switch off AIS</h3>
+          <p class="work-sum">A multi-sensor tracker that re-finds dark vessels from one satellite pass to the next, scored against AIS it never saw.</p>
+          <details class="work-more">
+            <summary>Read the case note</summary>
             <dl>
-              <dt>Problem</dt>
-              <dd>Vessels involved in illegal fishing, sanctions evasion and smuggling switch off AIS, the transponder that reports a ship's identity and position. Satellites still see them, but passes are hours apart, and by the next one a moving ship can be any of many unexplained detections.</dd>
-              <dt>What was built</dt>
-              <dd>A tracker that links detections from public radar, optical and night-light sensors (Sentinel-1 and NISAR, Sentinel-2 and Landsat, VIIRS) across the waters around Denmark and southern Norway. Each sensor has its own detector and attribute model, including heading and speed read from Sentinel-2's band delay and wake, and the motion model is learned from historical AIS. The system was scored against full-rate Danish and Norwegian AIS that it never saw.</dd>
-              <dt>Result</dt>
-              <dd>Ships at anchor or in port were re-found in most cases. Ships under way were re-found far less often, and the true next sighting was usually within a short ranked list of candidates. No published system was found that measures this problem, so the results would be a first public baseline once published. Changes to the tracking algorithm did not improve the moving-ship result; adding sensors did, which points to more looks per day as the lever. Results are from an unpublished draft.</dd>
+            <dt>Problem</dt>
+            <dd>Vessels involved in illegal fishing, sanctions evasion and smuggling switch off AIS, the transponder that reports a ship's identity and position. Satellites still see them, but passes are hours apart, and by the next one a moving ship can be any of many unexplained detections.</dd>
+            <dt>What was built</dt>
+            <dd>A tracker that links detections from public radar, optical and night-light sensors (Sentinel-1 and NISAR, Sentinel-2 and Landsat, VIIRS) across the waters around Denmark and southern Norway. Each sensor has its own detector and attribute model, including heading and speed read from Sentinel-2's band delay and wake, and the motion model is learned from historical AIS. The system was scored against full-rate Danish and Norwegian AIS that it never saw.</dd>
+            <dt>Result</dt>
+            <dd>Ships at anchor or in port were re-found in most cases. Ships under way were re-found far less often, and the true next sighting was usually within a short ranked list of candidates. No published system was found that measures this problem, so the results would be a first public baseline once published. Changes to the tracking algorithm did not improve the moving-ship result; adding sensors did, which points to more looks per day as the lever. Results are from an unpublished draft.</dd>
             </dl>
-          </div>
+          </details>
         </li>
-
         <li class="work" id="fastsar">
-          <div class="meta">
-            <p class="eyebrow">Research &middot; Synthetic aperture radar</p>
-            <p class="tags">CPU &middot; NVIDIA GPU &middot; Google TPU<br>C++ &middot; CUDA &middot; JAX Pallas<br>Open source, MIT license<br>Preprint, submitted to IEEE TGRS</p>
+          <div class="work-fig" aria-hidden="true">
+            <svg viewBox="0 0 240 120" focusable="false">
+              <g class="a" fill="none" stroke="currentColor" stroke-width="1.2"><circle class="wf-ring d1" cx="34" cy="34" r="46"/><circle class="wf-ring d2" cx="34" cy="34" r="46"/><circle class="wf-ring d3" cx="34" cy="34" r="46"/></g>
+              <g fill="none" stroke="currentColor" stroke-width="1.4"><rect x="27" y="29" width="14" height="10" rx="1"/><path d="M14 34h13M41 34h13M34 39v8"/></g>
+              <g class="a" fill="currentColor"><rect class="wf-pulse d1" x="128" y="28" width="14" height="14" fill-opacity="0.12"/><rect class="wf-pulse d1" x="128" y="44" width="14" height="14" fill-opacity="0.3"/><rect class="wf-pulse d1" x="128" y="60" width="14" height="14" fill-opacity="0.2"/><rect class="wf-pulse d1" x="128" y="76" width="14" height="14" fill-opacity="0.1"/><rect class="wf-pulse d2" x="144" y="28" width="14" height="14" fill-opacity="0.25"/><rect class="wf-pulse d2" x="144" y="44" width="14" height="14" fill-opacity="0.7"/><rect class="wf-pulse d2" x="144" y="60" width="14" height="14" fill-opacity="0.45"/><rect class="wf-pulse d2" x="144" y="76" width="14" height="14" fill-opacity="0.15"/><rect class="wf-pulse d3" x="160" y="28" width="14" height="14" fill-opacity="0.2"/><rect class="wf-pulse d3" x="160" y="44" width="14" height="14" fill-opacity="0.9"/><rect class="wf-pulse d3" x="160" y="60" width="14" height="14" fill-opacity="0.6"/><rect class="wf-pulse d3" x="160" y="76" width="14" height="14" fill-opacity="0.3"/><rect class="wf-pulse d4" x="176" y="28" width="14" height="14" fill-opacity="0.15"/><rect class="wf-pulse d4" x="176" y="44" width="14" height="14" fill-opacity="0.5"/><rect class="wf-pulse d4" x="176" y="60" width="14" height="14" fill-opacity="0.95"/><rect class="wf-pulse d4" x="176" y="76" width="14" height="14" fill-opacity="0.35"/><rect class="wf-pulse d5" x="192" y="28" width="14" height="14" fill-opacity="0.1"/><rect class="wf-pulse d5" x="192" y="44" width="14" height="14" fill-opacity="0.3"/><rect class="wf-pulse d5" x="192" y="60" width="14" height="14" fill-opacity="0.5"/><rect class="wf-pulse d5" x="192" y="76" width="14" height="14" fill-opacity="0.75"/><rect class="wf-pulse d6" x="208" y="28" width="14" height="14" fill-opacity="0.08"/><rect class="wf-pulse d6" x="208" y="44" width="14" height="14" fill-opacity="0.15"/><rect class="wf-pulse d6" x="208" y="60" width="14" height="14" fill-opacity="0.3"/><rect class="wf-pulse d6" x="208" y="76" width="14" height="14" fill-opacity="0.4"/></g>
+            </svg>
           </div>
-          <div>
-            <h3>FastSAR: radar image formation on CPUs, GPUs and TPUs, compared on matched hardware</h3>
+          <p class="eyebrow">Research &middot; Radar &middot; Open source</p>
+          <h3>FastSAR: radar image formation on CPUs, GPUs and TPUs</h3>
+          <p class="work-sum">An open-source library that forms radar images faster than every open-source implementation tested, at equal or better accuracy.</p>
+          <p class="work-links"><a href="https://github.com/saulpingerman/FastSAR">GitHub</a> &middot; <a href="https://pypi.org/project/fastsar/">PyPI</a> &middot; <a href="https://arxiv.org/abs/2610.33932">arXiv</a></p>
+          <details class="work-more">
+            <summary>Read the case note</summary>
             <dl>
-              <dt>Problem</dt>
-              <dd>Every radar satellite returns raw phase histories that must be formed into images, and the constellation is growing fast. The open-source image-formation codes had never been compared on the same hardware against a common reference, and none ran on TPUs.</dd>
-              <dt>What was built</dt>
-              <dd>A library that forms SAR images on CPUs, NVIDIA GPUs and Google TPUs through one Python interface: exact backprojection, factorized backprojection and polar format, in several floating-point precisions, reading CPHD, SICD, Sentinel-1 and NISAR data. Every configuration was scored against a high-precision reference and priced at on-demand cloud rates, so a user can pick the accuracy, speed and cost they need.</dd>
-              <dt>Result</dt>
-              <dd>Faster than every open-source implementation tested, by orders of magnitude in most cases, at equal or better accuracy. A full commercial spotlight image forms in seconds on the lowest-priced cloud GPU for a fraction of a cent, and the comparison shows which precision and device to choose for interferometric, radiometric or quick-look use. Written with a co-author at Penn State's Applied Research Laboratory. The code is public under the MIT license on <a href="https://github.com/saulpingerman/FastSAR">GitHub</a> and installs from <a href="https://pypi.org/project/fastsar/">PyPI</a>; the paper is on <a href="https://arxiv.org/abs/2610.33932">arXiv</a> and submitted to IEEE Transactions on Geoscience and Remote Sensing.</dd>
+            <dt>Problem</dt>
+            <dd>Every radar satellite returns raw phase histories that must be formed into images, and the constellation is growing fast. The open-source image-formation codes had never been compared on the same hardware against a common reference, and none ran on TPUs.</dd>
+            <dt>What was built</dt>
+            <dd>A library that forms SAR images on CPUs, NVIDIA GPUs and Google TPUs through one Python interface: exact backprojection, factorized backprojection and polar format, in several floating-point precisions, reading CPHD, SICD, Sentinel-1 and NISAR data. Every configuration was scored against a high-precision reference and priced at on-demand cloud rates, so a user can pick the accuracy, speed and cost they need.</dd>
+            <dt>Result</dt>
+            <dd>Faster than every open-source implementation tested, by orders of magnitude in most cases, at equal or better accuracy. A full commercial spotlight image forms in seconds on the lowest-priced cloud GPU for a fraction of a cent, and the comparison shows which precision and device to choose for interferometric, radiometric or quick-look use. Written with a co-author at Penn State's Applied Research Laboratory. The code is public under the MIT license on <a href="https://github.com/saulpingerman/FastSAR">GitHub</a> and installs from <a href="https://pypi.org/project/fastsar/">PyPI</a>; the paper is on <a href="https://arxiv.org/abs/2610.33932">arXiv</a> and submitted to IEEE Transactions on Geoscience and Remote Sensing.</dd>
             </dl>
-          </div>
+          </details>
         </li>
-
         <li class="work" id="vessel-model">
-          <div class="meta">
-            <p class="eyebrow">Research &middot; Vessel movement</p>
-            <p class="tags">Foundation model &middot; AIS<br>Under review</p>
+          <div class="work-fig" aria-hidden="true">
+            <svg viewBox="0 0 240 120" focusable="false">
+              <path d="M16 96 C50 94 74 82 104 70" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="3 4"/>
+              <g class="a" fill="currentColor"><ellipse class="wf-pulse d3" cx="196" cy="38" rx="34" ry="22" fill-opacity=".1" transform="rotate(-18 196 38)"/><ellipse class="wf-pulse d2" cx="168" cy="48" rx="23" ry="15" fill-opacity=".16" transform="rotate(-18 168 48)"/><ellipse class="wf-pulse d1" cx="140" cy="58" rx="13" ry="9" fill-opacity=".24" transform="rotate(-18 140 58)"/><path d="M98 66 l12 0 l5 5 l-5 5 l-12 0 z" transform="rotate(-18 106 71)"/></g>
+            </svg>
           </div>
-          <div>
-            <h3>A foundation model for where vessels go</h3>
+          <p class="eyebrow">Research &middot; Vessel movement &middot; Under review</p>
+          <h3>A foundation model for where vessels go</h3>
+          <p class="work-sum">One model, pretrained on public AIS traffic, that forecasts where a vessel will be as a probability map.</p>
+          <details class="work-more">
+            <summary>Read the case note</summary>
             <dl>
-              <dt>Problem</dt>
-              <dd>Forecasting where a vessel will be, and what it is doing, underlies collision avoidance, search and rescue, port planning and fisheries enforcement. Each of those tasks has had its own small model.</dd>
-              <dt>What was built</dt>
-              <dd>A single model pretrained on years of public AIS traffic that forecasts a vessel's position as a probability map at any time horizon, with small task heads on the frozen model for the questions analysts ask of a track.</dd>
-              <dt>Status</dt>
-              <dd>A paper is under review. We are able to discuss the approach, not the results, prior to publication.</dd>
+            <dt>Problem</dt>
+            <dd>Forecasting where a vessel will be, and what it is doing, underlies collision avoidance, search and rescue, port planning and fisheries enforcement. Each of those tasks has had its own small model.</dd>
+            <dt>What was built</dt>
+            <dd>A single model pretrained on years of public AIS traffic that forecasts a vessel's position as a probability map at any time horizon, with small task heads on the frozen model for the questions analysts ask of a track.</dd>
+            <dt>Status</dt>
+            <dd>A paper is under review. We are able to discuss the approach, not the results, prior to publication.</dd>
             </dl>
-          </div>
+          </details>
         </li>
-
         <li class="work" id="uarc-rag">
-          <div class="meta">
-            <p class="eyebrow">Generative AI &middot; Navy UARC</p>
-            <p class="tags">Amazon Bedrock &middot; AWS GovCloud<br>Impact Level 4 &middot; CUI<br>Directory integration</p>
+          <div class="work-fig" aria-hidden="true">
+            <svg viewBox="0 0 240 120" focusable="false">
+              <rect x="8" y="10" width="224" height="100" rx="6" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 4"/>
+              <g fill="none" stroke="currentColor" stroke-width="1.4"><rect x="26" y="38" width="30" height="38" rx="2"/><rect x="32" y="32" width="30" height="38" rx="2"/><rect x="38" y="26" width="30" height="38" rx="2"/><path d="M44 36h18M44 43h18M44 50h12"/><path d="M168 42h44a4 4 0 0 1 4 4v24a4 4 0 0 1-4 4h-28l-8 8v-8h-8a4 4 0 0 1-4-4V46a4 4 0 0 1 4-4z"/><path d="M176 54h28M176 62h18"/><path d="M76 58h22M138 58h18" stroke-dasharray="2 3"/></g>
+              <g class="a"><circle cx="118" cy="58" r="15" fill="none" stroke="currentColor" stroke-width="1.6"/><circle class="wf-travel" cx="74" cy="58" r="3.2" fill="currentColor"/></g>
+            </svg>
           </div>
-          <div>
-            <h3>A retrieval-augmented generation system for Controlled Unclassified Information at a Navy University Affiliated Research Center</h3>
+          <p class="eyebrow">Delivery &middot; Generative AI</p>
+          <h3>Generative AI for CUI at a Navy UARC</h3>
+          <p class="work-sum">A language-model assistant over Controlled Unclassified Information, delivered to production on Amazon Bedrock in an Impact Level 4 AWS GovCloud environment.</p>
+          <details class="work-more">
+            <summary>Read the case note</summary>
             <dl>
-              <dt>Problem</dt>
-              <dd>The laboratory wanted its staff to use a language-model assistant over internal documents marked as Controlled Unclassified Information.</dd>
-              <dt>What was done</dt>
-              <dd>Designed and delivered the system on Amazon Bedrock inside an Impact Level 4 AWS GovCloud environment, integrated with the laboratory's directory service (LDAP), with TLS on every connection.</dd>
-              <dt>Outcome</dt>
-              <dd>Delivered to production on the laboratory's controlled network.</dd>
+            <dt>Problem</dt>
+            <dd>The laboratory wanted its staff to use a language-model assistant over internal documents marked as Controlled Unclassified Information.</dd>
+            <dt>What was done</dt>
+            <dd>Designed and delivered the system on Amazon Bedrock inside an Impact Level 4 AWS GovCloud environment, integrated with the laboratory's directory service (LDAP), with TLS on every connection.</dd>
+            <dt>Outcome</dt>
+            <dd>Delivered to production on the laboratory's controlled network.</dd>
             </dl>
-          </div>
+          </details>
         </li>
-
         <li class="work" id="geo-fm">
-          <div class="meta">
-            <p class="eyebrow">Foundation models &middot; Geospatial</p>
-            <p class="tags">Model and training architecture<br>Data pipelines &middot; Compute planning</p>
+          <div class="work-fig" aria-hidden="true">
+            <svg viewBox="0 0 240 120" focusable="false">
+              <g class="a" fill="currentColor"><rect class="wf-pulse d1" x="18" y="30" width="17" height="17" fill-opacity=".28"/><rect class="wf-pulse d2" x="18" y="50" width="17" height="17" fill-opacity=".28"/><rect class="wf-pulse d3" x="18" y="70" width="17" height="17" fill-opacity=".28"/><rect class="wf-pulse d2" x="38" y="30" width="17" height="17" fill-opacity=".28"/><rect class="wf-pulse d3" x="38" y="50" width="17" height="17" fill-opacity=".28"/><rect class="wf-pulse d4" x="38" y="70" width="17" height="17" fill-opacity=".28"/><rect class="wf-pulse d3" x="58" y="30" width="17" height="17" fill-opacity=".28"/><rect class="wf-pulse d4" x="58" y="50" width="17" height="17" fill-opacity=".28"/><rect class="wf-pulse d1" x="58" y="70" width="17" height="17" fill-opacity=".28"/><rect class="wf-pulse d4" x="78" y="30" width="17" height="17" fill-opacity=".28"/><rect class="wf-pulse d1" x="78" y="50" width="17" height="17" fill-opacity=".28"/><rect class="wf-pulse d2" x="78" y="70" width="17" height="17" fill-opacity=".28"/></g>
+              <path d="M104 60h26m-6-5l6 5l-6 5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+              <g class="a" fill="none" stroke="currentColor" stroke-width="1.6"><path class="wf-pulse d1" d="M150 80l36-12l36 12l-36 12z"/><path class="wf-pulse d2" d="M150 62l36-12l36 12l-36 12z"/><path class="wf-pulse d3" d="M150 44l36-12l36 12l-36 12z"/></g>
+            </svg>
           </div>
-          <div>
-            <h3>Geospatial foundation models over overhead data</h3>
+          <p class="eyebrow">Delivery &middot; Foundation models</p>
+          <h3>Geospatial foundation models</h3>
+          <p class="work-sum">Architects for a customer's foundation-model effort over overhead data, working directly with Google and NVIDIA engineering teams.</p>
+          <details class="work-more">
+            <summary>Read the case note</summary>
             <dl>
-              <dt>Problem</dt>
-              <dd>A customer required foundation models trained on large volumes of overhead and geospatial data instead of one narrow model per task.</dd>
-              <dt>What was done</dt>
-              <dd>Served as architects for the modeling and training effort, working directly with vendor engineering teams at Google and NVIDIA on data pipelines, model design, and the compute plan.</dd>
-              <dt>What we took from it</dt>
-              <dd>The cluster-sizing and cost models we build now come from this work.</dd>
+            <dt>Problem</dt>
+            <dd>A customer required foundation models trained on large volumes of overhead and geospatial data instead of one narrow model per task.</dd>
+            <dt>What was done</dt>
+            <dd>Served as architects for the modeling and training effort, working directly with vendor engineering teams at Google and NVIDIA on data pipelines, model design, and the compute plan.</dd>
+            <dt>What we took from it</dt>
+            <dd>The cluster-sizing and cost models we build now come from this work.</dd>
             </dl>
-          </div>
+          </details>
         </li>
-
         <li class="work" id="ic-acquisition">
-          <div class="meta">
-            <p class="eyebrow">Acquisition &middot; Intelligence Community</p>
-            <p class="tags">About ten years<br>Requirements &middot; Source selection<br>BAA evaluation &middot; Training</p>
+          <div class="work-fig" aria-hidden="true">
+            <svg viewBox="0 0 240 120" focusable="false">
+              <g class="a" fill="currentColor"><polygon class="wf-pulse d1" points="12,44 44,44 54,60 44,76 12,76 22,60"/><polygon class="wf-pulse d2" points="56,44 88,44 98,60 88,76 56,76 66,60"/><polygon class="wf-pulse d3" points="100,44 132,44 142,60 132,76 100,76 110,60"/><polygon class="wf-pulse d4" points="144,44 176,44 186,60 176,76 144,76 154,60"/><polygon class="wf-pulse d5" points="188,44 220,44 230,60 220,76 188,76 198,60"/></g>
+              <path d="M12 92h216" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 4"/>
+            </svg>
           </div>
-          <div>
-            <h3>A decade inside Intelligence Community acquisition</h3>
+          <p class="eyebrow">Experience &middot; Acquisition</p>
+          <h3>A decade inside Intelligence Community acquisition</h3>
+          <p class="work-sum">Nearly a decade supporting acquisition and R&amp;D programs: requirements, proposal and BAA evaluation, training, and advice to senior leadership.</p>
+          <details class="work-more">
+            <summary>Read the case note</summary>
             <dl>
-              <dt>Role</dt>
-              <dd>We've worked alongside the government teams we now advise. Before founding Manifold, we spent nearly a decade supporting Intelligence Community acquisition and R&amp;D programs through Navy-affiliated research and SETA roles.</dd>
-              <dt>What that involved</dt>
-              <dd>Developing technical requirements, evaluating competitive proposals and Broad Agency Announcements (BAAs), designing AI/ML training for government personnel, and advising senior leadership on technology investments.</dd>
-              <dt>Why it matters</dt>
-              <dd>Technical expertise is only valuable when it informs decisions. We understand the acquisition process, the constraints government decision-makers face, and how to deliver recommendations they can act on.</dd>
+            <dt>Role</dt>
+            <dd>We've worked alongside the government teams we now advise. Before founding Manifold, we spent nearly a decade supporting Intelligence Community acquisition and R&amp;D programs through Navy-affiliated research and SETA roles.</dd>
+            <dt>What that involved</dt>
+            <dd>Developing technical requirements, evaluating competitive proposals and Broad Agency Announcements (BAAs), designing AI/ML training for government personnel, and advising senior leadership on technology investments.</dd>
+            <dt>Why it matters</dt>
+            <dd>Technical expertise is only valuable when it informs decisions. We understand the acquisition process, the constraints government decision-makers face, and how to deliver recommendations they can act on.</dd>
             </dl>
-          </div>
+          </details>
         </li>
       </ol>
     </div>
