@@ -47,6 +47,13 @@
   canvas.setAttribute("aria-label", "Wire-grid drawing of a curved surface. Drag to turn it, or use shift with the left and right arrow keys and the up and down keys.");
   stage.appendChild(canvas);
   img.hidden = true; img.style.display = "none";
+  // A hint above the drawing, until the visitor has turned it once.
+  var hint = document.createElement("p");
+  hint.className = "manifold-hint";
+  hint.innerHTML = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8a5.5 5.5 0 0 1 9.4-3.9M13.5 8a5.5 5.5 0 0 1-9.4 3.9" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M12.3 1.6v2.8H9.5M3.7 14.4v-2.8h2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Grab the surface and turn it</span>';
+  fig.insertBefore(hint, stage);
+  var turned = false;
+  function noteTurn() { if (turned) return; turned = true; hint.classList.add("is-done"); }
   var ctx = canvas.getContext("2d");
 
   // A stepper: previous and next arrows with the step name between them. Left and right keys step too.
@@ -173,14 +180,14 @@
   var drag = null, anim = null;
   canvas.style.touchAction = "none";
   canvas.addEventListener("pointerdown", function (e) { stopAnim(); drag = { x: e.clientX, y: e.clientY, a: view.azim, el: view.elev }; canvas.setPointerCapture(e.pointerId); canvas.classList.add("is-dragging"); });
-  canvas.addEventListener("pointermove", function (e) { if (!drag) return; view.azim = drag.a + (e.clientX - drag.x) * 0.008; view.elev = clamp(drag.el + (e.clientY - drag.y) * 0.006); draw(); });
+  canvas.addEventListener("pointermove", function (e) { if (!drag) return; noteTurn(); view.azim = drag.a + (e.clientX - drag.x) * 0.008; view.elev = clamp(drag.el + (e.clientY - drag.y) * 0.006); draw(); });
   function end() { drag = null; canvas.classList.remove("is-dragging"); }
   canvas.addEventListener("pointerup", end); canvas.addEventListener("pointercancel", end);
   canvas.addEventListener("keydown", function (e) {
     var k = e.key;
     if (k === "ArrowUp") view.elev = clamp(view.elev - 0.06); else if (k === "ArrowDown") view.elev = clamp(view.elev + 0.06);
     else if (e.shiftKey && k === "ArrowLeft") view.azim -= 0.08; else if (e.shiftKey && k === "ArrowRight") view.azim += 0.08; else return;
-    stopAnim(); e.preventDefault(); e.stopPropagation(); draw();
+    stopAnim(); e.preventDefault(); e.stopPropagation(); noteTurn(); draw();
   });
   function clamp(x) { return Math.max(0.25, Math.min(1.5, x)); }
   function stopAnim() { if (anim) { cancelAnimationFrame(anim); anim = null; } }
