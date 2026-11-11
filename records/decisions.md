@@ -127,3 +127,6 @@ Owner said to fix the defects found in the review. Applied: absolute logo link a
 
 ## 2026-11-09 | DoW, tense, page two, and R&D on the overview
 Owner decisions on the four open points from the PDF review. (1) DoW is the term; the one DoD on the site, inside a guide's name in the structured data, was reworded to "Impact Level 4 and 5 cloud environments". (2) Both founders are still at Penn State ARL and SAIC and will leave when the firm wins work, so "former" is not true today; the overview says "Trusted-agent and SETA experience", which holds before and after. Bios stay in the past tense as decided earlier. (3) Maintainer recommendation accepted in advance: page two of the capability statement gains a Typical deliverables list and the acquisition-cycle diagram. (4) Left to the maintainer: the overview gains an applied research and development row so it matches the site's "Advise or Build".
+
+## 2026-11-11 | Footer statement removed; document links tagged
+Owner decision. The footer no longer states that the site sets no cookies and runs no analytics or third-party scripts; this supersedes the 2026-11-08 entry that introduced the statement. The page itself is unchanged: it still loads no third-party script and sets no cookie. Links in the capability statement and the overview, and the overview's QR code, now carry a source tag.
