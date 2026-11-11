@@ -5,6 +5,7 @@ Live state of the site. Update whenever any of this changes.
 ## Publishing
 - Host: GitHub Pages, published from the `main` branch root of `Manifold-LLC/Manifold-LLC.github.io`. No build step. `_config.yml` keeps `records/`, `docs/`, `scripts/` and the Markdown files off the published site and includes `.well-known`.
 - Domain: `manifold-llc.com` via the `CNAME` file. `manifold-llc.github.io` redirects to it. HTTPS is served by GitHub with a Let's Encrypt certificate.
+- In front of GitHub: since 2026-11-11 the site is served through Cloudflare's proxy. The four A records and the `www` CNAME are set to Proxied, encryption mode is Full, and a Cloudflare Worker named `manifold-visits` runs on `manifold-llc.com/*` and `www.manifold-llc.com/*`. It passes every request through unchanged and keeps request statistics in a D1 database of the same name; its source, with comments, lives in the Cloudflare dashboard and not in this repository. Bot Fight Mode and Email Address Obfuscation are off because both rewrite the pages, and Browser Cache TTL is set to respect the site's own headers. To take Cloudflare out of the path, set those five records back to DNS only; the site reverts to direct GitHub within about five minutes and nothing else needs changing.
 - teammanifold.com: bought through Google Workspace in April 2026 and registered with Squarespace Domains (Google's Workspace notice of 2026-04-12 says so). Sign in at account.squarespace.com with Google as Info@teammanifold.com; the domain also appears under Domains in the Workspace Admin Console. DNS is on Google Cloud DNS nameservers (ns-cloud-c1 to c4.googledomains.com) with Squarespace's parking A records and the Google mail records. Record here where recovery codes are kept.
 - Email: Google Workspace, primary domain teammanifold.com, with manifold-llc.com as a user alias domain (verified 2026-11-08). Mail to info@manifold-llc.com and info@teammanifold.com lands in the same inbox. DNS for manifold-llc.com carries the Gmail MX, SPF and DKIM records; DMARC published 2026-11-09 at `_dmarc` with `p=none` and reports to info@manifold-llc.com; tighten to `p=quarantine` once a few weeks of reports look clean.
 - Registrar and DNS: Cloudflare, account login info@teammanifold.com (domain registered there 2026-05-19). A DNS-edit API token created on 2026-11-08 was invalid; a replacement made on 2026-11-09 works and is saved on the maintainer's cloud environment. Delete the invalid one under My Profile, API Tokens.
@@ -16,7 +17,7 @@ Live state of the site. Update whenever any of this changes.
 
 ## Check and fix
 ```
-curl -sI https://manifold-llc.com/ | head -12          # 200, server: GitHub.com
+curl -sI https://manifold-llc.com/ | head -12          # 200, server: cloudflare, a cf-ray header, no set-cookie
 curl -s https://manifold-llc.com/ | md5sum; md5sum index.html   # should match once main is deployed
 curl -sI https://manifold-llc.com/.well-known/security.txt      # 200 after the first deploy with _config.yml
 dig manifold-llc.com +noall +answer -t A               # four 185.199.x.153 addresses
@@ -38,7 +39,9 @@ npx html-validate@11 index.html capability-statement.html 404.html
 - Facts appear in several files. Change `records/facts.md` first, then grep for the old value.
 - GitHub Pages tells browsers to cache files for ten minutes, so a changed stylesheet or script can run against a stale copy of the other. Every CSS and JS link carries a content hash (`?v=...`). After editing anything in `assets/css` or `assets/js`, run `python3 scripts/stamp.py` and commit the page changes with it; CI fails if the stamps are stale.
 - `404.html` uses absolute asset paths and looks unstyled when opened from disk. That is expected.
+- Cloudflare caches images, PDFs, CSS and JS for the ten minutes GitHub's headers ask for, so a freshly deployed PDF can be the old one for that long. To see it at once, clear the cache in the Cloudflare dashboard (Caching, Configuration, Purge Everything). Pages themselves are never cached.
+- GitHub renews the custom domain's certificate by checking that the domain points at GitHub, which it no longer appears to do. If that renewal lapses, Cloudflare's Full mode still connects, so visitors see no difference. A certificate or 52x error page from Cloudflare is the sign to switch the records to DNS only while it is sorted out.
 - Links inside the print pages must be absolute (`https://manifold-llc.com/...`). A relative link is baked into the PDF as the address of the local render server.
 
 ## Last updated
-2026-11-09
+2026-11-11

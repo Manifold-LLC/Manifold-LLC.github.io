@@ -130,3 +130,6 @@ Owner decisions on the four open points from the PDF review. (1) DoW is the term
 
 ## 2026-11-11 | Footer statement removed; document links tagged
 Owner decision. The footer no longer states that the site sets no cookies and runs no analytics or third-party scripts; this supersedes the 2026-11-08 entry that introduced the statement. The page itself is unchanged: it still loads no third-party script and sets no cookie. Links in the capability statement and the overview, and the overview's QR code, now carry a source tag.
+
+## 2026-11-11 | Site served through Cloudflare
+Owner decision. Traffic to manifold-llc.com and www now passes through Cloudflare's proxy, with a Worker on the route that passes requests through unchanged and keeps request statistics. The Owner approved the DNS change and switching off Bot Fight Mode and Email Address Obfuscation, which would otherwise inject code into the pages. Verified on the day: sixteen representative files byte-identical before and after, the 404 page still returns 404, no cookies set, no script added, no console errors. Hosting stays on GitHub Pages and the publishing flow is unchanged.
