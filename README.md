@@ -2,7 +2,7 @@
 
 Source for the Manifold LLC website, served by GitHub Pages at <https://manifold-llc.com>.
 
-The site is one hand-written content page, a 404 page and a print-styled capability statement, with one stylesheet and one small script. There is no build step, no framework, no third-party scripts on page load, and no analytics. Fonts are self-hosted.
+The site is one hand-written content page, a 404 page and a print-styled capability statement, with one stylesheet and one small script. There is no build step, no framework and no third-party scripts on page load. Fonts are self-hosted.
 
 ## Files
 
