@@ -40,6 +40,8 @@ Lines nearer the viewer are darker and heavier, as on the site, so the transpare
 | `pdf/` | Vector | Print shops, Illustrator, InDesign, Affinity, LaTeX. Stays sharp at any size. |
 | `png/` | Transparent image, 300 dpi or better | Google Docs and Slides, older Word, email signatures, anywhere SVG is refused. |
 
+`mesh-geometry.json` holds the raw line coordinates, and `AGENTS.md` tells an AI agent how to redraw any of this. To have an agent make a new version, give it this whole folder.
+
 Line weights are set for the drawn size. Shrinking a drawing to a third of its size or less makes the far lines faint; use `icon` for small sizes.
 
 ## Putting a letter page behind a letter in Word
@@ -62,11 +64,17 @@ Most office printers leave about a quarter inch unprinted at the edge of the she
 
 ## Changing or adding designs
 
-All files are drawn by `scripts/mesh_kit.py` from the same equation as the site's drawing. Edit the `DESIGNS` or `COLOURS` table there, then run from the repository root:
+All files are drawn by `mesh_kit.py` in this folder, from the same equation as the site's drawing. One drawing with other settings:
 
 ```bash
 pip install cairosvg pillow
-python3 scripts/mesh_kit.py
+python3 mesh_kit.py draw -d classic -c "#2F8BFF" --stroke-scale 2 -o mesh.png
+```
+
+To change the set itself, edit the `DESIGNS` or `COLOURS` table in `mesh_kit.py`, then redraw everything:
+
+```bash
+python3 mesh_kit.py kit
 ```
 
 This redraws every file in `brand/mesh/`, including `preview.png`. If you rename or remove a design, delete its old files by hand.
