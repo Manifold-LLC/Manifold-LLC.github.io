@@ -4,6 +4,9 @@ Notable changes to manifold-llc.com. The format follows [Keep a Changelog](https
 
 ## [Unreleased]
 
+### Changed (mesh drawings for agents)
+- `mesh_kit.py` moved into `brand/mesh/` so the folder stands alone, and became a command-line tool: any design redrawn in any colour, line weight, size, angle, crop or left-to-right fade, plus a raw-geometry export. Each SVG now records its settings and labels every grid line with its depth. Added `brand/mesh/AGENTS.md` and `mesh-geometry.json`. The drawings themselves are unchanged.
+
 ### Added (mesh drawings for documents)
 - `brand/mesh/`: the site's wireframe surface without data points, for offer letters and other documents. Twelve designs (seven free-standing views, a full-width band, a corner piece and three US Letter page backgrounds) in navy, ink, faint and white, each as SVG, PDF and transparent PNG, with a preview sheet and a how-to-use guide. All drawn by `scripts/mesh_kit.py`; kept off the published site.
 
