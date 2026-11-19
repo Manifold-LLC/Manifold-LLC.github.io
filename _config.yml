@@ -10,5 +10,6 @@ exclude:
   - records/
   - docs/
   - scripts/
+  - brand/
   - .htmlvalidate.json
   - .github/
