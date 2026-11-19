@@ -4,6 +4,9 @@ Notable changes to manifold-llc.com. The format follows [Keep a Changelog](https
 
 ## [Unreleased]
 
+### Added (mesh drawings for documents)
+- `brand/mesh/`: the site's wireframe surface without data points, for offer letters and other documents. Twelve designs (seven free-standing views, a full-width band, a corner piece and three US Letter page backgrounds) in navy, ink, faint and white, each as SVG, PDF and transparent PNG, with a preview sheet and a how-to-use guide. All drawn by `scripts/mesh_kit.py`; kept off the published site.
+
 ### Changed (lead)
 - The lead paragraph on the page and the capability statement now says "firsthand experience supporting the Intelligence Community"; the clause naming DoW research and acquisition programs is gone. Capability statement PDF re-rendered.
 
